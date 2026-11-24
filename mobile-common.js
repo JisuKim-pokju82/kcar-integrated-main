@@ -348,7 +348,7 @@
       var keys = ['a', 'b', 'c', 'd', 'e', 'f'];
       var links = keys.map(function (k) {
         var cls = k === vKey ? 'mo-dock-link active' : 'mo-dock-link';
-        return '<a class="' + cls + '" href="./' + k + '.html">' + k.toUpperCase() + '</a>';
+        return '<button type="button" style="border:none;font-family:inherit;cursor:pointer;" class="' + cls + '" onclick="mountKcarMobilePage(\'' + k + '\')">' + k.toUpperCase() + '</button>';
       }).join('');
       dockHtml =
         '<nav id="quickDock" class="mo-QuickDock" aria-label="모바일 시안 빠른 전환">' +
@@ -359,6 +359,8 @@
     }
 
     root.innerHTML = '<div>' + topAndBodyHtml + '</div>' + footerHtml + dockHtml;
+    document.title = 'K Car 통합 메인 — 모바일 ' + cfg.name;
+    window.scrollTo(0, 0);
   };
 
   window.toggleDock = function () {

@@ -1857,19 +1857,24 @@
     .mlo-tabs {
       display: flex;
       align-items: center;
-      gap: 5px;
+      gap: 4px;
       overflow-x: auto;
+      scrollbar-width: none;
+    }
+
+    .mlo-tabs::-webkit-scrollbar {
+      display: none;
     }
 
     .mlo-tab {
-      height: 32px;
-      padding: 0 12px;
+      height: 30px;
+      padding: 0 9px;
       border-radius: 999px;
       border: 1px solid rgba(255, 255, 255, 0.16);
       background: rgba(255, 255, 255, 0.06);
       color: rgba(255, 255, 255, 0.78);
       font-family: inherit;
-      font-size: 12px;
+      font-size: 11.5px;
       font-weight: 700;
       cursor: pointer;
       white-space: nowrap;
@@ -2098,6 +2103,138 @@
       letter-spacing: 0.2px;
       margin-bottom: 2px;
     }
+
+    /* =========================================================================
+       STEP 05 — 5 UNCONSTRAINED CREATIVE FREE-DESIGN SKINS (G ~ K)
+       ========================================================================= */
+    /* G: Obsidian Cyber-GT Dark Showroom */
+    .fskin-g {
+      background-color: #0B0D14;
+      background-image:
+        radial-gradient(ellipse 95% 240px at 50% 0%, rgba(183, 15, 40, 0.26) 0%, rgba(11, 13, 20, 0) 72%),
+        radial-gradient(ellipse 80% 220px at 90% 55%, rgba(14, 165, 233, 0.10) 0%, rgba(11, 13, 20, 0) 70%),
+        linear-gradient(180deg, #0B0D14 0%, #101420 100%);
+    }
+
+    /* H: Warm Linen Editorial Magazine */
+    .fskin-h {
+      background-color: #F4EDE2;
+      background-image:
+        linear-gradient(180deg, #F6F0E6 0%, #EFE6D7 100%);
+    }
+
+    /* I: Spatial Iridescent Hologram & Vision Glass */
+    .fskin-i {
+      background-color: #EAF4FF;
+      background-image:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.32) 0%, rgba(240, 248, 255, 0.14) 50%, rgba(244, 247, 255, 0.65) 100%),
+        url('./assets/bg_free_holo.jpg');
+      background-size: 100% 780px;
+      background-position: top center;
+      background-repeat: no-repeat;
+    }
+
+    /* J: Neo-Brutalist Pop & Acid Lime */
+    .fskin-j {
+      background-color: #FAF8F2;
+      background-image: radial-gradient(#D5D0C3 1px, transparent 1px);
+      background-size: 16px 16px;
+    }
+
+    /* K: British Racing Emerald & Champagne Gold VIP */
+    .fskin-k {
+      background-color: #081B15;
+      background-image:
+        linear-gradient(180deg, rgba(6, 20, 15, 0.35) 0%, rgba(8, 28, 22, 0.22) 55%, rgba(7, 23, 18, 0.92) 100%),
+        url('./assets/bg_free_emerald.jpg');
+      background-size: 100% 780px;
+      background-position: top center;
+      background-repeat: no-repeat;
+    }
+
+    /* Creative Search Bar Variants (Both .kcar-main-search & .mlo-search-form) */
+    .kcar-main-search.style-obsidian-neon,
+    .mlo-search-form.style-obsidian-neon {
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.07);
+      border: 1.2px solid rgba(255, 77, 90, 0.48);
+      padding: 0 8px 0 14px;
+      box-shadow: 0 6px 22px rgba(183, 15, 40, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    }
+    .style-obsidian-neon .kcar-search-placeholder,
+    .style-obsidian-neon input::placeholder { color: rgba(226, 232, 240, 0.68); }
+    .style-obsidian-neon input { color: #FFFFFF; }
+
+    .kcar-main-search.style-linen-editorial,
+    .mlo-search-form.style-linen-editorial {
+      border-radius: 3px;
+      background: #FCF9F4;
+      border: 1.5px solid #1C1917;
+      box-shadow: 0 3px 0 rgba(28, 25, 23, 0.12);
+    }
+    .style-linen-editorial .kcar-search-placeholder,
+    .style-linen-editorial input::placeholder { color: #6B6257; }
+
+    .kcar-main-search.style-holo-pill,
+    .mlo-search-form.style-holo-pill {
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.84);
+      border: 1.5px solid #FFFFFF;
+      padding: 0 8px 0 16px;
+      box-shadow: 0 10px 26px rgba(79, 70, 229, 0.12), inset 0 1px 0 #FFFFFF;
+    }
+
+    .kcar-main-search.style-brutal-pop,
+    .mlo-search-form.style-brutal-pop {
+      border-radius: 12px;
+      background: #FFFFFF;
+      border: 2.2px solid #111111;
+      padding: 0 7px 0 14px;
+      box-shadow: 4px 4px 0 #111111;
+    }
+    .style-brutal-pop .kcar-search-placeholder,
+    .style-brutal-pop input::placeholder { color: #444444; font-weight: 500; }
+
+    .kcar-main-search.style-emerald-vip,
+    .mlo-search-form.style-emerald-vip {
+      border-radius: 10px;
+      background: rgba(8, 28, 22, 0.84);
+      border: 1.2px solid rgba(216, 183, 120, 0.62);
+      padding: 0 8px 0 14px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.34);
+    }
+    .style-emerald-vip .kcar-search-placeholder,
+    .style-emerald-vip input::placeholder { color: rgba(232, 206, 150, 0.78); }
+    .style-emerald-vip input { color: #FBF6EB; }
+
+    /* Custom Footer Themes for Creative Variations */
+    .kcar-mo-footer.theme-dark {
+      background: #080A10;
+      border-top: 1px solid rgba(255, 255, 255, 0.09);
+      color: #8A93A6;
+    }
+    .kcar-mo-footer.theme-dark .kf-links { color: #B4BCCF; border-bottom-color: rgba(255, 255, 255, 0.09); }
+    .kcar-mo-footer.theme-dark .kf-links strong,
+    .kcar-mo-footer.theme-dark .kf-cs-tel { color: #F8FAFC; }
+    .kcar-mo-footer.theme-dark .kf-biz-badge { background: #141824; border-color: #2E364F; color: #CBD5E1; }
+
+    .kcar-mo-footer.theme-linen {
+      background: #E8DFD1;
+      border-top: 1px solid #CBBFB0;
+      color: #5C5349;
+    }
+    .kcar-mo-footer.theme-linen .kf-links { color: #3D362F; border-bottom-color: #CEC3B4; }
+    .kcar-mo-footer.theme-linen .kf-biz-badge { background: #FCF9F4; border-color: #B8ACA0; color: #3D362F; }
+
+    .kcar-mo-footer.theme-emerald {
+      background: #071712;
+      border-top: 1px solid rgba(216, 183, 120, 0.25);
+      color: #96B0A6;
+    }
+    .kcar-mo-footer.theme-emerald .kf-links { color: #C6D8D0; border-bottom-color: rgba(216, 183, 120, 0.18); }
+    .kcar-mo-footer.theme-emerald .kf-links strong,
+    .kcar-mo-footer.theme-emerald .kf-cs-tel { color: #E8CE96; }
+    .kcar-mo-footer.theme-emerald .kf-biz-badge { background: #0E2920; border-color: rgba(216, 183, 120, 0.45); color: #E8CE96; }
   </style>
 </head>
 <body class="show-fold">
@@ -2114,11 +2251,12 @@
       </div>
 
       <nav class="exec-tabs" aria-label="의사결정 단계 전환">
-        <button class="exec-tab-btn active" data-tab="all">전체 브리핑 (1~4)</button>
+        <button class="exec-tab-btn active" data-tab="all">전체 브리핑 (1~5)</button>
         <button class="exec-tab-btn" data-tab="step-layouts">1) 플랫폼 아키텍처 (4종)</button>
-        <button class="exec-tab-btn" data-tab="step-icons">2) 그래픽·모션 아트디렉션 (3종)</button>
-        <button class="exec-tab-btn" data-tab="step-optimal">3) 플래그십 최적안 (3종)</button>
-        <button class="exec-tab-btn" data-tab="step-final5">4) ★최적 1안 베리에이션 (A~F 6종)</button>
+        <button class="exec-tab-btn" data-tab="step-icons">2) 그래픽·모션 (3종)</button>
+        <button class="exec-tab-btn" data-tab="step-optimal">3) 최적안 TOP 3</button>
+        <button class="exec-tab-btn" data-tab="step-final5">4) 화이트 베리에이션 (A~F)</button>
+        <button class="exec-tab-btn" data-tab="step-free5">5) ★자유 크리에이티브 (G~K)</button>
       </nav>
 
       <div>
@@ -2132,22 +2270,28 @@
 
   <main class="workspace">
 
-    <!-- Direct Real-Mobile Fullscreen Access Bar (A ~ F) -->
+    <!-- Direct Real-Mobile Fullscreen Access Bar (A ~ K) -->
     <section class="mobile-live-bar" aria-label="모바일 실화면 바로가기">
       <div class="mlb-left">
-        <span class="mlb-badge">📱 모바일 실화면 버전</span>
+        <span class="mlb-badge">📱 모바일 실화면 버전 (A~K 전 시안)</span>
         <div class="mlb-text">
-          <strong>스마트폰 전체화면(베젤 없는 실기 뷰포트)에서 A~F안 바로 보기</strong>
-          <span>버튼을 누르면 즉시 폰 베젤이 제거된 순수 모바일 웹 화면으로 전환되며, A~F안 실시간 비교 및 스마트폰 링크 복사를 지원합니다.</span>
+          <strong>스마트폰 전체화면(베젤 없는 실기 뷰포트)에서 A~F(화이트) 및 G~K(자유 크리에이티브) 바로 보기</strong>
+          <span>버튼 클릭 시 즉시 순수 모바일 웹 화면으로 열리며, 기기 폭 전환(360/390/430)과 스마트폰 전용 링크 복사를 지원합니다.</span>
         </div>
       </div>
       <div class="mlb-links">
-        <button type="button" class="mlb-btn" onclick="openMobileLiveView('a')">A안 실화면</button>
-        <button type="button" class="mlb-btn" onclick="openMobileLiveView('b')">B안 실화면</button>
-        <button type="button" class="mlb-btn" onclick="openMobileLiveView('c')">C안 실화면</button>
-        <button type="button" class="mlb-btn" onclick="openMobileLiveView('d')">D안 실화면</button>
-        <button type="button" class="mlb-btn" onclick="openMobileLiveView('e')">E안 실화면</button>
-        <button type="button" class="mlb-btn" onclick="openMobileLiveView('f')">F안 실화면</button>
+        <button type="button" class="mlb-btn" onclick="openMobileLiveView('a')">A안</button>
+        <button type="button" class="mlb-btn" onclick="openMobileLiveView('b')">B안</button>
+        <button type="button" class="mlb-btn" onclick="openMobileLiveView('c')">C안</button>
+        <button type="button" class="mlb-btn" onclick="openMobileLiveView('d')">D안</button>
+        <button type="button" class="mlb-btn" onclick="openMobileLiveView('e')">E안</button>
+        <button type="button" class="mlb-btn" onclick="openMobileLiveView('f')">F안</button>
+        <span style="width:1px;height:20px;background:rgba(255,255,255,0.2);margin:0 2px;"></span>
+        <button type="button" class="mlb-btn" style="border-color:#F59E0B;color:#FDE68A;" onclick="openMobileLiveView('g')">★G안(다크)</button>
+        <button type="button" class="mlb-btn" style="border-color:#F59E0B;color:#FDE68A;" onclick="openMobileLiveView('h')">★H안(매거진)</button>
+        <button type="button" class="mlb-btn" style="border-color:#F59E0B;color:#FDE68A;" onclick="openMobileLiveView('i')">★I안(홀로그램)</button>
+        <button type="button" class="mlb-btn" style="border-color:#F59E0B;color:#FDE68A;" onclick="openMobileLiveView('j')">★J안(네오팝)</button>
+        <button type="button" class="mlb-btn" style="border-color:#F59E0B;color:#FDE68A;" onclick="openMobileLiveView('k')">★K안(에메랄드)</button>
       </div>
     </section>
 
@@ -2326,6 +2470,71 @@
       </div>
     </section>
 
+    <!-- =======================================================================
+         STEP 5: 제약 없는 자유 크리에이티브 아트 디렉션 5종 (G~K) — 동일 레이아웃 유지
+         ======================================================================= -->
+    <section id="step-free5" class="board-section">
+      <div class="sec-banner">
+        <div>
+          <span class="sec-kicker" style="background:#16171D;color:#FDE68A;">STEP 05 · UNCONSTRAINED CREATIVE ART DIRECTIONS (자유 디자인 G~K 5종)</span>
+          <h2 class="sec-title">동일 레이아웃 유지 — 무제약 크리에이티브 자유 디자인 5종 (G~K안)</h2>
+          <p class="sec-subdesc">
+            확정된 <strong>[헤더 → 검색창 → 중고차(50:50 + 1줄 직거래) → 렌터카 → 바이크/마이카(1st Fold 수납) → 배너 → 푸터]</strong> 골격은 100% 그대로 유지하면서,
+            화이트 톤 제약을 완전히 벗어난 <strong>다크 사이버 쇼룸(G) · 웜 에디토리얼 매거진(H) · 스페이셜 홀로그램(I) · 네오 브루탈리즘 팝(J) · 브리티시 레이싱 에메랄드 VIP(K)</strong> 5가지 파격 시안입니다.
+          </p>
+        </div>
+      </div>
+
+      <div id="gridFree5" class="grid-5-final"></div>
+
+      <!-- Creative 5-Variation Summary Sheet -->
+      <div class="summary-sheet">
+        <h3>크리에이티브 자유 디자인 5종 (G~K안) 아트 디렉션 요약</h3>
+        <table class="cmp-table">
+          <thead>
+            <tr>
+              <th>시안 코드</th>
+              <th>아트 디렉션 &amp; 레퍼런스</th>
+              <th>컬러 · 머티리얼 · 그래픽 특징</th>
+              <th>기대 브랜드 임팩트</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>G안</strong><br/><span style="color:#E11D38;font-size:11px;font-weight:700;">Obsidian Cyber-GT</span></td>
+              <td>포르쉐 타이칸 · 제네시스 나이트 쇼룸</td>
+              <td>풀 매트 카본(<code>#0B0D14</code>) + 크림슨 네온림 + 스튜디오 실사 화보 &amp; HUD 시세 차트</td>
+              <td>기존 중고차 앱의 통념을 깨는 압도적 하이테크 다크 쇼룸</td>
+            </tr>
+            <tr>
+              <td><strong>H안</strong><br/><span style="color:#9A3412;font-size:11px;font-weight:700;">Warm Linen Editorial</span></td>
+              <td>모노클(Monocle) · 현대카드 라이브러리</td>
+              <td>오트밀 린넨 지류 질감(<code>#F4EDE2</code>) + 에스프레소 잉크 보더 &amp; 이탤릭 세리프 인덱싱</td>
+              <td>지적이고 신뢰감 높은 프리미엄 큐레이션 컨시어지 인상</td>
+            </tr>
+            <tr>
+              <td><strong>I안</strong><br/><span style="color:#4F46E5;font-size:11px;font-weight:700;">Spatial Vision Glass</span></td>
+              <td>Apple visionOS · 차세대 EV 모빌리티 OS</td>
+              <td>홀로그래픽 크리스탈 오로라 배경 + 스페큘러 반투명 스페이셜 글래스 캡슐</td>
+              <td>미래지향적 모빌리티 테크 기업 이미지를 극대화한 영롱한 무드</td>
+            </tr>
+            <tr>
+              <td><strong>J안</strong><br/><span style="color:#111111;font-size:11px;font-weight:700;">Neo-Brutalist Pop</span></td>
+              <td>Spotify · Nike SNKRS · MZ 트렌드 팝</td>
+              <td><code>2px</code> 솔리드 블랙 보더 + <code>4px</code> 하드 오프셋 섀도우 + 애시드 라임(<code>#D4FF2A</code>)·솔라 옐로우</td>
+              <td>2030 세대 및 바이크·직거래 유입을 폭발시키는 강렬한 팝 감성</td>
+            </tr>
+            <tr>
+              <td><strong>K안</strong><br/><span style="color:#0B4F3A;font-size:11px;font-weight:700;">British Emerald VIP</span></td>
+              <td>애스턴마틴 · 벤틀리 프라이빗 오토 클럽</td>
+              <td>딥 에메랄드 마블 &amp; 골드 채광 배경 + 브러시드 샴페인 골드(<code>#D8B778</code>) &amp; 포슬린 카드</td>
+              <td>프라이빗 뱅킹급 품격과 하이엔드 인증 중고차 멤버십 감성</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
   </main>
 
   <div class="floating-choice-bar">
@@ -2337,12 +2546,12 @@
     <div class="dlg-body" id="rationaleBody"></div>
   </dialog>
 
-  <!-- ==================== IN-PAGE FULL-SCREEN MOBILE LIVE OVERLAY (A~F) ==================== -->
+  <!-- ==================== IN-PAGE FULL-SCREEN MOBILE LIVE OVERLAY (A~K) ==================== -->
   <div id="moLiveOverlay" class="mo-live-overlay" aria-hidden="true">
     <div class="mlo-topbar">
-      <div style="display:flex;align-items:center;gap:12px;">
-        <button type="button" class="mlo-back-btn" onclick="closeMobileLiveView()">← 전체 리뷰 보드로 돌아가기</button>
-        <span id="mloTitle" style="font-size:13px;font-weight:700;color:rgba(255,255,255,0.9);">모바일 실화면</span>
+      <div style="display:flex;align-items:center;gap:10px;min-width:0;">
+        <button type="button" class="mlo-back-btn" onclick="closeMobileLiveView()">← 리뷰 보드</button>
+        <span id="mloTitle" style="font-size:12.5px;font-weight:700;color:rgba(255,255,255,0.9);max-width:210px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">모바일 실화면</span>
       </div>
 
       <div class="mlo-tabs" id="mloTabs">
@@ -2352,6 +2561,11 @@
         <button type="button" class="mlo-tab" data-mo-key="d" onclick="openMobileLiveView('d')">D안</button>
         <button type="button" class="mlo-tab" data-mo-key="e" onclick="openMobileLiveView('e')">E안</button>
         <button type="button" class="mlo-tab" data-mo-key="f" onclick="openMobileLiveView('f')">F안</button>
+        <button type="button" class="mlo-tab" data-mo-key="g" onclick="openMobileLiveView('g')">★G안</button>
+        <button type="button" class="mlo-tab" data-mo-key="h" onclick="openMobileLiveView('h')">★H안</button>
+        <button type="button" class="mlo-tab" data-mo-key="i" onclick="openMobileLiveView('i')">★I안</button>
+        <button type="button" class="mlo-tab" data-mo-key="j" onclick="openMobileLiveView('j')">★J안</button>
+        <button type="button" class="mlo-tab" data-mo-key="k" onclick="openMobileLiveView('k')">★K안</button>
       </div>
 
       <div class="mlo-right-tools">
@@ -2368,7 +2582,7 @@
       <div id="mloScreen" class="mlo-real-screen"></div>
     </div>
 
-    <div class="mlo-float-dock" id="mloFloatDock">
+    <div class="mlo-float-dock" id="mloFloatDock" style="max-width:94vw;overflow-x:auto;">
       <button type="button" class="mlo-dock-pill" style="width:auto;padding:0 9px;border-right:1px solid rgba(255,255,255,0.2);" onclick="closeMobileLiveView()">← 보드</button>
       <button type="button" class="mlo-dock-pill" data-mo-key="a" onclick="openMobileLiveView('a')">A</button>
       <button type="button" class="mlo-dock-pill" data-mo-key="b" onclick="openMobileLiveView('b')">B</button>
@@ -2376,6 +2590,11 @@
       <button type="button" class="mlo-dock-pill" data-mo-key="d" onclick="openMobileLiveView('d')">D</button>
       <button type="button" class="mlo-dock-pill" data-mo-key="e" onclick="openMobileLiveView('e')">E</button>
       <button type="button" class="mlo-dock-pill" data-mo-key="f" onclick="openMobileLiveView('f')">F</button>
+      <button type="button" class="mlo-dock-pill" data-mo-key="g" onclick="openMobileLiveView('g')">G</button>
+      <button type="button" class="mlo-dock-pill" data-mo-key="h" onclick="openMobileLiveView('h')">H</button>
+      <button type="button" class="mlo-dock-pill" data-mo-key="i" onclick="openMobileLiveView('i')">I</button>
+      <button type="button" class="mlo-dock-pill" data-mo-key="j" onclick="openMobileLiveView('j')">J</button>
+      <button type="button" class="mlo-dock-pill" data-mo-key="k" onclick="openMobileLiveView('k')">K</button>
     </div>
   </div>
 
@@ -3706,6 +3925,7 @@
       renderStep2Only();
       renderStep3Only();
       renderStep4Only();
+      renderStep5Only();
     }
 
     let activeMoSlug = 'a';
@@ -3879,8 +4099,396 @@
         ],
         bikeStyle: 'background:linear-gradient(145deg,#FFF5F6 0%,#FFECEF 100%);box-shadow:inset 0 0 0 1px #F6C9D0;',
         mycarStyle: 'background:#F7F9FC;box-shadow:inset 0 0 0 1px #E6EBF3;'
+      },
+      g: {
+        title: 'G안 · 옵시디언 사이버-GT 다크 쇼룸',
+        skinCls: 'fskin-g',
+        darkHeader: true,
+        secTitleColor: '#F8FAFC',
+        secMoreColor: '#94A3B8',
+        crimsonCap: false,
+        searchCls: 'style-obsidian-neon',
+        placeholder: '모델명 · 번호판 야간 쇼룸 검색',
+        searchBtnHtml: `<button type="button" class="kcar-search-btn" style="border:none;cursor:pointer;background:linear-gradient(135deg,#FF2A4B 0%,#B70F28 100%);color:#FFFFFF;box-shadow:0 0 12px rgba(255,42,75,0.55);" aria-label="검색"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5"><circle cx="11" cy="11" r="7"/><line x1="16.2" y1="16.2" x2="21" y2="21" stroke-linecap="round"/></svg></button>`,
+        wrapUsedStyle: '',
+        cardRadius: '15px',
+        buyStyle: "background:linear-gradient(145deg,rgba(10,13,22,0.92) 0%,rgba(10,13,22,0.22) 66%),url('./assets/photo_car_hero_dark.png') right bottom / cover no-repeat;color:#FFFFFF;border:1px solid rgba(255,77,90,0.45);box-shadow:0 10px 24px rgba(0,0,0,0.45);",
+        buyTag: '<span class="f5-tech-tag" style="color:#FF4D5A;">● DIRECT GT</span>',
+        buySubColor: 'rgba(226,232,240,0.82)',
+        buyCarImg: '',
+        sellStyle: "background:linear-gradient(145deg,rgba(12,15,24,0.93) 0%,rgba(12,15,24,0.28) 68%),url('./assets/photo_sell_key.jpg') right bottom / cover no-repeat;color:#FFFFFF;border:1px solid rgba(251,191,36,0.38);box-shadow:0 10px 24px rgba(0,0,0,0.45);",
+        sellTag: '<span class="f5-tech-tag" style="color:#FBBF24;">● 1-DAY SELL</span>',
+        sellSubColor: 'rgba(226,232,240,0.82)',
+        sellImgHtml: '',
+        c2cStyle: 'background:linear-gradient(90deg,#141A29 0%,#1B2438 100%);color:#FFFFFF;border:1px solid rgba(56,189,248,0.38);box-shadow:0 8px 22px rgba(0,0,0,0.4);',
+        c2cBadge: '<span style="font-size:9.5px;font-weight:700;color:#041019;background:#38BDF8;padding:2px 7px;border-radius:99px;">CYBER C2C</span>',
+        c2cSubColor: 'rgba(203,213,225,0.82)',
+        c2cIconWrap: `<svg width="44" height="44" viewBox="0 0 48 48" fill="none" style="flex-shrink:0;"><defs><linearGradient id="gPin" x1="8" y1="6" x2="40" y2="42" gradientUnits="userSpaceOnUse"><stop stop-color="#38BDF8"/><stop offset="1" stop-color="#2563EB"/></linearGradient></defs><circle cx="24" cy="24" r="20" fill="rgba(56,189,248,0.12)" stroke="rgba(56,189,248,0.35)"/><path d="M24 11c-5.5 0-10 4.3-10 9.6 0 7.1 10 16.4 10 16.4s10-9.3 10-16.4C34 15.3 29.5 11 24 11z" fill="url(#gPin)"/><circle cx="24" cy="20.5" r="3.8" fill="#FFFFFF"/></svg>`,
+        rentStyle: [
+          'background:linear-gradient(150deg,#161C2C 0%,#101420 100%);color:#F8FAFC;border:1px solid rgba(255,255,255,0.11);',
+          "background:linear-gradient(155deg,rgba(12,16,26,0.90) 0%,rgba(12,16,26,0.22) 100%),url('./assets/photo_rent_drive.jpg') center / cover no-repeat;color:#FFFFFF;border:1px solid rgba(56,189,248,0.30);",
+          'background:linear-gradient(150deg,#28121B 0%,#131724 100%);color:#FFFFFF;border:1px solid rgba(255,77,90,0.38);'
+        ],
+        rentImgHtml: [
+          `<svg width="42" height="42" viewBox="0 0 44 44" fill="none" style="position:absolute;right:6px;bottom:5px;"><rect x="7" y="10" width="30" height="26" rx="7" fill="rgba(56,189,248,0.16)" stroke="#38BDF8" stroke-width="1.6"/><path d="M7 18h30" stroke="#38BDF8" stroke-width="1.6"/><circle cx="16" cy="26" r="2.2" fill="#7DD3FC"/><circle cx="22" cy="26" r="2.2" fill="#7DD3FC"/><circle cx="28" cy="26" r="2.2" fill="#FF4D5A"/></svg>`,
+          '',
+          `<svg width="42" height="42" viewBox="0 0 44 44" fill="none" style="position:absolute;right:6px;bottom:5px;"><rect x="8" y="8" width="28" height="28" rx="9" fill="rgba(255,77,90,0.2)" stroke="#FF4D5A" stroke-width="1.6"/><path d="M17 27L27 17" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round"/><circle cx="17.5" cy="17.5" r="2.2" fill="#FF4D5A"/><circle cx="26.5" cy="26.5" r="2.2" fill="#FBBF24"/></svg>`
+        ],
+        bikeStyle: "background:linear-gradient(135deg,rgba(11,14,22,0.90) 0%,rgba(11,14,22,0.18) 100%),url('./assets/photo_bike_wide_dark.jpg') right center / cover no-repeat;color:#FFFFFF;border:1px solid rgba(255,77,90,0.42);",
+        bikeImgHtml: '',
+        mycarStyle: 'background:linear-gradient(145deg,#131B2C 0%,#0E1320 100%);color:#FFFFFF;border:1px solid rgba(52,211,153,0.36);',
+        mycarImgHtml: `<svg width="68" height="42" viewBox="0 0 72 44" fill="none" style="position:absolute;right:7px;bottom:6px;"><path d="M4 34 L20 26 L34 29 L50 15 L67 9" stroke="#34D399" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="67" cy="9" r="3.5" fill="#34D399"/><text x="34" y="40" fill="#6EE7B7" font-size="9" font-weight="700">+32만▲</text></svg>`,
+        footerTheme: 'theme-dark',
+        homebarStyle: 'background:#080A10;color:#FFFFFF;'
+      },
+      h: {
+        title: 'H안 · 웜 린넨 에디토리얼 매거진',
+        skinCls: 'fskin-h',
+        darkHeader: false,
+        secTitleColor: '#1C1917',
+        secMoreColor: '#6B6257',
+        secPrefix: ['I.', 'II.', 'III.', 'IV.'],
+        crimsonCap: false,
+        searchCls: 'style-linen-editorial',
+        placeholder: '차량 아카이브 · 모델명으로 검색',
+        searchBtnHtml: `<button type="button" class="kcar-search-btn" style="border:none;background:transparent;cursor:pointer;" aria-label="검색"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1C1917" stroke-width="2.1"><circle cx="11" cy="11" r="7"/><line x1="16.2" y1="16.2" x2="21" y2="21" stroke-linecap="round"/></svg></button>`,
+        wrapUsedStyle: '',
+        cardRadius: '4px',
+        buyStyle: 'background:#B70F28;color:#FCF9F4;border:1px solid #8C0B1E;box-shadow:0 4px 12px rgba(45,30,18,0.10);',
+        buyTag: '<span class="f5-tech-tag" style="color:#FDE68A;font-family:Georgia,serif;font-style:italic;position:relative;z-index:2;">No. 01 · Buy</span>',
+        buySubColor: 'rgba(252,249,244,0.88)',
+        buyCarImg: '<img src="./assets/clay_car_on_red.png" alt="내차 사기" style="width:86px;height:62px;object-fit:contain;" />',
+        sellStyle: 'background:#FCF9F4;color:#1C1917;border:1px solid #C6BAA9;box-shadow:0 4px 12px rgba(45,30,18,0.05);',
+        sellTag: '<span class="f5-tech-tag" style="color:#8C3B2B;font-family:Georgia,serif;font-style:italic;">No. 02 · Sell</span>',
+        sellSubColor: '#6B6257',
+        c2cStyle: 'background:#F8F3EA;color:#1C1917;border:1px solid #C6BAA9;border-left:3.5px solid #2D4F40;',
+        c2cBadge: '<span style="font-size:9.5px;font-weight:700;color:#FCF9F4;background:#2D4F40;padding:2px 7px;border-radius:2px;">VERIFIED</span>',
+        c2cSubColor: '#6B6257',
+        c2cIconWrap: '<img class="blend-multiply" src="./assets/icon3d_c2c_pin.png" alt="안심직거래" style="width:50px;height:50px;object-fit:contain;flex-shrink:0;" />',
+        rentStyle: [
+          'background:#FCF9F4;border-radius:4px;border:1px solid #C8BCAE;',
+          'background:#FCF9F4;border-radius:4px;border:1px solid #C8BCAE;',
+          'background:#F9EFEA;border-radius:4px;border:1px solid #D5B4A8;'
+        ],
+        bikeStyle: 'background:#FCF9F4;border-radius:4px;border:1px solid #C8BCAE;border-top:2.5px solid #B70F28;',
+        mycarStyle: 'background:#FCF9F4;border-radius:4px;border:1px solid #C8BCAE;border-top:2.5px solid #1C1917;',
+        footerTheme: 'theme-linen',
+        homebarStyle: 'background:#E8DFD1;color:#1C1917;'
+      },
+      i: {
+        title: 'I안 · 스페이셜 홀로그램 & 비전 글래스',
+        skinCls: 'fskin-i',
+        darkHeader: false,
+        secTitleColor: '#0F172A',
+        secMoreColor: '#475569',
+        crimsonCap: false,
+        searchCls: 'style-holo-pill',
+        placeholder: 'AI 모빌리티 스페이셜 검색',
+        searchBtnHtml: `<button type="button" class="kcar-search-btn" style="border:none;cursor:pointer;background:linear-gradient(135deg,#4F46E5 0%,#06B6D4 100%);color:#FFFFFF;box-shadow:0 4px 12px rgba(79,70,229,0.32);" aria-label="검색"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5"><circle cx="11" cy="11" r="7"/><line x1="16.2" y1="16.2" x2="21" y2="21" stroke-linecap="round"/></svg></button>`,
+        wrapUsedStyle: '',
+        cardRadius: '22px',
+        buyStyle: 'background:linear-gradient(145deg,rgba(235,238,255,0.88) 0%,rgba(224,244,255,0.66) 100%);color:#0F172A;border:1.5px solid #FFFFFF;box-shadow:inset 0 1px 0 #FFFFFF,0 12px 26px rgba(79,70,229,0.10);',
+        buyTag: '<span class="f5-tech-tag" style="color:#4F46E5;">✦ SPATIAL BUY</span>',
+        buySubColor: '#3730A3',
+        buyCarImg: '<img class="blend-multiply" src="./assets/clay_car_iso.png" alt="내차 사기" style="width:102px;height:74px;object-fit:contain;" />',
+        sellStyle: 'background:linear-gradient(145deg,rgba(253,236,248,0.88) 0%,rgba(255,248,238,0.66) 100%);color:#0F172A;border:1.5px solid #FFFFFF;box-shadow:inset 0 1px 0 #FFFFFF,0 12px 26px rgba(219,39,119,0.09);',
+        sellTag: '<span class="f5-tech-tag" style="color:#DB2777;">✦ FAST SELL</span>',
+        sellSubColor: '#831843',
+        c2cStyle: 'background:linear-gradient(90deg,rgba(224,252,244,0.88) 0%,rgba(255,255,255,0.72) 100%);color:#0F172A;border:1.5px solid #FFFFFF;box-shadow:inset 0 1px 0 #FFFFFF,0 10px 24px rgba(13,148,136,0.09);',
+        c2cBadge: '<span style="font-size:9.5px;font-weight:700;color:#FFFFFF;background:linear-gradient(90deg,#059669,#0EA5E9);padding:2px 8px;border-radius:99px;">VISION C2C</span>',
+        c2cSubColor: '#334155',
+        c2cIconWrap: '<img class="blend-multiply" src="./assets/icon3d_c2c_pin.png" alt="안심직거래" style="width:50px;height:50px;object-fit:contain;flex-shrink:0;" />',
+        rentStyle: [
+          'background:linear-gradient(145deg,rgba(255,255,255,0.86) 0%,rgba(240,249,255,0.64) 100%);border-radius:18px;border:1.5px solid #FFFFFF;box-shadow:0 8px 22px rgba(30,64,175,0.07);',
+          'background:linear-gradient(145deg,rgba(255,255,255,0.86) 0%,rgba(245,243,255,0.64) 100%);border-radius:18px;border:1.5px solid #FFFFFF;box-shadow:0 8px 22px rgba(79,70,229,0.07);',
+          'background:linear-gradient(145deg,rgba(255,240,246,0.86) 0%,rgba(255,255,255,0.64) 100%);border-radius:18px;border:1.5px solid #FFFFFF;box-shadow:0 8px 22px rgba(219,39,119,0.07);'
+        ],
+        bikeStyle: 'background:linear-gradient(145deg,rgba(255,235,242,0.88) 0%,rgba(240,244,255,0.68) 100%);border-radius:20px;border:1.5px solid #FFFFFF;box-shadow:0 8px 22px rgba(79,70,229,0.08);',
+        mycarStyle: 'background:linear-gradient(145deg,rgba(232,250,255,0.88) 0%,rgba(255,255,255,0.68) 100%);border-radius:20px;border:1.5px solid #FFFFFF;box-shadow:0 8px 22px rgba(14,165,233,0.08);'
+      },
+      j: {
+        title: 'J안 · 네오 브루탈리즘 팝 & 애시드 라임',
+        skinCls: 'fskin-j',
+        darkHeader: false,
+        secTitleColor: '#111111',
+        secMoreColor: '#111111',
+        crimsonCap: false,
+        searchCls: 'style-brutal-pop',
+        placeholder: '차종 · 번호판 바로 검색!',
+        searchBtnHtml: `<button type="button" class="kcar-search-btn" style="border-radius:8px;background:#D4FF2A;border:1.8px solid #111111;color:#111111;cursor:pointer;" aria-label="검색"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#111111" stroke-width="2.6"><circle cx="11" cy="11" r="7"/><line x1="16.2" y1="16.2" x2="21" y2="21" stroke-linecap="round"/></svg></button>`,
+        wrapUsedStyle: '',
+        cardRadius: '14px',
+        buyStyle: 'background:#B70F28;color:#FFFFFF;border:2px solid #111111;box-shadow:4px 4px 0 #111111;',
+        buyTag: '<span style="display:inline-block;position:relative;z-index:2;font-size:9.5px;font-weight:700;color:#111111;background:#D4FF2A;border:1.5px solid #111111;padding:0 6px;border-radius:99px;margin-bottom:3px;">HOT!</span>',
+        buySubColor: '#FFE4E8',
+        buyCarImg: '<img src="./assets/clay_car_on_red.png" alt="내차 사기" style="width:86px;height:62px;object-fit:contain;" />',
+        sellStyle: 'background:#FFE45E;color:#111111;border:2px solid #111111;box-shadow:4px 4px 0 #111111;',
+        sellTag: '<span style="display:inline-block;font-size:9.5px;font-weight:700;color:#FFFFFF;background:#111111;padding:1px 6px;border-radius:99px;margin-bottom:3px;">TOP ₩</span>',
+        sellSubColor: '#3B2F00',
+        c2cStyle: 'background:#FFFFFF;color:#111111;border:2px solid #111111;box-shadow:4px 4px 0 #111111;',
+        c2cBadge: '<span style="font-size:9.5px;font-weight:700;color:#111111;background:#D4FF2A;border:1.5px solid #111111;padding:1px 7px;border-radius:99px;">수수료 0%</span>',
+        c2cSubColor: '#333333',
+        c2cIconWrap: '<img class="blend-multiply" src="./assets/icon3d_c2c_pin.png" alt="안심직거래" style="width:50px;height:50px;object-fit:contain;flex-shrink:0;" />',
+        rentStyle: [
+          'background:#D9F3FF;color:#111111;border:2px solid #111111;box-shadow:3px 3px 0 #111111;',
+          'background:#DCFAE8;color:#111111;border:2px solid #111111;box-shadow:3px 3px 0 #111111;',
+          'background:#EFE3FF;color:#111111;border:2px solid #111111;box-shadow:3px 3px 0 #111111;'
+        ],
+        bikeStyle: 'background:#FFD8E2;color:#111111;border:2px solid #111111;box-shadow:3px 3px 0 #111111;',
+        mycarStyle: 'background:#EAFFA6;color:#111111;border:2px solid #111111;box-shadow:3px 3px 0 #111111;'
+      },
+      k: {
+        title: 'K안 · 브리티시 레이싱 에메랄드 & 샴페인 골드 VIP',
+        skinCls: 'fskin-k',
+        darkHeader: true,
+        secTitleColor: '#E8CE96',
+        secMoreColor: '#C8B282',
+        crimsonCap: false,
+        searchCls: 'style-emerald-vip',
+        placeholder: '프라이빗 인증 매물 · 번호판 조회',
+        searchBtnHtml: `<button type="button" class="kcar-search-btn" style="border:none;cursor:pointer;background:linear-gradient(135deg,#E8CE96 0%,#C59B4E 100%);color:#092018;" aria-label="검색"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#092018" stroke-width="2.5"><circle cx="11" cy="11" r="7"/><line x1="16.2" y1="16.2" x2="21" y2="21" stroke-linecap="round"/></svg></button>`,
+        wrapUsedStyle: '',
+        cardRadius: '12px',
+        buyStyle: 'background:#16171D;color:#FBF6EB;border:1px solid rgba(216,183,120,0.65);box-shadow:0 10px 24px rgba(0,0,0,0.38);',
+        buyTag: '<span class="f5-tech-tag" style="color:#E8CE96;position:relative;z-index:2;">✦ PRIVATE CERT</span>',
+        buySubColor: 'rgba(232,206,150,0.86)',
+        buyCarImg: '<img src="./assets/clay_car_on_dark.png" alt="내차 사기" style="width:86px;height:62px;object-fit:contain;" />',
+        sellStyle: 'background:linear-gradient(150deg,#FBF6EB 0%,#F1E2C2 100%);color:#0B241C;border:1px solid #D4B06A;box-shadow:0 10px 24px rgba(0,0,0,0.28);',
+        sellTag: '<span class="f5-tech-tag" style="color:#8A621C;">✦ CONCIERGE</span>',
+        sellSubColor: '#4E3B18',
+        c2cStyle: 'background:linear-gradient(90deg,rgba(10,36,28,0.94) 0%,rgba(18,56,43,0.92) 100%);color:#FBF6EB;border:1px solid rgba(216,183,120,0.58);box-shadow:0 8px 22px rgba(0,0,0,0.32);',
+        c2cBadge: '<span style="font-size:9.5px;font-weight:700;color:#092018;background:#E8CE96;padding:2px 7px;border-radius:4px;">VIP 보증</span>',
+        c2cSubColor: 'rgba(232,206,150,0.82)',
+        c2cIconWrap: '<span style="width:44px;height:44px;border-radius:10px;background:#FBF6EB;border:1px solid #D4B06A;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><img class="blend-multiply" src="./assets/icon3d_c2c_pin.png" alt="안심직거래" style="width:39px;height:39px;object-fit:contain;" /></span>',
+        rentStyle: [
+          'background:linear-gradient(160deg,#FCF9F2 0%,#F3EAD8 100%);color:#0B241C;border-radius:11px;border:1px solid rgba(212,176,106,0.65);',
+          'background:linear-gradient(160deg,#FCF9F2 0%,#F3EAD8 100%);color:#0B241C;border-radius:11px;border:1px solid rgba(212,176,106,0.65);',
+          'background:linear-gradient(160deg,#FCF9F2 0%,#F3EAD8 100%);color:#0B241C;border-radius:11px;border:1px solid rgba(212,176,106,0.65);'
+        ],
+        bikeStyle: 'background:linear-gradient(150deg,#FFF6F5 0%,#F6E6E4 100%);color:#0B241C;border-radius:12px;border:1px solid #DFB3AF;',
+        mycarStyle: 'background:linear-gradient(160deg,#FCF9F2 0%,#F3EAD8 100%);color:#0B241C;border-radius:12px;border:1px solid rgba(212,176,106,0.65);',
+        footerTheme: 'theme-emerald',
+        homebarStyle: 'background:#071712;color:#E8CE96;'
       }
     };
+
+    const STEP5_FREE5 = [
+      {
+        id: 'FR_G',
+        slug: 'g',
+        moCode: 'G안',
+        choiceText: '자유 G안 · 옵시디언 사이버-GT 다크 쇼룸',
+        badge: 'Creative G · 다크 사이버 쇼룸',
+        badgeCls: 'b-dark',
+        meta: '매트 카본 + 실사 나이트 화보',
+        title: 'G. 옵시디언 사이버-GT 다크 쇼룸',
+        desc: '풀 매트 카본(#0B0D14) 바탕 위에 크림슨 네온 검색창과 스튜디오 세단·스마트키·바이크 나이트 실사 화보 및 HUD 시세 차트를 입힌 다크 쇼룸입니다.'
+      },
+      {
+        id: 'FR_H',
+        slug: 'h',
+        moCode: 'H안',
+        choiceText: '자유 H안 · 웜 린넨 에디토리얼 매거진',
+        badge: 'Creative H · 에디토리얼 매거진',
+        badgeCls: 'b-warm',
+        meta: '오트밀 지류 + 이탤릭 세리프',
+        title: 'H. 웜 린넨 에디토리얼 매거진',
+        desc: '모노클·현대카드 라이브러리 감성의 따뜻한 오트밀 지류(#F4EDE2)와 에스프레소 1.5px 직선 프레임, 이탤릭 세리프 넘버링으로 완성한 지적인 컨시어지입니다.'
+      },
+      {
+        id: 'FR_I',
+        slug: 'i',
+        moCode: 'I안',
+        choiceText: '자유 I안 · 스페이셜 홀로그램 & 비전 글래스',
+        badge: 'Creative I · 스페이셜 비전OS',
+        badgeCls: 'b-navy',
+        meta: '홀로그램 오로라 + 스페이셜 캡슐',
+        title: 'I. 스페이셜 홀로그램 & 비전 글래스',
+        desc: '영롱한 민트·라벤더 홀로그래픽 크리스탈 배경 위에 Apple visionOS 스타일의 스페큘러 반투명 글래스 캡슐을 띄운 미래형 모빌리티 OS 시안입니다.'
+      },
+      {
+        id: 'FR_J',
+        slug: 'j',
+        moCode: 'J안',
+        choiceText: '자유 J안 · 네오 브루탈리즘 팝 & 애시드 라임',
+        badge: 'Creative J · 네오 브루탈리즘 팝',
+        badgeCls: 'b-swiss',
+        meta: '2px 블랙보더 + 4px 하드섀도우',
+        title: 'J. 네오 브루탈리즘 팝 & 애시드 라임',
+        desc: '선명한 2px 블랙 잉크 보더와 4px 하드 오프셋 그림자, 애시드 라임(#D4FF2A)·솔라 옐로우 팝 컬러블록으로 MZ세대 주목도를 극대화한 트렌드 시안입니다.'
+      },
+      {
+        id: 'FR_K',
+        slug: 'k',
+        moCode: 'K안',
+        choiceText: '자유 K안 · 브리티시 레이싱 에메랄드 VIP',
+        badge: 'Creative K · 프라이빗 오토 클럽',
+        badgeCls: 'b-pastel',
+        meta: '에메랄드 마블 + 샴페인 골드',
+        title: 'K. 브리티시 레이싱 에메랄드 VIP',
+        desc: '애스턴마틴·벤틀리 쇼룸을 연상시키는 딥 에메랄드 마블 & 골드 채광 배경 위에 샴페인 골드(#E8CE96)와 웜 포슬린 카드를 매치한 하이엔드 멤버십 시안입니다.'
+      }
+    ];
+
+    function buildUnifiedSectionsHtml(cfg, forMockup) {
+      const titleCol = cfg.secTitleColor || '#16171D';
+      const moreCol = cfg.secMoreColor || '#82848B';
+      const pfx = cfg.secPrefix || ['', '', '', ''];
+      const pfxHtml = (idx) => pfx[idx] ? `<em style="font-family:Georgia,serif;font-weight:700;margin-right:3px;">${pfx[idx]}</em>` : '';
+
+      const eqH = forMockup ? '144px' : '136px';
+      const c2cH = forMockup ? '68px' : '66px';
+      const rentH = forMockup ? '94px' : '90px';
+      const halfH = forMockup ? '96px' : '92px';
+      const promoMargin = forMockup ? (cfg.wrapUsedStyle ? '16px' : '28px') : '8px';
+
+      const defaultSellImg = `<img class="blend-multiply" src="./assets/icon3d_sell_coin.png" alt="내차 팔기" style="position:absolute;right:6px;bottom:5px;width:66px;height:66px;object-fit:contain;" />`;
+      const sellVisual = cfg.sellImgHtml !== undefined ? cfg.sellImgHtml : defaultSellImg;
+
+      const defaultRentImgs = [
+        `<img class="blend-multiply" src="./assets/icon3d_rent_calendar.png" alt="중고차 렌트" style="position:absolute;right:4px;bottom:3px;width:50px;height:50px;object-fit:contain;" />`,
+        `<img class="blend-multiply" src="./assets/clay_rent_new.png" alt="신차 렌트" style="position:absolute;right:3px;bottom:2px;width:56px;height:52px;object-fit:contain;" />`,
+        `<img class="blend-multiply" src="./assets/icon3d_rent_deal.png" alt="렌트 특가" style="position:absolute;right:4px;bottom:3px;width:50px;height:50px;object-fit:contain;" />`
+      ];
+      const rentVisuals = cfg.rentImgHtml || defaultRentImgs;
+
+      const bikeVisual = cfg.bikeImgHtml !== undefined
+        ? cfg.bikeImgHtml
+        : `<img class="blend-multiply" src="./assets/clay_bike_iso.png" alt="바이크 직거래" style="position:absolute;right:4px;bottom:3px;width:66px;height:58px;object-fit:contain;" />`;
+      const mycarVisual = cfg.mycarImgHtml !== undefined
+        ? cfg.mycarImgHtml
+        : `<img class="blend-multiply" src="./assets/clay_mycar.png" alt="내차 시세 확인" style="position:absolute;right:4px;bottom:3px;width:64px;height:56px;object-fit:contain;" />`;
+
+      const usedInner = `
+        <div class="f5-sec-head">
+          <span class="f5-sec-title" style="color:${titleCol};">${pfxHtml(0)}중고차</span>
+          <span class="f5-sec-more" style="color:${moreCol};">바로가기 ›</span>
+        </div>
+        <div class="f5-used-pair">
+          <div class="mlo-touch f5-used-equal" style="height:${eqH};border-radius:${cfg.cardRadius};${cfg.buyStyle}">
+            ${cfg.buyTag}
+            <div style="position:relative;z-index:2;">
+              <div style="font-size:16px;line-height:21px;font-weight:700;">내차 사기</div>
+              <div style="font-size:11.5px;line-height:15px;margin-top:2px;color:${cfg.buySubColor};">직영인증 실매물</div>
+            </div>
+            ${cfg.buyCarImg ? `<div style="position:absolute;right:3px;bottom:2px;z-index:1;">${cfg.buyCarImg}</div>` : ''}
+          </div>
+          <div class="mlo-touch f5-used-equal" style="height:${eqH};border-radius:${cfg.cardRadius};${cfg.sellStyle}">
+            ${cfg.sellTag}
+            <div style="position:relative;z-index:2;">
+              <div style="font-size:16px;line-height:21px;font-weight:700;">내차 팔기</div>
+              <div style="font-size:11.5px;line-height:15px;margin-top:2px;color:${cfg.sellSubColor};">방문견적 최고가</div>
+            </div>
+            ${sellVisual}
+          </div>
+        </div>
+        <div class="mlo-touch f5-used-c2c-bar" style="height:${c2cH};border-radius:${cfg.cardRadius};${cfg.c2cStyle}">
+          <div style="display:flex;flex-direction:column;gap:2px;">
+            <div style="display:flex;align-items:center;gap:6px;">
+              <span style="font-size:15.5px;line-height:20px;font-weight:700;">안심직거래</span>
+              ${cfg.c2cBadge}
+            </div>
+            <div style="font-size:11.5px;line-height:15px;color:${cfg.c2cSubColor};">케이카 진단·보증으로 안전한 개인 직거래</div>
+          </div>
+          ${cfg.c2cIconWrap}
+        </div>
+      `;
+
+      const usedBlock = cfg.wrapUsedStyle ? `<section style="${cfg.wrapUsedStyle}">${usedInner}</section>` : `<section>${usedInner}</section>`;
+
+      return `
+        ${usedBlock}
+        <section>
+          <div class="f5-sec-head"><span class="f5-sec-title" style="color:${titleCol};">${pfxHtml(1)}렌터카</span></div>
+          <div class="f5-rent-grid">
+            <div class="mlo-touch f5-rent-card" style="height:${rentH};${cfg.rentStyle[0]}">
+              <div style="font-size:13.5px;font-weight:700;">중고차 렌트</div>
+              ${rentVisuals[0]}
+            </div>
+            <div class="mlo-touch f5-rent-card" style="height:${rentH};${cfg.rentStyle[1]}">
+              <div style="font-size:13.5px;font-weight:700;">신차 렌트</div>
+              ${rentVisuals[1]}
+            </div>
+            <div class="mlo-touch f5-rent-card" style="height:${rentH};${cfg.rentStyle[2]}">
+              <div style="font-size:13.5px;font-weight:700;">렌트 특가</div>
+              ${rentVisuals[2]}
+            </div>
+          </div>
+        </section>
+        <section class="f5-bottom-split">
+          <div>
+            <div class="f5-sec-head"><span class="f5-sec-title" style="color:${titleCol};">${pfxHtml(2)}바이크 <span class="n-badge">N</span></span></div>
+            <div class="mlo-touch f5-half-card" style="height:${halfH};${cfg.bikeStyle}">
+              <div style="font-size:14px;font-weight:700;">쉽고 편한 직거래</div>
+              ${bikeVisual}
+            </div>
+          </div>
+          <div>
+            <div class="f5-sec-head"><span class="f5-sec-title" style="color:${titleCol};">${pfxHtml(3)}마이카</span></div>
+            <div class="mlo-touch f5-half-card" style="height:${halfH};${cfg.mycarStyle}">
+              <div style="font-size:14px;font-weight:700;">내차 시세 확인</div>
+              ${mycarVisual}
+            </div>
+          </div>
+        </section>
+        <section class="f5-promo-banner" style="height:${forMockup ? '104px' : '108px'};margin-top:${promoMargin};">
+          <div>
+            <div style="font-size:10.5px;color:rgba(255,255,255,0.75);">K Car의 새로운 도전을 위한 투표이벤트</div>
+            <div style="font-size:16.5px;line-height:21px;font-weight:700;margin-top:2px;">케이카에서 <span style="color:#F5A345;">이것까지</span> <span style="color:#FF4D5A;">사볼까?</span></div>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;">
+            <span style="font-size:10.5px;color:rgba(255,255,255,0.72);">추첨을 통해 할리스 커피쿠폰 증정</span>
+            <span style="font-size:10px;background:rgba(0,0,0,0.48);padding:2px 8px;border-radius:99px;">1 / 5</span>
+          </div>
+        </section>
+      `;
+    }
+
+    function renderFreeCreativePhone(slug) {
+      const cfg = MO_LIVE_CONFIGS[slug];
+      const isDark = !!cfg.darkHeader;
+      const bellCol = isDark ? '#FFFFFF' : '#16171D';
+      const footerCls = cfg.footerTheme ? `kcar-mo-footer ${cfg.footerTheme}` : 'kcar-mo-footer';
+      const hbStyle = cfg.homebarStyle || 'background:#F4F5F8;color:#16171D;';
+      const lowerHtml = buildUnifiedSectionsHtml(cfg, true);
+
+      return `
+        <div class="phone-shell">
+          <div class="mo-viewport ${cfg.skinCls}">
+            <div class="fold-guide"><span class="fold-guide-badge">1st Fold · 760px</span></div>
+            ${renderStatusBar(isDark)}
+            <div style="height:44px;padding:0 20px;display:flex;align-items:center;justify-content:space-between;">
+              ${renderKcarLogo(isDark, true)}
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="${bellCol}" stroke-width="1.9"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+            </div>
+            <div style="padding:10px 20px 22px;display:flex;flex-direction:column;gap:24px;">
+              <div class="kcar-main-search ${cfg.searchCls}">
+                <span class="kcar-search-placeholder">${cfg.placeholder}</span>
+                ${cfg.searchBtnHtml}
+              </div>
+              ${lowerHtml}
+            </div>
+            <footer class="${footerCls}">
+              <div class="kf-links">
+                <span>회사소개</span><span>이용약관</span><strong>개인정보처리방침</strong><span>소비자보호</span><span>고객지원</span>
+              </div>
+              <div class="kf-cs-row">
+                <span style="font-size:11px;font-weight:700;">K Car 고객센터</span>
+                <span class="kf-cs-tel">1588-5455 <span style="font-size:10px;font-weight:400;opacity:0.78;">(평일 09:00~18:00)</span></span>
+              </div>
+              <div class="kf-biz-info">
+                <div>상호명 : 케이카 주식회사 &nbsp;|&nbsp; 대표자 : 정인국</div>
+                <div>사업자등록번호 : 787-87-00729 <span class="kf-biz-badge">사업자정보확인</span></div>
+                <div>통신판매업신고번호 : 제 2018-서울영등포-0562호</div>
+                <div>주소 : 서울특별시 영등포구 선유로43길 27, 3층 (양평동3가, 청우오토프라자)</div>
+              </div>
+              <div class="kf-copy">Copyright © K Car Co., Ltd. All Rights Reserved.</div>
+            </footer>
+            <div class="mo-homebar" style="${hbStyle}"><div class="mo-homebar-pill"></div></div>
+          </div>
+        </div>
+      `;
+    }
 
     window.openMobileLiveView = function(slug) {
       activeMoSlug = MO_LIVE_CONFIGS[slug] ? slug : 'a';
@@ -3894,96 +4502,16 @@
         btn.classList.toggle('active', btn.getAttribute('data-mo-key') === activeMoSlug);
       });
 
-      const usedInner = `
-        <div class="f5-sec-head">
-          <span class="f5-sec-title">중고차</span>
-          <span class="f5-sec-more">바로가기 ›</span>
-        </div>
-        <div class="f5-used-pair">
-          <div class="mlo-touch f5-used-equal" style="height:136px;border-radius:${cfg.cardRadius};${cfg.buyStyle}">
-            ${cfg.buyTag}
-            <div>
-              <div style="font-size:16.5px;line-height:22px;font-weight:700;">내차 사기</div>
-              <div style="font-size:12px;line-height:16px;margin-top:2px;color:${cfg.buySubColor};">직영인증 실매물</div>
-            </div>
-            <div style="position:absolute;right:5px;bottom:3px;">${cfg.buyCarImg}</div>
-          </div>
-          <div class="mlo-touch f5-used-equal" style="height:136px;border-radius:${cfg.cardRadius};${cfg.sellStyle}">
-            ${cfg.sellTag}
-            <div>
-              <div style="font-size:16.5px;line-height:22px;font-weight:700;">내차 팔기</div>
-              <div style="font-size:12px;line-height:16px;margin-top:2px;color:${cfg.sellSubColor};">방문견적 최고가</div>
-            </div>
-            <img class="blend-multiply" src="./assets/icon3d_sell_coin.png" alt="내차 팔기" style="position:absolute;right:7px;bottom:5px;width:66px;height:66px;object-fit:contain;" />
-          </div>
-        </div>
-        <div class="mlo-touch f5-used-c2c-bar" style="height:66px;border-radius:${cfg.cardRadius};${cfg.c2cStyle}">
-          <div style="display:flex;flex-direction:column;gap:2px;">
-            <div style="display:flex;align-items:center;gap:6px;">
-              <span style="font-size:15.5px;line-height:20px;font-weight:700;">안심직거래</span>
-              ${cfg.c2cBadge}
-            </div>
-            <div style="font-size:12px;line-height:16px;color:${cfg.c2cSubColor};">케이카 진단·보증으로 안전한 개인 직거래</div>
-          </div>
-          ${cfg.c2cIconWrap}
-        </div>
-      `;
-
-      const usedBlock = cfg.wrapUsedStyle ? `<section style="${cfg.wrapUsedStyle}">${usedInner}</section>` : `<section>${usedInner}</section>`;
-
-      const lowerHtml = `
-        ${usedBlock}
-        <section>
-          <div class="f5-sec-head"><span class="f5-sec-title">렌터카</span></div>
-          <div class="f5-rent-grid">
-            <div class="mlo-touch f5-rent-card" style="height:90px;${cfg.rentStyle[0]}">
-              <div style="font-size:14px;font-weight:700;">중고차 렌트</div>
-              <img class="blend-multiply" src="./assets/icon3d_rent_calendar.png" alt="중고차 렌트" style="position:absolute;right:5px;bottom:4px;width:50px;height:50px;object-fit:contain;" />
-            </div>
-            <div class="mlo-touch f5-rent-card" style="height:90px;${cfg.rentStyle[1]}">
-              <div style="font-size:14px;font-weight:700;">신차 렌트</div>
-              <img class="blend-multiply" src="./assets/clay_rent_new.png" alt="신차 렌트" style="position:absolute;right:4px;bottom:3px;width:56px;height:52px;object-fit:contain;" />
-            </div>
-            <div class="mlo-touch f5-rent-card" style="height:90px;${cfg.rentStyle[2]}">
-              <div style="font-size:14px;font-weight:700;">렌트 특가</div>
-              <img class="blend-multiply" src="./assets/icon3d_rent_deal.png" alt="렌트 특가" style="position:absolute;right:5px;bottom:4px;width:50px;height:50px;object-fit:contain;" />
-            </div>
-          </div>
-        </section>
-        <section class="f5-bottom-split">
-          <div>
-            <div class="f5-sec-head"><span class="f5-sec-title">바이크 <span class="n-badge">N</span></span></div>
-            <div class="mlo-touch f5-half-card" style="height:92px;${cfg.bikeStyle}">
-              <div style="font-size:14.5px;font-weight:700;">쉽고 편한 직거래</div>
-              <img class="blend-multiply" src="./assets/clay_bike_iso.png" alt="바이크 직거래" style="position:absolute;right:5px;bottom:3px;width:66px;height:58px;object-fit:contain;" />
-            </div>
-          </div>
-          <div>
-            <div class="f5-sec-head"><span class="f5-sec-title">마이카</span></div>
-            <div class="mlo-touch f5-half-card" style="height:92px;${cfg.mycarStyle}">
-              <div style="font-size:14.5px;font-weight:700;">내차 시세 확인</div>
-              <img class="blend-multiply" src="./assets/clay_mycar.png" alt="내차 시세 확인" style="position:absolute;right:5px;bottom:3px;width:64px;height:56px;object-fit:contain;" />
-            </div>
-          </div>
-        </section>
-        <section class="f5-promo-banner" style="height:108px;margin-top:8px;">
-          <div>
-            <div style="font-size:11px;color:rgba(255,255,255,0.75);">K Car의 새로운 도전을 위한 투표이벤트</div>
-            <div style="font-size:17px;line-height:22px;font-weight:700;margin-top:2px;">케이카에서 <span style="color:#F5A345;">이것까지</span> <span style="color:#FF4D5A;">사볼까?</span></div>
-          </div>
-          <div style="display:flex;align-items:center;justify-content:space-between;">
-            <span style="font-size:11px;color:rgba(255,255,255,0.72);">추첨을 통해 할리스 커피쿠폰 증정</span>
-            <span style="font-size:10.5px;background:rgba(0,0,0,0.48);padding:2px 8px;border-radius:99px;">1 / 5</span>
-          </div>
-        </section>
-      `;
-
+      const lowerHtml = buildUnifiedSectionsHtml(cfg, false);
       const searchForm = `
         <form class="mlo-search-form ${cfg.searchCls}" onsubmit="return false;">
           <input type="search" placeholder="${cfg.placeholder}" aria-label="통합검색" />
           ${cfg.searchBtnHtml}
         </form>
       `;
+
+      const isDark = !!cfg.darkHeader;
+      const bellCol = isDark ? '#FFFFFF' : '#16171D';
 
       const topMarkup = cfg.crimsonCap ? `
         <div class="f5-crimson-cap" style="padding-top:10px;padding-bottom:28px;">
@@ -3998,8 +4526,8 @@
         </div>
       ` : `
         <div style="height:52px;padding:0 20px;display:flex;align-items:center;justify-content:space-between;">
-          ${renderKcarLogo(false, true)}
-          <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#16171D" stroke-width="1.9"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+          ${renderKcarLogo(isDark, true)}
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="${bellCol}" stroke-width="1.9"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
         </div>
         <div style="padding:6px 20px 26px;display:flex;flex-direction:column;gap:18px;">
           ${searchForm}
@@ -4007,14 +4535,15 @@
         </div>
       `;
 
+      const footerCls = cfg.footerTheme ? `kcar-mo-footer ${cfg.footerTheme}` : 'kcar-mo-footer';
       const footerMarkup = `
-        <footer class="kcar-mo-footer" style="padding-bottom:68px;">
+        <footer class="${footerCls}" style="padding-bottom:68px;">
           <div class="kf-links">
             <span>회사소개</span><span>이용약관</span><strong>개인정보처리방침</strong><span>소비자보호</span><span>고객지원</span>
           </div>
           <div class="kf-cs-row">
-            <span style="font-size:11.5px;font-weight:700;color:#3E4149;">K Car 고객센터</span>
-            <span class="kf-cs-tel">1588-5455 <span style="font-size:10.5px;font-weight:400;color:#7A7F8A;">(평일 09:00~18:00)</span></span>
+            <span style="font-size:11.5px;font-weight:700;">K Car 고객센터</span>
+            <span class="kf-cs-tel">1588-5455 <span style="font-size:10.5px;font-weight:400;opacity:0.78;">(평일 09:00~18:00)</span></span>
           </div>
           <div class="kf-biz-info">
             <div>상호명 : 케이카 주식회사 &nbsp;|&nbsp; 대표자 : 정인국</div>
@@ -4098,12 +4627,36 @@
       }).join('');
     }
 
+    function renderStep5Only() {
+      document.getElementById('gridFree5').innerHTML = STEP5_FREE5.map(item => {
+        const selected = item.id === selectedOptId;
+        return `
+          <div class="device-col ${selected ? 'is-selected' : ''}">
+            <div class="brief-card">
+              <div class="brief-top">
+                <span class="brief-badge ${item.badgeCls}">${item.badge}</span>
+                <span class="brief-meta">${item.meta}</span>
+              </div>
+              <h3 class="brief-title">${item.title}</h3>
+              <p class="brief-desc">${item.desc}</p>
+              <div class="brief-btns">
+                <button type="button" class="btn-mo-open" onclick="openMobileLiveView('${item.slug}')">📱 ${item.moCode} 모바일 실화면</button>
+                <button type="button" class="btn-select" onclick="chooseFinal5('${item.id}')">${selected ? '✓ 선택됨' : '이 시안 선택'}</button>
+              </div>
+            </div>
+            ${renderFreeCreativePhone(item.slug)}
+          </div>
+        `;
+      }).join('');
+    }
+
     window.chooseFinal5 = function(id) {
       selectedOptId = id;
-      const found = STEP4_FINAL5.find(x => x.id === id);
+      const found = STEP4_FINAL5.find(x => x.id === id) || STEP5_FREE5.find(x => x.id === id);
       if (found) document.getElementById('choiceLabel').textContent = found.choiceText;
       renderStep3Only();
       renderStep4Only();
+      renderStep5Only();
     };
 
     function renderStep2Only() {

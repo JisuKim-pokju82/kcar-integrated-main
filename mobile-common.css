@@ -553,3 +553,117 @@ html, body {
   align-items: center;
   justify-content: center;
 }
+
+/* ==========================================================================
+   CREATIVE UNCONSTRAINED MOBILE SKINS (G ~ K)
+   ========================================================================== */
+.mskin-g {
+  background-color: #0B0D14;
+  background-image:
+    radial-gradient(ellipse 95% 240px at 50% 0%, rgba(183, 15, 40, 0.26) 0%, rgba(11, 13, 20, 0) 72%),
+    radial-gradient(ellipse 80% 220px at 90% 55%, rgba(14, 165, 233, 0.10) 0%, rgba(11, 13, 20, 0) 70%),
+    linear-gradient(180deg, #0B0D14 0%, #101420 100%);
+}
+.mskin-h {
+  background: linear-gradient(180deg, #F6F0E6 0%, #EFE6D7 100%);
+}
+.mskin-i {
+  background-color: #EAF4FF;
+  background-image:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.32) 0%, rgba(240, 248, 255, 0.14) 50%, rgba(244, 247, 255, 0.65) 100%),
+    url('./assets/bg_free_holo.jpg');
+  background-size: 100% 760px;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+.mskin-j {
+  background-color: #FAF8F2;
+  background-image: radial-gradient(#D5D0C3 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+.mskin-k {
+  background-color: #081B15;
+  background-image:
+    linear-gradient(180deg, rgba(6, 20, 15, 0.35) 0%, rgba(8, 28, 22, 0.22) 55%, rgba(7, 23, 18, 0.92) 100%),
+    url('./assets/bg_free_emerald.jpg');
+  background-size: 100% 760px;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+.kcar-search-box.style-obsidian-neon {
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1.2px solid rgba(255, 77, 90, 0.48);
+  padding: 0 8px 0 14px;
+  box-shadow: 0 6px 22px rgba(183, 15, 40, 0.22);
+}
+.kcar-search-box.style-obsidian-neon input { color: #FFFFFF; }
+.kcar-search-box.style-obsidian-neon input::placeholder { color: rgba(226, 232, 240, 0.68); }
+
+.kcar-search-box.style-linen-editorial {
+  border-radius: 3px;
+  background: #FCF9F4;
+  border: 1.5px solid #1C1917;
+  box-shadow: 0 3px 0 rgba(28, 25, 23, 0.12);
+}
+.kcar-search-box.style-linen-editorial input::placeholder { color: #6B6257; }
+
+.kcar-search-box.style-holo-pill {
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.84);
+  border: 1.5px solid #FFFFFF;
+  padding: 0 8px 0 16px;
+  box-shadow: 0 10px 26px rgba(79, 70, 229, 0.12);
+}
+
+.kcar-search-box.style-brutal-pop {
+  border-radius: 12px;
+  background: #FFFFFF;
+  border: 2.2px solid #111111;
+  padding: 0 7px 0 14px;
+  box-shadow: 4px 4px 0 #111111;
+}
+
+.kcar-search-box.style-emerald-vip {
+  border-radius: 10px;
+  background: rgba(8, 28, 22, 0.84);
+  border: 1.2px solid rgba(216, 183, 120, 0.62);
+  padding: 0 8px 0 14px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.34);
+}
+.kcar-search-box.style-emerald-vip input { color: #FBF6EB; }
+.kcar-search-box.style-emerald-vip input::placeholder { color: rgba(232, 206, 150, 0.78); }
+
+.kcar-mo-footer.theme-dark {
+  background: #080A10;
+  border-top: 1px solid rgba(255, 255, 255, 0.09);
+  color: #8A93A6;
+}
+.kcar-mo-footer.theme-dark .kf-links { color: #B4BCCF; border-bottom-color: rgba(255, 255, 255, 0.09); }
+.kcar-mo-footer.theme-dark .kf-links strong,
+.kcar-mo-footer.theme-dark .kf-cs-tel { color: #F8FAFC; }
+.kcar-mo-footer.theme-dark .kf-biz-badge { background: #141824; border-color: #2E364F; color: #CBD5E1; }
+
+.kcar-mo-footer.theme-linen {
+  background: #E8DFD1;
+  border-top: 1px solid #CBBFB0;
+  color: #5C5349;
+}
+.kcar-mo-footer.theme-linen .kf-links { color: #3D362F; border-bottom-color: #CEC3B4; }
+.kcar-mo-footer.theme-linen .kf-biz-badge { background: #FCF9F4; border-color: #B8ACA0; color: #3D362F; }
+
+.kcar-mo-footer.theme-emerald {
+  background: #071712;
+  border-top: 1px solid rgba(216, 183, 120, 0.25);
+  color: #96B0A6;
+}
+.kcar-mo-footer.theme-emerald .kf-links { color: #C6D8D0; border-bottom-color: rgba(216, 183, 120, 0.18); }
+.kcar-mo-footer.theme-emerald .kf-links strong,
+.kcar-mo-footer.theme-emerald .kf-cs-tel { color: #E8CE96; }
+.kcar-mo-footer.theme-emerald .kf-biz-badge { background: #0E2920; border-color: rgba(216, 183, 120, 0.45); color: #E8CE96; }
+
+.mo-QuickDock {
+  max-width: 94vw;
+  overflow-x: auto;
+}

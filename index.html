@@ -32,72 +32,49 @@
            url('https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@latest/Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Regular.woff2') format('woff2');
     }
 
-    /* ==========================================================================
-       2. K CAR C2C / MOBILITY DESIGN SYSTEM TOKENS (Exact Specification)
-       ========================================================================== */
     :root {
-      /* Brand & Primary Scale */
       --primary-2: #9D0A2E;
-      --primary-3: #B70F28;   /* Brand Red (Default) */
-      --primary-4: #F01D29;   /* Active / Error / N Badge */
-      --primary-5: #F53A44;
-      --primary-9: #FDEEEF;   /* Soft Red Tint */
-      --primary-10: #FFF9F9;  /* Soft Red Surface */
+      --primary-3: #B70F28;   /* K Car Brand Red */
+      --primary-4: #F01D29;   /* Active Red */
+      --primary-9: #FDEEEF;
+      --primary-10: #FFF9F9;
 
-      /* Gray Scale */
       --gray-1: #000000;
-      --gray-2: #16171D;      /* 기본 본문 텍스트 */
-      --gray-3: #54555A;      /* Sub Text / Brand Gray */
-      --gray-4: #82848B;      /* 보조 / 캡션 */
-      --gray-5: #999EA1;      /* Tooltip */
-      --gray-6: #B0B2BD;      /* BTN Border */
-      --gray-7: #D8DEE8;      /* Main Border */
-      --gray-8: #E8E8EE;      /* Main Sub Border */
+      --gray-2: #16171D;
+      --gray-3: #54555A;
+      --gray-4: #82848B;
+      --gray-5: #999EA1;
+      --gray-7: #D8DEE8;
+      --gray-8: #E8E8EE;
       --gray-9: #F1F1F4;
-      --gray-10: #F2F2F2;
-      --gray-11: #F6F8FA;     /* Card Surface (Exact RGB 246,248,250 matched with Studio PNGs) */
-      --gray-12: #F9FAFB;     /* App BG */
-      --gray-13: #FFFFFF;
+      --gray-11: #F6F8FA;
+      --gray-12: #F9FAFB;
+      --white: #FFFFFF;
 
-      /* Semantic & Sub Scales */
       --info-blue: #0086FF;
-      --blue-bg: #E5EEFC;
       --navy-4: #003AA1;
-      --navy-9: #F1F5FE;
       --green-5: #0B845F;
-      --green-10: #DDF2E5;
-      --orange-4: #FBA900;
       --orange-1: #FA6400;
-      --orange-10: #FEF6EE;
 
-      /* Elevation (Shadow Tokens) */
-      --z100: 0 2px 4px 0 rgba(22, 23, 29, 0.04), 0 0 1px 0 rgba(22, 23, 29, 0.14);
-      --z200: 0 4px 8px -2px rgba(22, 23, 29, 0.08), 0 0 1px 0 rgba(22, 23, 29, 0.16);
-      --z300: 0 8px 16px -4px rgba(22, 23, 29, 0.10), 0 0 1px 0 rgba(22, 23, 29, 0.16);
-      --z-device: 0 24px 48px -12px rgba(16, 20, 32, 0.16), 0 4px 12px rgba(16, 20, 32, 0.06), 0 0 0 1px rgba(22, 23, 29, 0.08);
+      --z100: 0 2px 4px rgba(22, 23, 29, 0.04), 0 0 1px rgba(22, 23, 29, 0.14);
+      --z200: 0 6px 14px -2px rgba(22, 23, 29, 0.10), 0 0 1px rgba(22, 23, 29, 0.14);
+      --z300: 0 12px 28px -6px rgba(22, 23, 29, 0.14), 0 0 1px rgba(22, 23, 29, 0.12);
+      --z-device: 0 26px 54px -12px rgba(15, 19, 30, 0.22), 0 4px 14px rgba(15, 19, 30, 0.08);
 
-      --font-kcar: 'Spoqa Han Sans Neo', 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+      --font-kcar: 'Spoqa Han Sans Neo', 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
 
     body {
       font-family: var(--font-kcar);
-      background: #EBEEF4;
+      background: #E7EBF2;
       color: var(--gray-2);
       letter-spacing: -0.5px;
       word-break: keep-all;
       -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      padding-bottom: 100px;
+      padding-bottom: 104px;
     }
 
     button {
@@ -114,30 +91,21 @@
       -webkit-user-drag: none;
     }
 
-    /* Official K Car Typography Utility Classes */
-    .t-h2   { font-size: 26px; line-height: 34px; letter-spacing: -0.5px; font-weight: 700; }
-    .t-h3   { font-size: 24px; line-height: 30px; letter-spacing: -0.5px; font-weight: 700; }
-    .t-sub1 { font-size: 20px; line-height: 26px; letter-spacing: -0.5px; font-weight: 700; }
-    .t-sub2 { font-size: 18px; line-height: 24px; letter-spacing: -0.5px; font-weight: 700; }
-    .t-sub3 { font-size: 16px; line-height: 22px; letter-spacing: -0.5px; font-weight: 700; }
-    .t-sub4 { font-size: 15px; line-height: 21px; letter-spacing: -0.5px; font-weight: 700; }
-    .t-b1   { font-size: 14px; line-height: 20px; letter-spacing: -0.5px; font-weight: 400; }
-    .t-b2   { font-size: 13px; line-height: 18px; letter-spacing: -0.5px; font-weight: 400; }
-    .t-b3   { font-size: 12px; line-height: 16px; letter-spacing: -0.5px; font-weight: 400; }
-    .t-cap2 { font-size: 12px; line-height: 16px; letter-spacing: 0px;    font-weight: 500; }
-    .t-span { font-size: 10px; line-height: 14px; letter-spacing: 0px;    font-weight: 700; }
+    .blend-multiply {
+      mix-blend-mode: multiply;
+    }
 
     /* ==========================================================================
-       3. EXECUTIVE PRESENTATION HEADER & CONTROLS
+       2. EXECUTIVE BOARD HEADER & NAVIGATION
        ========================================================================== */
     .exec-header {
       position: sticky;
       top: 0;
       z-index: 200;
-      background: rgba(22, 23, 29, 0.95);
+      background: rgba(18, 20, 27, 0.96);
       backdrop-filter: blur(16px);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-      color: var(--gray-13);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+      color: var(--white);
       padding: 14px 32px;
     }
 
@@ -159,9 +127,8 @@
 
     .exec-tag-pill {
       background: var(--primary-3);
-      color: var(--gray-13);
+      color: var(--white);
       font-size: 11px;
-      line-height: 16px;
       font-weight: 700;
       padding: 4px 10px;
       border-radius: 6px;
@@ -172,13 +139,11 @@
       font-size: 17px;
       line-height: 24px;
       font-weight: 700;
-      letter-spacing: -0.5px;
     }
 
     .exec-brand-text p {
       font-size: 12px;
-      line-height: 16px;
-      color: #999BA1;
+      color: #9DA3B4;
       margin-top: 1px;
     }
 
@@ -186,16 +151,14 @@
       display: flex;
       align-items: center;
       gap: 4px;
-      background: rgba(255, 255, 255, 0.07);
+      background: rgba(255, 255, 255, 0.08);
       padding: 4px;
       border-radius: 10px;
-      border: 1px solid rgba(255, 255, 255, 0.06);
     }
 
     .exec-tab-btn {
       color: #B4B7C4;
       font-size: 13px;
-      line-height: 18px;
       font-weight: 500;
       padding: 8px 15px;
       border-radius: 7px;
@@ -204,21 +167,15 @@
     }
 
     .exec-tab-btn:hover {
-      color: var(--gray-13);
-      background: rgba(255, 255, 255, 0.06);
+      color: var(--white);
+      background: rgba(255, 255, 255, 0.07);
     }
 
     .exec-tab-btn.active {
-      background: var(--gray-13);
+      background: var(--white);
       color: var(--gray-2);
       font-weight: 700;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.24);
-    }
-
-    .exec-right-tools {
-      display: flex;
-      align-items: center;
-      gap: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
     }
 
     .fold-btn {
@@ -231,30 +188,29 @@
       font-weight: 500;
       color: #DBDDE6;
       background: rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      transition: all 0.16s ease;
+      border: 1px solid rgba(255, 255, 255, 0.14);
     }
 
     .fold-btn.active {
-      background: rgba(240, 29, 41, 0.20);
-      border-color: rgba(245, 58, 68, 0.65);
+      background: rgba(240, 29, 41, 0.22);
+      border-color: rgba(245, 58, 68, 0.7);
       color: #FFDADB;
     }
 
-    .fold-indicator-dot {
+    .fold-dot {
       width: 7px;
       height: 7px;
       border-radius: 50%;
       background: #82848B;
     }
 
-    .fold-btn.active .fold-indicator-dot {
+    .fold-btn.active .fold-dot {
       background: var(--primary-4);
       box-shadow: 0 0 8px var(--primary-4);
     }
 
     /* ==========================================================================
-       4. PRESENTATION CANVAS & SECTION HEADERS
+       3. PRESENTATION WORKSPACE & BRIEFING CARDS
        ========================================================================== */
     .workspace {
       max-width: 1620px;
@@ -262,8 +218,8 @@
       padding: 32px 32px 0;
     }
 
-    .system-spec-bar {
-      background: var(--gray-13);
+    .concept-legend-bar {
+      background: var(--white);
       border-radius: 16px;
       padding: 20px 26px;
       margin-bottom: 36px;
@@ -276,28 +232,25 @@
       border-left: 4px solid var(--primary-3);
     }
 
-    .spec-bar-copy h2 {
+    .legend-copy h2 {
       font-size: 16px;
-      line-height: 22px;
       font-weight: 700;
       color: var(--gray-2);
     }
 
-    .spec-bar-copy p {
+    .legend-copy p {
       font-size: 13px;
-      line-height: 19px;
       color: var(--gray-3);
       margin-top: 4px;
     }
 
-    .spec-badges {
+    .legend-chips {
       display: flex;
-      align-items: center;
       gap: 8px;
       flex-wrap: wrap;
     }
 
-    .spec-chip {
+    .legend-chip {
       display: inline-flex;
       align-items: center;
       gap: 6px;
@@ -306,24 +259,18 @@
       background: var(--gray-11);
       border: 1px solid var(--gray-8);
       font-size: 12px;
-      color: var(--gray-3);
       font-weight: 500;
+      color: var(--gray-3);
     }
 
-    .spec-chip b {
-      color: var(--gray-2);
-      font-weight: 700;
-    }
-
-    .swatch-dot {
+    .legend-swatch {
       width: 10px;
       height: 10px;
       border-radius: 3px;
-      display: inline-block;
     }
 
     .board-section {
-      margin-bottom: 64px;
+      margin-bottom: 68px;
       scroll-margin-top: 90px;
     }
 
@@ -342,32 +289,34 @@
 
     .sec-kicker {
       display: inline-flex;
-      align-items: center;
-      gap: 6px;
       font-size: 11px;
-      line-height: 16px;
       font-weight: 700;
-      letter-spacing: 0.2px;
       color: var(--primary-3);
       background: var(--primary-9);
       padding: 4px 10px;
       border-radius: 6px;
       margin-bottom: 8px;
+      letter-spacing: 0.2px;
+    }
+
+    .sec-title {
+      font-size: 26px;
+      line-height: 34px;
+      font-weight: 700;
     }
 
     .sec-subdesc {
       font-size: 14px;
       line-height: 20px;
       color: var(--gray-3);
-      margin-top: 6px;
+      margin-top: 5px;
     }
 
-    /* Layout Switcher inside Section 2 */
     .layout-pill-bar {
       display: flex;
       align-items: center;
       gap: 4px;
-      background: var(--gray-13);
+      background: var(--white);
       padding: 5px;
       border-radius: 12px;
       box-shadow: var(--z100);
@@ -390,35 +339,22 @@
       transition: all 0.15s ease;
     }
 
-    .layout-pill-btn:hover {
-      background: var(--gray-11);
-      color: var(--gray-2);
-    }
+    .layout-pill-btn:hover { background: var(--gray-11); color: var(--gray-2); }
+    .layout-pill-btn.active { background: var(--gray-2); color: var(--white); font-weight: 700; }
 
-    .layout-pill-btn.active {
-      background: var(--gray-2);
-      color: var(--gray-13);
-      font-weight: 700;
-    }
-
-    /* ==========================================================================
-       5. SHOWCASE GRIDS & EXECUTIVE BRIEFING CARDS
-       ========================================================================== */
     .grid-4-up {
       display: grid;
       grid-template-columns: repeat(4, 368px);
       justify-content: space-between;
       gap: 24px;
-      overflow-x: auto;
       padding: 4px 2px 16px;
     }
 
     .grid-3-up {
       display: grid;
-      grid-template-columns: repeat(3, 388px);
+      grid-template-columns: repeat(3, 384px);
       justify-content: center;
-      gap: 40px;
-      overflow-x: auto;
+      gap: 38px;
       padding: 4px 2px 16px;
     }
 
@@ -426,16 +362,12 @@
       .grid-4-up {
         grid-template-columns: repeat(2, 368px);
         justify-content: center;
-        gap: 36px 40px;
+        gap: 36px 42px;
       }
       .grid-3-up {
         justify-content: center;
         gap: 24px;
       }
-    }
-
-    .blend-multiply {
-      mix-blend-mode: multiply;
     }
 
     .device-col {
@@ -447,21 +379,18 @@
 
     .brief-card {
       width: 368px;
-      background: var(--gray-13);
+      background: var(--white);
       border-radius: 16px;
       padding: 18px 20px;
       box-shadow: var(--z100);
       border: 1.5px solid var(--gray-8);
-      transition: all 0.2s ease;
     }
 
-    .grid-3-up .brief-card {
-      width: 376px;
-    }
+    .grid-3-up .brief-card { width: 376px; }
 
     .device-col.is-selected .brief-card {
       border-color: var(--primary-3);
-      box-shadow: 0 10px 28px rgba(183, 15, 40, 0.14);
+      box-shadow: 0 10px 28px rgba(183, 15, 40, 0.15);
     }
 
     .brief-top {
@@ -474,31 +403,29 @@
 
     .brief-badge {
       font-size: 11px;
-      line-height: 16px;
       font-weight: 700;
       padding: 3px 8px;
       border-radius: 5px;
       letter-spacing: -0.2px;
     }
 
-    .b-red    { background: var(--primary-3); color: var(--gray-13); }
-    .b-soft   { background: var(--primary-9); color: var(--primary-3); }
-    .b-navy   { background: var(--navy-9);    color: var(--navy-4); }
-    .b-green  { background: var(--green-10);  color: var(--green-5); }
-    .b-orange { background: var(--orange-10); color: var(--orange-1); }
+    .b-red    { background: var(--primary-3); color: var(--white); }
+    .b-navy   { background: #EBF2FF; color: var(--navy-4); }
+    .b-dark   { background: #181B24; color: #F8FAFC; }
+    .b-warm   { background: #F4EFE6; color: #5C4728; }
+    .b-pastel { background: #FFEAF0; color: #C81E51; }
+    .b-swiss  { background: #EEF2F6; color: #16171D; border: 1px solid #CBD5E1; }
 
     .brief-meta {
       font-size: 11px;
       color: var(--gray-4);
       font-weight: 500;
-      letter-spacing: -0.2px;
     }
 
     .brief-title {
       font-size: 16px;
       line-height: 22px;
       font-weight: 700;
-      color: var(--gray-2);
       margin-bottom: 5px;
     }
 
@@ -506,13 +433,10 @@
       font-size: 12.5px;
       line-height: 18px;
       color: var(--gray-3);
-      font-weight: 400;
       min-height: 54px;
     }
 
-    .grid-4-up .brief-desc {
-      min-height: 72px;
-    }
+    .grid-4-up .brief-desc { min-height: 72px; }
 
     .kpi-list {
       margin-top: 14px;
@@ -539,10 +463,7 @@
       overflow: hidden;
     }
 
-    .kpi-fill {
-      height: 100%;
-      border-radius: 99px;
-    }
+    .kpi-fill { height: 100%; border-radius: 99px; }
 
     .brief-btns {
       margin-top: 14px;
@@ -559,99 +480,85 @@
       font-size: 12px;
       font-weight: 700;
       color: var(--gray-2);
-      transition: background 0.15s ease;
-    }
-
-    .btn-outline:hover {
-      background: var(--gray-9);
     }
 
     .btn-select {
       flex: 1;
       height: 36px;
       border-radius: 8px;
-      background: var(--gray-13);
+      background: var(--white);
       border: 1px solid var(--primary-3);
       font-size: 12px;
       font-weight: 700;
       color: var(--primary-3);
-      transition: all 0.15s ease;
     }
 
     .btn-select:hover,
     .device-col.is-selected .btn-select {
       background: var(--primary-3);
-      color: var(--gray-13);
+      color: var(--white);
     }
 
     /* ==========================================================================
-       6. AUTHENTIC 360px K CAR MOBILE VIEWPORT (Pixel-Matched to Figma #3576:38696)
+       4. MOBILE PHONE HARDWARE SHELL & 1st FOLD INDICATOR
        ========================================================================== */
     .phone-shell {
-      width: 368px; /* 360px inner viewport + 4px sleek bezel each side */
+      width: 368px;
       padding: 4px;
-      border-radius: 36px;
-      background: linear-gradient(145deg, #2A2D37 0%, #14161C 100%);
+      border-radius: 38px;
+      background: linear-gradient(145deg, #2D313D 0%, #13151C 100%);
       box-shadow: var(--z-device);
       position: relative;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
     .device-col.is-selected .phone-shell {
-      background: linear-gradient(145deg, #D91832 0%, #8E0B1E 100%);
-      box-shadow: 0 26px 52px -12px rgba(183, 15, 40, 0.28);
+      background: linear-gradient(145deg, #E11932 0%, #8A091C 100%);
+      box-shadow: 0 28px 56px -12px rgba(183, 15, 40, 0.30);
     }
 
     .mo-viewport {
       width: 360px;
-      background: var(--gray-13);
-      border-radius: 32px;
+      border-radius: 34px;
       overflow: hidden;
       position: relative;
+      background: var(--white);
     }
 
-    /* 1st Fold (760px) Guide Line */
     .fold-guide {
       display: none;
       position: absolute;
       top: 760px;
       left: 0;
       right: 0;
-      z-index: 40;
-      border-top: 1.5px dashed var(--primary-4);
+      z-index: 60;
+      border-top: 1.5px dashed #FF2E43;
       pointer-events: none;
     }
 
-    body.show-fold .fold-guide {
-      display: block;
-    }
+    body.show-fold .fold-guide { display: block; }
 
     .fold-guide-badge {
       position: absolute;
-      right: 10px;
+      right: 16px;
       top: -20px;
-      background: rgba(240, 29, 41, 0.94);
-      color: var(--gray-13);
+      background: #F01D29;
+      color: var(--white);
       font-size: 10px;
-      line-height: 14px;
       font-weight: 700;
       padding: 2px 7px;
       border-radius: 4px;
       letter-spacing: 0;
     }
 
-    /* MO Status Bar (44px) + GNB Header (56px) = 100px Exact Figma Spec */
     .mo-statusbar {
-      height: 42px;
+      height: 40px;
       padding: 0 22px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      background: var(--gray-13);
       font-size: 13px;
       font-weight: 700;
       letter-spacing: -0.2px;
-      color: var(--gray-2);
     }
 
     .mo-status-right {
@@ -660,633 +567,581 @@
       gap: 5px;
     }
 
-    .mo-gnb {
-      height: 52px;
+    .mo-homebar {
+      height: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .mo-homebar-pill {
+      width: 118px;
+      height: 4px;
+      border-radius: 99px;
+      background: currentColor;
+      opacity: 0.75;
+    }
+
+    /* ==========================================================================
+       5. FOUR RADICALLY DISTINCT DESIGN SKINS & ARCHITECTURES
+       ========================================================================== */
+
+    /* --------------------------------------------------------------------------
+       SKIN 1: K CAR SIGNATURE RED BRIDGE (강렬한 브랜드 레드 상단 + 플로팅 브릿지)
+       -------------------------------------------------------------------------- */
+    .skin-red-bridge {
+      background: #F5F6F9;
+      color: var(--gray-2);
+    }
+
+    .rb-hero-top {
+      background: linear-gradient(150deg, #C2112B 0%, #8E081D 100%);
+      color: var(--white);
+      padding: 0 20px 66px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .rb-hero-top::after {
+      content: "";
+      position: absolute;
+      right: -40px;
+      top: 10px;
+      width: 190px;
+      height: 190px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0) 70%);
+      pointer-events: none;
+    }
+
+    .rb-gnb {
+      height: 46px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .rb-nav-tabs {
+      display: flex;
+      gap: 16px;
+      margin-top: 8px;
+      border-bottom: 1px solid rgba(255,255,255,0.16);
+      padding-bottom: 9px;
+      font-size: 13.5px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.72);
+    }
+
+    .rb-nav-tabs span.active {
+      color: var(--white);
+      font-weight: 700;
+      position: relative;
+    }
+
+    .rb-nav-tabs span.active::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -10px;
+      height: 2.5px;
+      background: var(--white);
+      border-radius: 2px;
+    }
+
+    .rb-headline-row {
+      margin-top: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .rb-headline-row h3 {
+      font-size: 18px;
+      line-height: 24px;
+      font-weight: 700;
+      letter-spacing: -0.6px;
+    }
+
+    .rb-search-pill {
+      margin-top: 12px;
+      height: 40px;
+      border-radius: 10px;
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 0 13px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 12px;
+      color: rgba(255,255,255,0.88);
+    }
+
+    .rb-body {
+      padding: 0 16px 18px;
+      margin-top: -48px;
+      position: relative;
+      z-index: 4;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .rb-bridge-card {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 16px;
+      box-shadow: var(--z300);
+    }
+
+    .rb-section-box {
+      background: var(--white);
+      border-radius: 18px;
+      padding: 15px 16px;
+      box-shadow: var(--z100);
+    }
+
+    /* --------------------------------------------------------------------------
+       SKIN 2: TOSS / FINTECH MINIMAL SUPER-APP (쿨그레이 + 화이트 모듈 + 번호판)
+       -------------------------------------------------------------------------- */
+    .skin-fintech {
+      background: #F2F4F8;
+      color: #191F28;
+    }
+
+    .ft-gnb {
+      height: 48px;
       padding: 0 20px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      background: var(--gray-13);
     }
 
-    .kcar-ci {
-      display: inline-flex;
+    .ft-body {
+      padding: 6px 16px 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .ft-module {
+      background: var(--white);
+      border-radius: 22px;
+      padding: 18px 16px;
+      box-shadow: 0 2px 10px rgba(15, 23, 42, 0.03);
+    }
+
+    .ft-mod-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 14px;
+    }
+
+    .ft-mod-title {
+      font-size: 17px;
+      font-weight: 700;
+      color: #191F28;
+      letter-spacing: -0.5px;
+    }
+
+    /* Authentic Korean License Plate Lookup Widget */
+    .kr-plate-box {
+      display: flex;
+      align-items: center;
+      height: 48px;
+      border-radius: 10px;
+      border: 2px solid #1E232E;
+      background: var(--white);
+      overflow: hidden;
+      box-shadow: inset 0 1px 3px rgba(0,0,0,0.06);
+    }
+
+    .kr-plate-euro {
+      width: 24px;
+      height: 100%;
+      background: #0046A8;
+      color: var(--white);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: 7.5px;
+      font-weight: 700;
+      letter-spacing: 0;
+      line-height: 1.15;
+    }
+
+    .kr-plate-num {
+      flex: 1;
+      padding: 0 12px;
+      font-size: 17px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: #16171D;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .kr-plate-cta {
+      background: #191F28;
+      color: var(--white);
+      font-size: 11.5px;
+      font-weight: 700;
+      padding: 7px 11px;
+      border-radius: 7px;
+      letter-spacing: -0.3px;
+    }
+
+    .ft-dock-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      row-gap: 16px;
+      column-gap: 6px;
+    }
+
+    .ft-dock-item {
+      display: flex;
+      flex-direction: column;
       align-items: center;
       gap: 7px;
-    }
-
-    .kcar-ci-slogan {
-      font-size: 11px;
-      line-height: 14px;
-      font-weight: 700;
-      color: var(--gray-2);
-      letter-spacing: -0.4px;
-      margin-left: 1px;
-    }
-
-    /* MO Scroll Content Container (360px - 40px = 320px Content Width) */
-    .mo-content {
-      padding: 6px 20px 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 28px;
-      background: var(--gray-13);
-    }
-
-    .mo-content.compact-gap {
-      gap: 22px;
-    }
-
-    /* Top Photographic Key Visual Event Banner (Exact 320x124 Figma Spec) */
-    .mo-kv-banner {
-      width: 320px;
-      height: 124px;
-      border-radius: 12px;
       position: relative;
-      overflow: hidden;
-      background-color: #16171D;
-      background-image:
-        linear-gradient(92deg, rgba(18, 19, 24, 0.96) 0%, rgba(18, 19, 24, 0.84) 48%, rgba(18, 19, 24, 0.22) 100%),
-        url('./assets/banner_mobility_hero.jpg');
-      background-size: cover;
-      background-position: center right;
-      padding: 18px 18px 16px;
+      cursor: pointer;
+    }
+
+    .ft-squircle {
+      width: 56px;
+      height: 56px;
+      border-radius: 20px;
       display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.06);
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      padding: 5px;
     }
 
-    .mo-kv-banner.compact-kv {
-      height: 112px;
-      padding: 14px 18px;
-    }
-
-    .kv-eyebrow {
-      font-size: 10px;
-      line-height: 14px;
+    .ft-dock-label {
+      font-size: 12px;
       font-weight: 500;
-      color: rgba(255, 255, 255, 0.72);
-      letter-spacing: -0.3px;
+      color: #333D4B;
     }
 
-    .kv-title {
-      font-size: 18px;
-      line-height: 22px;
-      font-weight: 700;
-      color: var(--gray-13);
-      letter-spacing: -0.6px;
-      margin-top: 2px;
-    }
-
-    .kv-title .hl-amber { color: #F5A345; }
-    .kv-title .hl-red   { color: #F23847; }
-
-    .kv-foot {
-      font-size: 10px;
-      line-height: 14px;
-      color: rgba(255, 255, 255, 0.68);
-      letter-spacing: -0.3px;
-    }
-
-    .kv-counter {
+    .ft-pill-new {
       position: absolute;
-      right: 12px;
-      bottom: 10px;
-      background: rgba(0, 0, 0, 0.48);
-      backdrop-filter: blur(4px);
-      color: rgba(255, 255, 255, 0.88);
-      font-size: 10px;
-      line-height: 14px;
-      font-weight: 500;
-      padding: 2px 8px;
+      top: -5px;
+      right: 6px;
+      background: #F01D29;
+      color: var(--white);
+      font-size: 9px;
+      font-weight: 700;
+      padding: 1px 5px;
       border-radius: 99px;
       letter-spacing: 0;
+      z-index: 3;
     }
 
-    /* Section Header Row (Exact Figma y=0..24 + 12px margin to y=36) */
-    .sec-row-head {
+    /* --------------------------------------------------------------------------
+       SKIN 3: DARK LUXURY MOBILITY SHOWROOM (딥 오닉스 다크 + 글래스 메탈릭 + 화보)
+       -------------------------------------------------------------------------- */
+    .skin-dark-lounge {
+      background: #0B0D13;
+      color: #F8FAFC;
+    }
+
+    .dl-top-hero {
+      position: relative;
+      height: 204px;
+      background-color: #0B0D13;
+      background-image:
+        linear-gradient(180deg, rgba(11,13,19,0.78) 0%, rgba(11,13,19,0.28) 45%, rgba(11,13,19,0.98) 100%),
+        url('./assets/banner_mobility_hero.jpg');
+      background-size: cover;
+      background-position: center;
+      padding: 0 20px 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .dl-body {
+      padding: 4px 18px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .dl-sec-label {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 24px;
-      margin-bottom: 12px;
-    }
-
-    .sec-row-left {
-      display: flex;
-      align-items: baseline;
-      gap: 6px;
-    }
-
-    .sec-row-title {
-      font-size: 18px;
-      line-height: 24px;
+      font-size: 11px;
       font-weight: 700;
-      color: var(--gray-2);
-      letter-spacing: -0.5px;
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
+      letter-spacing: 0.8px;
+      color: #94A3B8;
+      text-transform: uppercase;
+      margin-bottom: 8px;
     }
 
-    .sec-row-sub {
-      font-size: 12.5px;
-      line-height: 18px;
-      font-weight: 400;
-      color: var(--gray-4);
-      letter-spacing: -0.5px;
-    }
-
-    .sec-row-more {
-      font-size: 12px;
-      line-height: 16px;
-      font-weight: 400;
-      color: var(--gray-4);
-      display: inline-flex;
-      align-items: center;
-      gap: 2px;
-    }
-
-    .n-circle {
-      width: 16px;
-      height: 16px;
-      border-radius: 50%;
-      background: var(--primary-4);
-      color: var(--gray-13);
-      font-size: 10px;
-      line-height: 16px;
-      font-weight: 700;
-      text-align: center;
-      letter-spacing: 0;
-      display: inline-block;
-      transform: translateY(-1px);
-    }
-
-    /* ==========================================================================
-       7. CARD SURFACES & SEAMLESS STUDIO ASSET SLOTS
-       ========================================================================== */
-    .m-card {
-      background: var(--gray-11); /* #F6F8FA — exact match to StudioMaster PNG edge RGB(246,248,250) */
-      border-radius: 14px;
+    .dl-glass-card {
+      background: linear-gradient(155deg, rgba(30, 35, 48, 0.92) 0%, rgba(19, 22, 31, 0.96) 100%);
+      border: 1px solid rgba(255, 255, 255, 0.10);
+      border-radius: 16px;
       padding: 15px 14px;
       position: relative;
       overflow: hidden;
-      cursor: pointer;
-      transition: transform 0.16s ease, box-shadow 0.16s ease;
+      color: #F8FAFC;
     }
 
-    .m-card:hover {
-      transform: translateY(-2px);
-      box-shadow: var(--z200);
-    }
-
-    .m-card.surface-red {
-      background: var(--primary-3); /* #B70F28 — exact match to photo_car_hero_red.png */
-      color: var(--gray-13);
-    }
-
-    .m-card.surface-dark {
-      background: var(--gray-2);    /* #16171D — exact match to photo_car_hero_dark.png */
-      color: var(--gray-13);
-    }
-
-    .m-card.surface-tint {
-      background: var(--primary-10);/* #FFF9F9 — exact match to photo_bike_tint.png */
-      box-shadow: inset 0 0 0 1px #F9DCE0;
-    }
-
-    .m-card.surface-white {
-      background: var(--gray-13);
-      box-shadow: inset 0 0 0 1px var(--gray-8);
-    }
-
-    .m-card.surface-bike-dark {
-      background-color: #16171D;
-      background-image:
-        linear-gradient(90deg, rgba(22, 23, 29, 0.96) 0%, rgba(22, 23, 29, 0.85) 50%, rgba(22, 23, 29, 0.15) 100%),
-        url('./assets/photo_bike_wide_dark.jpg');
+    .dl-photo-card {
+      border-radius: 16px;
+      padding: 16px;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.12);
       background-size: cover;
       background-position: right center;
-      color: var(--gray-13);
+      color: var(--white);
     }
 
-    .m-copy {
+    .dl-chip-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+    }
+
+    .dl-mini-card {
+      background: #151924;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 14px;
+      padding: 12px 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 88px;
+    }
+
+    /* --------------------------------------------------------------------------
+       SKIN 4: EDITORIAL SWISS MAGAZINE & CONCIERGE (웜 아이보리 + 블랙 잉크 그리드)
+       -------------------------------------------------------------------------- */
+    .skin-editorial {
+      background: #F6F3EC;
+      color: #121316;
+    }
+
+    .ed-header {
+      padding: 8px 20px 14px;
+      border-bottom: 1.5px solid #121316;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .ed-body {
+      padding: 16px 20px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .ed-masthead h3 {
+      font-size: 22px;
+      line-height: 28px;
+      font-weight: 700;
+      letter-spacing: -0.8px;
+    }
+
+    .ed-masthead p {
+      font-size: 12px;
+      color: #57534E;
+      margin-top: 4px;
+    }
+
+    .ed-filter-pills {
+      display: flex;
+      gap: 6px;
+    }
+
+    .ed-pill {
+      padding: 5px 11px;
+      border-radius: 99px;
+      border: 1.2px solid #121316;
+      font-size: 11.5px;
+      font-weight: 700;
+      background: transparent;
+      color: #121316;
+    }
+
+    .ed-pill.active {
+      background: #121316;
+      color: #F6F3EC;
+    }
+
+    .ed-card {
+      background: var(--white);
+      border: 1.5px solid #121316;
+      border-radius: 14px;
+      padding: 13px 14px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      box-shadow: 3px 3px 0px #121316;
+      position: relative;
+    }
+
+    .ed-card.ed-highlight {
+      background: #FFF3F4;
+      border-color: var(--primary-3);
+      box-shadow: 3px 3px 0px var(--primary-3);
+    }
+
+    .ed-num {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0;
+      color: var(--primary-3);
+      margin-bottom: 2px;
+    }
+
+    .ed-circle-btn {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border: 1.2px solid #121316;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    /* ==========================================================================
+       6. SHARED INNER COMPONENT GRIDS & VISUAL STYLE MIX TREATMENTS
+       ========================================================================== */
+    .sec-head-inline {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .sec-head-inline h4 {
+      font-size: 16px;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .sec-head-inline span.more {
+      font-size: 11.5px;
+      color: var(--gray-4);
+    }
+
+    .n-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background: var(--primary-4);
+      color: var(--white);
+      font-size: 9.5px;
+      font-weight: 700;
+      letter-spacing: 0;
+    }
+
+    .bento-2col {
+      display: grid;
+      grid-template-columns: 1.02fr 0.98fr;
+      gap: 8px;
+    }
+
+    .card-base {
+      border-radius: 14px;
+      padding: 14px 13px;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.16s ease;
+    }
+
+    .card-base:hover { transform: translateY(-2px); }
+
+    .card-title {
+      font-size: 15px;
+      line-height: 20px;
+      font-weight: 700;
       position: relative;
       z-index: 3;
     }
 
-    .m-title {
-      font-size: 15px;
-      line-height: 20px;
-      font-weight: 700;
-      letter-spacing: -0.5px;
-      color: inherit;
-    }
-
-    .m-sub {
-      font-size: 12px;
-      line-height: 16px;
-      font-weight: 400;
-      letter-spacing: -0.4px;
-      color: var(--gray-4);
-      margin-top: 3px;
-    }
-
-    .surface-red .m-sub  { color: rgba(255, 255, 255, 0.80); }
-    .surface-dark .m-sub,
-    .surface-bike-dark .m-sub { color: rgba(255, 255, 255, 0.72); }
-    .surface-tint .m-sub { color: var(--primary-3); font-weight: 500; }
-
-    /* ---- Layout A: Asymmetric Bento (152 + 8 + 160 = 320px) ---- */
-    .bento-grid {
-      display: grid;
-      grid-template-columns: 152px 160px;
-      gap: 8px;
-    }
-
-    .bento-left-hero {
-      height: 176px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .bento-left-hero .art-slot {
-      position: absolute;
-      right: 2px;
-      bottom: 4px;
-      width: 132px;
-      height: 98px;
-      display: flex;
-      align-items: flex-end;
-      justify-content: flex-end;
-      z-index: 1;
-    }
-
-    .bento-right-col {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-
-    .bento-right-card {
-      height: 84px;
-      padding: 13px 14px;
-    }
-
-    .bento-right-card .art-slot {
-      position: absolute;
-      right: 6px;
-      bottom: 4px;
-      width: 60px;
-      height: 60px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 1;
-    }
-
-    /* Quick Service Bar (From Figma Hidden Layer 3586:2284) */
-    .quick-service-strip {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 8px;
-      margin-top: 10px;
-    }
-
-    .quick-chip {
-      background: var(--gray-12);
-      border: 1px solid var(--gray-8);
-      border-radius: 11px;
-      padding: 9px 4px 8px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 5px;
-      cursor: pointer;
-      transition: background 0.15s ease;
-    }
-
-    .quick-chip:hover {
-      background: var(--gray-9);
-    }
-
-    .quick-chip span {
-      font-size: 11px;
-      line-height: 14px;
-      font-weight: 500;
-      color: var(--gray-3);
-      letter-spacing: -0.4px;
-    }
-
-    /* Rent 3-Col Tiles (100 + 10 + 100 + 10 + 100 = 320px Exact Figma Spec) */
-    .rent-3-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 100px);
-      gap: 10px;
-    }
-
-    .rent-tile {
-      height: 100px;
-      padding: 12px 11px;
-    }
-
-    .rent-tile .m-title {
-      font-size: 13.5px;
-      line-height: 18px;
-    }
-
-    .rent-tile .art-slot {
-      position: absolute;
-      right: 4px;
-      bottom: 3px;
-      width: 60px;
-      height: 56px;
-      display: flex;
-      align-items: flex-end;
-      justify-content: flex-end;
-    }
-
-    .rent-tile.center-mode {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-between;
-      padding: 10px 6px 11px;
-    }
-
-    .rent-tile.center-mode .art-slot {
-      position: static;
-      width: 56px;
-      height: 52px;
-      align-items: center;
-      justify-content: center;
-    }
-
-    /* Bottom 2-Col Split (152 + 16 + 152 = 320px Exact Figma Spec) */
-    .bottom-2-grid {
-      display: grid;
-      grid-template-columns: 152px 152px;
-      gap: 16px;
-    }
-
-    .bottom-half-card {
-      height: 100px;
-      padding: 13px 13px;
-    }
-
-    .bottom-half-card .m-title {
-      font-size: 14px;
-      line-height: 19px;
-    }
-
-    .bottom-half-card .art-slot {
-      position: absolute;
-      right: 4px;
-      bottom: 3px;
-      width: 82px;
-      height: 62px;
-      display: flex;
-      align-items: flex-end;
-      justify-content: flex-end;
-    }
-
-    /* ---- Layout B: Super-App Search + 4x2 Dock + Live Feed ---- */
-    .plate-search {
-      height: 44px;
-      padding: 0 14px;
-      border-radius: 12px;
-      background: var(--gray-11);
-      border: 1.5px solid var(--gray-7);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      font-size: 13px;
-      color: var(--gray-4);
-    }
-
-    .plate-search b {
-      color: var(--gray-2);
-      font-weight: 700;
-    }
-
-    .dock-4x2 {
-      background: var(--gray-13);
-      border-radius: 16px;
-      padding: 14px 6px 12px;
-      box-shadow: inset 0 0 0 1px var(--gray-8), var(--z100);
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      row-gap: 14px;
-    }
-
-    .dock-cell {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 6px;
-      position: relative;
-      cursor: pointer;
-    }
-
-    .dock-squircle {
-      width: 54px;
-      height: 54px;
-      border-radius: 16px;
-      background: var(--gray-11);
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: transform 0.15s ease;
-    }
-
-    .dock-cell:hover .dock-squircle {
-      transform: translateY(-2px);
-    }
-
-    .dock-cell.is-bike .dock-squircle {
-      background: var(--primary-10);
-      box-shadow: inset 0 0 0 1.5px #F5C2C8;
-    }
-
-    .dock-new-pill {
-      position: absolute;
-      top: -4px;
-      right: 7px;
-      background: var(--primary-4);
-      color: var(--gray-13);
-      font-size: 9px;
-      line-height: 13px;
-      font-weight: 700;
-      padding: 0 5px;
-      border-radius: 99px;
-      letter-spacing: 0;
-      z-index: 2;
-    }
-
-    .dock-name {
-      font-size: 12px;
-      line-height: 16px;
-      font-weight: 500;
-      color: var(--gray-2);
-      letter-spacing: -0.4px;
-    }
-
-    .feed-panel {
-      background: var(--gray-11);
-      border-radius: 14px;
-      padding: 14px;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-
-    .feed-row {
-      background: var(--gray-13);
-      border-radius: 10px;
-      padding: 10px 12px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 10px;
-      box-shadow: inset 0 0 0 1px var(--gray-8);
-    }
-
-    .feed-row h4 {
-      font-size: 13px;
-      line-height: 18px;
-      font-weight: 700;
-      color: var(--gray-2);
-    }
-
-    .feed-row p {
+    .card-sub {
       font-size: 11.5px;
-      line-height: 16px;
-      color: var(--gray-4);
-      margin-top: 1px;
+      line-height: 15px;
+      margin-top: 3px;
+      position: relative;
+      z-index: 3;
+      opacity: 0.82;
     }
 
-    .mini-tag {
-      font-size: 10.5px;
-      line-height: 14px;
+    /* --- STEP 2 VISUAL STYLE TREATMENTS --- */
+    /* Style 1: Magazine Full-Bleed Photo Cards */
+    .mag-card {
+      color: var(--white);
+      background-size: cover;
+      background-position: center right;
+      box-shadow: var(--z200);
+    }
+
+    .mag-pill {
+      display: inline-block;
+      font-size: 9.5px;
       font-weight: 700;
-      padding: 4px 7px;
-      border-radius: 6px;
-      background: var(--primary-9);
-      color: var(--primary-3);
-      white-space: nowrap;
-    }
-
-    /* ---- Layout C: Dual Flagship (156 + 8 + 156) + Full-Width Strips ---- */
-    .dual-cards {
-      display: grid;
-      grid-template-columns: 156px 156px;
-      gap: 8px;
-      margin-bottom: 8px;
-    }
-
-    .dual-card {
-      height: 164px;
-      padding: 15px 14px;
-    }
-
-    .dual-card .art-slot {
-      position: absolute;
-      right: 4px;
-      bottom: 4px;
-      width: 124px;
-      height: 90px;
-      display: flex;
-      align-items: flex-end;
-      justify-content: flex-end;
-    }
-
-    .wide-strip {
-      width: 320px;
-      height: 84px;
-      padding: 15px 16px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .wide-strip .art-slot {
-      width: 82px;
-      height: 68px;
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      flex-shrink: 0;
-    }
-
-    /* ---- Layout D: Segmented Concierge List ---- */
-    .cat-pills {
-      display: flex;
-      gap: 6px;
-      overflow-x: auto;
-    }
-
-    .cat-pill {
-      padding: 6px 12px;
+      letter-spacing: 0.5px;
+      padding: 2px 7px;
       border-radius: 99px;
-      font-size: 12px;
-      line-height: 16px;
-      font-weight: 700;
-      background: var(--gray-11);
-      color: var(--gray-3);
-      white-space: nowrap;
+      background: rgba(255,255,255,0.20);
+      backdrop-filter: blur(6px);
+      margin-bottom: 5px;
     }
 
-    .cat-pill.active {
-      background: var(--gray-2);
-      color: var(--gray-13);
+    /* Style 2: Pastel Pop Color-Block Surfaces */
+    .pastel-sky      { background: #E7F1FF; color: #132A4E; }
+    .pastel-butter   { background: #FFF4D4; color: #3D2B05; }
+    .pastel-mint     { background: #E3F7EE; color: #0B3B28; }
+    .pastel-peach    { background: #FFE9EE; color: #4A1020; }
+    .pastel-lavender { background: #EFEAFF; color: #281952; }
+    .pastel-cyan     { background: #E4F5FA; color: #0E3746; }
+
+    /* Style 3: High-Contrast Swiss Grid + Precision Vectors */
+    .swiss-card {
+      background: var(--white);
+      border: 1.5px solid #16171D;
+      color: #16171D;
     }
 
-    .list-stack {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
+    .swiss-card.swiss-red {
+      background: var(--primary-3);
+      border-color: var(--primary-3);
+      color: var(--white);
     }
 
-    .list-card {
-      height: 76px;
-      padding: 12px 14px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
+    .swiss-card.swiss-tint {
+      background: var(--primary-10);
+      border-color: var(--primary-3);
+      color: #16171D;
     }
 
-    .list-card .art-slot {
-      width: 56px;
-      height: 52px;
-      border-radius: 12px;
-      overflow: hidden;
-      flex-shrink: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .list-card-body {
-      flex: 1;
-      min-width: 0;
-    }
-
-    .list-chevron {
-      color: var(--gray-5);
-      font-size: 16px;
-      font-weight: 500;
-    }
-
-    /* Precision Brand Vector Squircle (Used in Style Mix 3 Hybrid) */
     .vec-badge {
-      width: 46px;
-      height: 46px;
-      border-radius: 14px;
-      background: var(--gray-13);
-      box-shadow: 0 2px 6px rgba(22, 23, 29, 0.06), inset 0 0 0 1px var(--gray-8);
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: #F6F8FA;
+      border: 1.2px solid #16171D;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -1294,109 +1149,86 @@
 
     .vec-badge.tint-red {
       background: var(--primary-9);
-      box-shadow: inset 0 0 0 1px #F7CFD4;
+      border-color: var(--primary-3);
     }
 
     /* ==========================================================================
-       EXCLUSIVE MOTION SYSTEM FOR STYLE MIX 03 (위계 차등 하이브리드 전용)
-       Strictly scoped to .phone-shell.motion-hybrid-only — zero impact elsewhere
+       7. EXCLUSIVE MOTION SYSTEM FOR STYLE MIX 03 ONLY (.motion-hybrid-only)
+       Strictly isolated — zero animations run on any other mockup
        ========================================================================== */
-    .fx-motion-only {
-      display: none;
-      pointer-events: none;
-    }
+    .fx-motion-only { display: none; pointer-events: none; }
+    .phone-shell.motion-hybrid-only .fx-motion-only { display: block; }
 
-    .phone-shell.motion-hybrid-only .fx-motion-only {
-      display: block;
-    }
-
-    /* 1군 히어로: 내차 사기 주행 서스펜션 & 쇼룸 광택 & 속도 스트림라인 */
     @keyframes kcarCarCruise {
       0%   { transform: translate(4px, -0.5px) scale(1); }
-      44%  { transform: translate(-9px, 2px) scale(1.05); }
-      62%  { transform: translate(-7px, 0.4px) scale(1.038); }
+      45%  { transform: translate(-9px, 2px) scale(1.055); }
+      63%  { transform: translate(-7px, 0.3px) scale(1.04); }
       100% { transform: translate(4px, -0.5px) scale(1); }
     }
 
     @keyframes kcarSheenSweep {
       0%, 18% { transform: translateX(-140%) skewX(-24deg); opacity: 0; }
       35%     { opacity: 1; }
-      65%     { transform: translateX(220%) skewX(-24deg); opacity: 0; }
-      100%    { transform: translateX(220%) skewX(-24deg); opacity: 0; }
+      65%, 100% { transform: translateX(220%) skewX(-24deg); opacity: 0; }
     }
 
     @keyframes kcarSpeedLine {
       0%, 15% { opacity: 0; transform: translate(0, 0) scaleX(0.5); }
-      45%     { opacity: 0.9; transform: translate(10px, -2px) scaleX(1.15); }
-      75%, 100% { opacity: 0; transform: translate(18px, -4px) scaleX(0.7); }
+      45%     { opacity: 0.95; transform: translate(10px, -2px) scaleX(1.15); }
+      78%, 100% { opacity: 0; transform: translate(18px, -4px) scaleX(0.7); }
     }
 
-    /* 1군 신사업: 바이크 경쾌한 라이딩 린(Lean) & 윈드 스트림 */
     @keyframes kcarBikeRide {
       0%   { transform: translate(3px, 0px) rotate(1deg) scale(1); }
-      48%  { transform: translate(-8px, 1px) rotate(-2.6deg) scale(1.055); }
+      48%  { transform: translate(-8px, 1px) rotate(-2.8deg) scale(1.06); }
       66%  { transform: translate(-6px, -0.8px) rotate(-1.4deg) scale(1.04); }
       100% { transform: translate(3px, 0px) rotate(1deg) scale(1); }
     }
 
-    /* 2군 서비스 정밀 벡터: 절제된 위계 차등 마이크로 모션 */
     @keyframes kcarCoinBob {
       0%, 100% { transform: translateY(0px) rotate(0deg); }
-      50%      { transform: translateY(-3px) rotate(-5deg); }
+      50%      { transform: translateY(-3.5px) rotate(-5deg); }
     }
 
     @keyframes kcarPinHop {
       0%, 100% { transform: translateY(0px); }
-      40%      { transform: translateY(-4px); }
-      60%      { transform: translateY(-1.5px); }
+      42%      { transform: translateY(-4px); }
+      62%      { transform: translateY(-1.5px); }
     }
 
     @keyframes kcarPinRadar {
-      0%   { transform: scale(0.75); opacity: 0.65; }
-      80%, 100% { transform: scale(1.42); opacity: 0; }
+      0%   { transform: scale(0.75); opacity: 0.7; }
+      85%, 100% { transform: scale(1.42); opacity: 0; }
     }
 
     @keyframes kcarRibbonWiggle {
       0%, 70%, 100% { transform: rotate(0deg) scale(1); }
-      80%           { transform: rotate(-5deg) scale(1.05); }
-      90%           { transform: rotate(5deg) scale(1.05); }
+      80%           { transform: rotate(-6deg) scale(1.06); }
+      90%           { transform: rotate(6deg) scale(1.06); }
     }
 
     @keyframes kcarDealBeat {
       0%, 100% { transform: scale(1); }
-      45%      { transform: scale(1.08); }
+      45%      { transform: scale(1.09); }
     }
 
     @keyframes kcarLensSweep {
       0%, 100% { transform: translate(0px, 0px); }
-      50%      { transform: translate(-3.8px, -1px); }
-    }
-
-    @keyframes kcarTruckGlide {
-      0%, 100% { transform: translateX(-1.5px); }
-      50%      { transform: translateX(2px); }
+      50%      { transform: translate(-4px, -1px); }
     }
 
     .phone-shell.motion-hybrid-only .asset-buycar {
-      animation: kcarCarCruise 2.9s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+      animation: kcarCarCruise 2.8s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
       transform-origin: center bottom;
-      will-change: transform;
     }
 
-    .phone-shell.motion-hybrid-only .m-card:hover .asset-buycar {
-      animation-play-state: paused;
-      transform: translate(-11px, 2px) scale(1.08);
-      transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1);
-    }
-
-    .phone-shell.motion-hybrid-only .bento-left-hero::after,
-    .phone-shell.motion-hybrid-only .dual-card:first-child::after {
+    .phone-shell.motion-hybrid-only .swiss-red::after {
       content: "";
       position: absolute;
       inset: 0;
       width: 55%;
-      background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.18) 50%, rgba(255,255,255,0) 100%);
-      animation: kcarSheenSweep 3.8s ease-in-out infinite;
+      background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.20) 50%, rgba(255,255,255,0) 100%);
+      animation: kcarSheenSweep 3.6s ease-in-out infinite;
       pointer-events: none;
       z-index: 2;
     }
@@ -1404,93 +1236,51 @@
     .phone-shell.motion-hybrid-only .fx-car-streaks {
       position: absolute;
       right: 6px;
-      top: 10px;
+      top: 8px;
       width: 44px;
       height: 24px;
       z-index: 2;
-      animation: kcarSpeedLine 2.9s ease-out infinite;
+      animation: kcarSpeedLine 2.8s ease-out infinite;
     }
 
     .phone-shell.motion-hybrid-only .asset-bike {
-      animation: kcarBikeRide 2.5s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+      animation: kcarBikeRide 2.4s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
       transform-origin: center bottom;
-      will-change: transform;
     }
 
     .phone-shell.motion-hybrid-only .fx-bike-streaks {
       position: absolute;
-      right: 2px;
-      top: 8px;
+      right: 4px;
+      top: 6px;
       width: 34px;
       height: 20px;
       z-index: 2;
-      animation: kcarSpeedLine 2.5s ease-out infinite;
+      animation: kcarSpeedLine 2.4s ease-out infinite;
     }
 
-    .phone-shell.motion-hybrid-only .vec-sell svg {
-      animation: kcarCoinBob 2.6s ease-in-out infinite;
-    }
-
-    .phone-shell.motion-hybrid-only .vec-c2c {
-      position: relative;
-    }
-
-    .phone-shell.motion-hybrid-only .vec-c2c svg {
-      animation: kcarPinHop 2.3s ease-in-out infinite;
-      position: relative;
-      z-index: 2;
-    }
-
+    .phone-shell.motion-hybrid-only .vec-sell svg { animation: kcarCoinBob 2.5s ease-in-out infinite; }
+    .phone-shell.motion-hybrid-only .vec-c2c { position: relative; }
+    .phone-shell.motion-hybrid-only .vec-c2c svg { animation: kcarPinHop 2.2s ease-in-out infinite; position: relative; z-index: 2; }
     .phone-shell.motion-hybrid-only .vec-c2c::after {
       content: "";
       position: absolute;
-      inset: 4px;
-      border-radius: 12px;
-      border: 1.5px solid rgba(183, 15, 40, 0.45);
-      animation: kcarPinRadar 2.3s ease-out infinite;
+      inset: 3px;
+      border-radius: 10px;
+      border: 1.5px solid rgba(183, 15, 40, 0.5);
+      animation: kcarPinRadar 2.2s ease-out infinite;
       pointer-events: none;
     }
-
-    .phone-shell.motion-hybrid-only .vec-rent-new svg {
-      animation: kcarRibbonWiggle 3s ease-in-out infinite;
-      transform-origin: center bottom;
-    }
-
-    .phone-shell.motion-hybrid-only .vec-rent-deal {
-      animation: kcarDealBeat 2.2s ease-in-out infinite;
-    }
-
-    .phone-shell.motion-hybrid-only .vec-mycar .scan-lens {
-      animation: kcarLensSweep 2.4s ease-in-out infinite;
-    }
-
-    .phone-shell.motion-hybrid-only .quick-chip:first-child svg {
-      animation: kcarTruckGlide 2.2s ease-in-out infinite;
-    }
-
-    /* Home Indicator (24px Exact Figma Spec) */
-    .mo-homebar {
-      height: 24px;
-      background: var(--gray-13);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .mo-homebar-pill {
-      width: 120px;
-      height: 4px;
-      border-radius: 99px;
-      background: var(--gray-2);
-    }
+    .phone-shell.motion-hybrid-only .vec-rent-new svg { animation: kcarRibbonWiggle 2.9s ease-in-out infinite; }
+    .phone-shell.motion-hybrid-only .vec-rent-deal { animation: kcarDealBeat 2.1s ease-in-out infinite; }
+    .phone-shell.motion-hybrid-only .vec-mycar .scan-lens { animation: kcarLensSweep 2.3s ease-in-out infinite; }
 
     /* ==========================================================================
-       8. SUMMARY TABLE, FLOATING BAR & RATIONALE DIALOG
+       8. SUMMARY TABLE, FLOATING CHOICE BAR & RATIONALE DIALOG
        ========================================================================== */
     .summary-sheet {
-      max-width: 1244px;
-      margin: 32px auto 0;
-      background: var(--gray-13);
+      max-width: 1228px;
+      margin: 34px auto 0;
+      background: var(--white);
       border-radius: 20px;
       padding: 28px 32px;
       box-shadow: var(--z100);
@@ -1500,7 +1290,6 @@
 
     .summary-sheet h3 {
       font-size: 18px;
-      line-height: 24px;
       font-weight: 700;
       margin-bottom: 16px;
     }
@@ -1510,11 +1299,10 @@
       border-collapse: collapse;
       font-size: 13px;
       line-height: 19px;
-      min-width: 760px;
+      min-width: 780px;
     }
 
-    .cmp-table th,
-    .cmp-table td {
+    .cmp-table th, .cmp-table td {
       padding: 13px 16px;
       text-align: left;
       border-bottom: 1px solid var(--gray-8);
@@ -1527,17 +1315,9 @@
       font-weight: 700;
     }
 
-    .cmp-table td:first-child {
-      white-space: nowrap;
-    }
-
-    .cmp-table tr.is-rec {
-      background: var(--primary-10);
-    }
-
-    .cmp-table tr.is-rec td:first-child {
-      border-left: 3px solid var(--primary-3);
-    }
+    .cmp-table td:first-child { white-space: nowrap; }
+    .cmp-table tr.is-rec { background: var(--primary-10); }
+    .cmp-table tr.is-rec td:first-child { border-left: 3px solid var(--primary-3); }
 
     .floating-choice-bar {
       position: fixed;
@@ -1545,9 +1325,9 @@
       left: 50%;
       transform: translateX(-50%);
       z-index: 190;
-      background: rgba(22, 23, 29, 0.96);
+      background: rgba(18, 20, 27, 0.96);
       backdrop-filter: blur(12px);
-      color: var(--gray-13);
+      color: var(--white);
       padding: 12px 24px;
       border-radius: 999px;
       box-shadow: var(--z300);
@@ -1559,10 +1339,7 @@
       white-space: nowrap;
     }
 
-    .floating-choice-bar strong {
-      color: #FF6E77;
-      font-weight: 700;
-    }
+    .floating-choice-bar strong { color: #FF6E77; font-weight: 700; }
 
     dialog.rationale-dialog {
       margin: auto;
@@ -1571,7 +1348,7 @@
       padding: 0;
       max-width: 560px;
       width: calc(100% - 32px);
-      background: var(--gray-13);
+      background: var(--white);
       color: var(--gray-2);
       box-shadow: var(--z300);
     }
@@ -1581,53 +1358,12 @@
       backdrop-filter: blur(4px);
     }
 
-    .dlg-body {
-      padding: 28px;
-    }
-
-    .dlg-head {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 12px;
-      margin-bottom: 18px;
-    }
-
-    .dlg-close {
-      width: 32px;
-      height: 32px;
-      border-radius: 8px;
-      background: var(--gray-11);
-      color: var(--gray-3);
-      font-size: 16px;
-    }
-
-    .dlg-section {
-      background: var(--gray-11);
-      border-radius: 12px;
-      padding: 15px 16px;
-      margin-bottom: 12px;
-      font-size: 13px;
-      line-height: 20px;
-      color: var(--gray-3);
-    }
-
-    .dlg-section h4 {
-      font-size: 13px;
-      font-weight: 700;
-      color: var(--gray-2);
-      margin-bottom: 6px;
-    }
-
-    .dlg-callout {
-      background: var(--primary-10);
-      border: 1px solid #F6C8CE;
-      border-radius: 12px;
-      padding: 13px 15px;
-      font-size: 12.5px;
-      line-height: 19px;
-      color: var(--primary-2);
-    }
+    .dlg-body { padding: 28px; }
+    .dlg-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; margin-bottom: 18px; }
+    .dlg-close { width: 32px; height: 32px; border-radius: 8px; background: var(--gray-11); color: var(--gray-3); font-size: 16px; }
+    .dlg-section { background: var(--gray-11); border-radius: 12px; padding: 15px 16px; margin-bottom: 12px; font-size: 13px; line-height: 20px; color: var(--gray-3); }
+    .dlg-section h4 { font-size: 13px; font-weight: 700; color: var(--gray-2); margin-bottom: 6px; }
+    .dlg-callout { background: var(--primary-10); border: 1px solid #F6C8CE; border-radius: 12px; padding: 13px 15px; font-size: 12.5px; line-height: 19px; color: var(--primary-2); }
   </style>
 </head>
 <body class="show-fold">
@@ -1638,21 +1374,21 @@
       <div class="exec-brand-area">
         <span class="exec-tag-pill">경영진 의사결정 리뷰</span>
         <div class="exec-brand-text">
-          <h1>K Car 통합 메인페이지(Gate) 구축 시안</h1>
-          <p>Figma #3576:38696 기준 · Spoqa Han Sans Neo &amp; K Car Design System 정밀 적용</p>
+          <h1>K Car 통합 메인페이지(Gate) 구축 — 스타일 차별화 시안</h1>
+          <p>브랜드 레드 브릿지 · 핀테크 슈퍼앱 · 다크 쇼룸 · 에디토리얼 매거진 등 확연히 다른 디자인 방향성 비교</p>
         </div>
       </div>
 
       <nav class="exec-tabs" aria-label="의사결정 단계 전환">
         <button class="exec-tab-btn active" data-tab="all">전체 브리핑 (1·2·3)</button>
-        <button class="exec-tab-btn" data-tab="step-layouts">1) 레이아웃 확장 (4종)</button>
-        <button class="exec-tab-btn" data-tab="step-icons">2) 아이콘·비주얼 혼합 (3종)</button>
-        <button class="exec-tab-btn" data-tab="step-optimal">3) 최종 추천 최적안 (3종)</button>
+        <button class="exec-tab-btn" data-tab="step-layouts">1) 플랫폼 아키텍처 (4종)</button>
+        <button class="exec-tab-btn" data-tab="step-icons">2) 그래픽·모션 아트디렉션 (3종)</button>
+        <button class="exec-tab-btn" data-tab="step-optimal">3) 최종 플래그십 최적안 (3종)</button>
       </nav>
 
-      <div class="exec-right-tools">
+      <div>
         <button id="foldToggle" class="fold-btn active">
-          <span class="fold-indicator-dot"></span>
+          <span class="fold-dot"></span>
           <span>1st Fold 기준선 (760px)</span>
         </button>
       </div>
@@ -1661,29 +1397,29 @@
 
   <main class="workspace">
 
-    <!-- Design System & Quality Verification Strip -->
-    <section class="system-spec-bar">
-      <div class="spec-bar-copy">
-        <h2>디자인 시스템 및 비주얼 에셋 정합성 안내</h2>
-        <p>피그마 원본(MO 360px) 그리드·여백 규격과 K Car 공식 타이포그래피·컬러 토큰, 스튜디오 실사 촬영풍 차량/바이크 및 3D 아이소메트릭 에셋을 정밀 매칭했습니다.</p>
+    <!-- Design Differentiation Legend -->
+    <section class="concept-legend-bar">
+      <div class="legend-copy">
+        <h2>시안 간 시각적 변별력 극대화 설계 (4대 모빌리티 플랫폼 디자인 무드)</h2>
+        <p>단순히 회색 박스 배치만 바꾸는 수준을 넘어, <strong>컬러 무드 · 상단 헤더 구조 · 카드 머티리얼 · 타이포그래피 위계</strong>를 시안마다 완전히 다른 디자인 언어로 구축해 경영진이 명확히 방향성을 선택할 수 있도록 설계했습니다.</p>
       </div>
-      <div class="spec-badges">
-        <span class="spec-chip">서체 <b>Spoqa Han Sans Neo (700·500·400)</b></span>
-        <span class="spec-chip"><i class="swatch-dot" style="background:#B70F28;"></i>Brand Red <b>#B70F28</b></span>
-        <span class="spec-chip"><i class="swatch-dot" style="background:#16171D;"></i>Text Gray 2 <b>#16171D</b></span>
-        <span class="spec-chip"><i class="swatch-dot" style="background:#F6F8FA;border:1px solid #D8DEE8;"></i>Surface Gray 11 <b>#F6F8FA</b></span>
+      <div class="legend-chips">
+        <span class="legend-chip"><i class="legend-swatch" style="background:#B70F28;"></i><b>Red Bridge</b> 브랜드 시그니처</span>
+        <span class="legend-chip"><i class="legend-swatch" style="background:#3182F6;"></i><b>Fintech Minimal</b> 토스형 슈퍼앱</span>
+        <span class="legend-chip"><i class="legend-swatch" style="background:#0B0D13;"></i><b>Dark Showroom</b> 럭셔리 쇼룸</span>
+        <span class="legend-chip"><i class="legend-swatch" style="background:#F6F3EC;border:1px solid #121316;"></i><b>Editorial Ink</b> 매거진 컨시어지</span>
       </div>
     </section>
 
     <!-- =======================================================================
-         STEP 1: 모빌리티 플랫폼 확장 레이아웃 베리에이션 (4종)
+         STEP 1: 4가지 완전히 다른 플랫폼 아키텍처 & 스킨 (4종)
          ======================================================================= -->
     <section id="step-layouts" class="board-section">
       <div class="sec-banner">
         <div>
-          <span class="sec-kicker">STEP 01 · MOBILITY PLATFORM LAYOUTS (4종)</span>
-          <h2 class="t-h2">모빌리티 플랫폼 확장을 위한 4가지 레이아웃 베리에이션</h2>
-          <p class="sec-subdesc">직영 중고차 중심 구조에서 바이크 직거래[N]·렌터카·마이카·부가서비스까지 아우르는 4가지 확장형 화면 아키텍처입니다.</p>
+          <span class="sec-kicker">STEP 01 · DISTINCT PLATFORM ARCHITECTURES (4종)</span>
+          <h2 class="sec-title">모빌리티 플랫폼 확장을 위한 4가지 차별화 아키텍처</h2>
+          <p class="sec-subdesc">정통 브랜드 포털부터 토스식 미니멀 슈퍼앱, 제네시스급 다크 쇼룸, 현대카드식 에디토리얼 컨시어지까지 4가지 뚜렷한 스킨으로 비교합니다.</p>
         </div>
       </div>
 
@@ -1691,22 +1427,20 @@
     </section>
 
     <!-- =======================================================================
-         STEP 2: 아이콘 및 비주얼 스타일 혼합 실험 (3종)
+         STEP 2: 그래픽 & 아이콘 아트 디렉션 3종 (풀블리드 화보 vs 파스텔 팝 vs 스위스 모션)
          ======================================================================= -->
     <section id="step-icons" class="board-section">
       <div class="sec-banner">
         <div>
-          <span class="sec-kicker">STEP 02 · VISUAL &amp; ICON STYLE MIXES (3종)</span>
-          <h2 class="t-h2">실사 · 3D 클레이 · 정밀 벡터를 조합한 3가지 비주얼 혼합안</h2>
-          <p class="sec-subdesc">우측 레이아웃 전환 버튼을 누르면 4가지 플랫폼 레이아웃 전체에서 3종의 아이콘 혼합 스타일을 즉시 비교하실 수 있습니다.</p>
+          <span class="sec-kicker">STEP 02 · GRAPHIC &amp; ICON ART DIRECTIONS (3종)</span>
+          <h2 class="sec-title">화보 풀블리드 · 파스텔 3D 팝 · 스위스 그리드(모션) 3종 비교</h2>
+          <p class="sec-subdesc">동일한 메뉴 구조 위에서 카드 그래픽 문법을 180도 다르게 연출했습니다. <strong>우측 3번째(Style Mix 03)에만 실사 주행 및 마이크로 모션</strong>이 적용되어 있습니다.</p>
         </div>
 
-        <div class="layout-pill-bar" role="group" aria-label="비교용 베이스 레이아웃 선택">
-          <span class="layout-pill-label">적용 레이아웃:</span>
-          <button class="layout-pill-btn active" data-base-layout="bento">A. 코어 벤토형</button>
-          <button class="layout-pill-btn" data-base-layout="superapp">B. 슈퍼앱 독형</button>
-          <button class="layout-pill-btn" data-base-layout="dualwide">C. 듀얼+와이드형</button>
-          <button class="layout-pill-btn" data-base-layout="concierge">D. 컨시어지 리스트형</button>
+        <div class="layout-pill-bar" role="group" aria-label="비교 구조 전환">
+          <span class="layout-pill-label">구조 전환:</span>
+          <button class="layout-pill-btn active" data-art-mode="bento">A. 비대칭 벤토 구조</button>
+          <button class="layout-pill-btn" data-art-mode="dual">B. 듀얼+와이드 구조</button>
         </div>
       </div>
 
@@ -1714,53 +1448,53 @@
     </section>
 
     <!-- =======================================================================
-         STEP 3: 경영진 의사결정 추천 최적안 TOP 3
+         STEP 3: 경영진 의사결정 최종 플래그십 최적안 TOP 3
          ======================================================================= -->
     <section id="step-optimal" class="board-section">
       <div class="sec-banner">
         <div>
-          <span class="sec-kicker">STEP 03 · EXECUTIVE OPTIMAL PROPOSALS (최적안 3종)</span>
-          <h2 class="t-h2">비즈니스 목표별 최종 추천 최적안 TOP 3</h2>
-          <p class="sec-subdesc">매출 방어·플랫폼 확장·신사업(바이크/직거래) 부스팅 중 경영진의 최우선 전략 방향에 맞춰 즉시 채택 가능한 완성형 시안 3종입니다.</p>
+          <span class="sec-kicker">STEP 03 · EXECUTIVE FLAGSHIP CANDIDATES (최적안 3종)</span>
+          <h2 class="sec-title">경영진 의사결정을 위한 최종 플래그십 최적안 TOP 3</h2>
+          <p class="sec-subdesc">케이카가 지향할 브랜드 정체성에 따라 즉시 채택 가능한 <strong>① 시그니처 레드 브릿지 · ② 토스형 슈퍼앱 · ③ 다크 럭셔리 쇼룸</strong> 완성본입니다.</p>
         </div>
       </div>
 
       <div id="gridOptimal" class="grid-3-up"></div>
 
-      <!-- Executive Comparison Matrix -->
+      <!-- Comparison Matrix -->
       <div class="summary-sheet">
-        <h3>최적안 TOP 3 경영진 의사결정 비교 요약</h3>
+        <h3>최적안 TOP 3 디자인 방향성 &amp; 비즈니스 의사결정 매트릭스</h3>
         <table class="cmp-table">
           <thead>
             <tr>
-              <th>후보안</th>
-              <th>핵심 전략 방향</th>
-              <th>레이아웃 &amp; 비주얼 조합</th>
-              <th>첫 화면(760px) 노출 범위</th>
-              <th>기대 효과 및 추천 상황</th>
+              <th>최종 후보안</th>
+              <th>디자인 컨셉 &amp; 레퍼런스 무드</th>
+              <th>핵심 시각적 차별점</th>
+              <th>주 타깃 및 강점</th>
+              <th>추천 의사결정 시나리오</th>
             </tr>
           </thead>
           <tbody>
             <tr class="is-rec">
-              <td><strong>최적 1안 (★최우선 추천)</strong><br/><span style="color:var(--primary-3);font-size:11.5px;font-weight:700;">코어 수성 + 소프트랜딩</span></td>
-              <td>주력 직영 중고차 전환율 유지 및 바이크 자연 유입</td>
-              <td>컴팩트 비대칭 벤토 + <strong>실사 히어로 × 정밀 벡터 하이브리드</strong></td>
-              <td>중고차 · 퀵칩 · 렌터카 · <strong>바이크[N]/마이카 상단 진입</strong></td>
-              <td>기존 앱 고객 학습비용 최소화, 직영 매출 리스크 없이 신사업 안착</td>
+              <td><strong>최적 1안 (★최우선 추천)</strong><br/><span style="color:var(--primary-3);font-size:11.5px;font-weight:700;">Signature Red Bridge</span></td>
+              <td>K Car 브랜드 레드 상단 + 화이트 플로팅 브릿지</td>
+              <td>상단 크림슨 레드 헤더 위로 입체 부상하는 메인 카드 + 바이크 코랄 배너</td>
+              <td>전 연령층 · 직영 본업 신뢰도 1위</td>
+              <td>"누가 봐도 케이카다운 정통성과 리뉴얼 체감도를 동시에 잡겠다"</td>
             </tr>
             <tr>
-              <td><strong>최적 2안</strong><br/><span style="color:var(--navy-4);font-size:11.5px;font-weight:700;">슈퍼앱 플랫폼 도약</span></td>
-              <td>종합 모빌리티 슈퍼앱 리포지셔닝 및 향후 확장 대비</td>
-              <td>번호판 통합검색 + 4×2 모빌리티 독 + <strong>3D 매트 클레이 혼합</strong></td>
-              <td><strong>8대 전 서비스 + 이벤트 배너 + 바이크 오픈 배너</strong> 완결 노출</td>
-              <td>바이크를 1열 상단 골든존에 배치, 차기 신사업 추가 시 UI 개편 불필요</td>
+              <td><strong>최적 2안</strong><br/><span style="color:var(--navy-4);font-size:11.5px;font-weight:700;">Fintech Super-App</span></td>
+              <td>토스·카카오T형 쿨그레이 미니멀 슈퍼앱</td>
+              <td>실물 대한민국 번호판 원탭 조회창 + 파스텔 3D 클레이 4×2 통합 독</td>
+              <td>2040 모바일 친화층 · 확장성 1위</td>
+              <td>"자동차·바이크·렌트·시세를 아우르는 가볍고 빠른 슈퍼앱으로 가겠다"</td>
             </tr>
             <tr>
-              <td><strong>최적 3안</strong><br/><span style="color:var(--green-5);font-size:11.5px;font-weight:700;">C2C 신사업 드라이브</span></td>
-              <td>승용 안심직거래 + 신규 바이크 직거래 트래픽 집중 부스팅</td>
-              <td>직영 다크 투톱 + <strong>바이크 다크 스튜디오 풀폭 배너</strong> + <strong>실사 스튜디오</strong></td>
-              <td>직영 투톱 + 안심직거래 + <strong>바이크 직거래 대형 화보 배너</strong> 노출</td>
-              <td>런칭 초반 3~6개월간 바이크 매물 등록 및 초기 CTR 극대화에 최적</td>
+              <td><strong>최적 3안</strong><br/><span style="color:#16171D;font-size:11.5px;font-weight:700;">Dark Mobility Lounge</span></td>
+              <td>제네시스·우버형 딥 오닉스 다크 쇼룸</td>
+              <td>풀 다크 테마 + 풀블리드 실사 세단·스마트키·스포츠 바이크 화보 카드</td>
+              <td>바이크·자동차 매니아 · 파격 혁신 1위</td>
+              <td>"경쟁 중고차 앱과 완전히 차별화되는 하이엔드 모빌리티 쇼룸을 만들겠다"</td>
             </tr>
           </tbody>
         </table>
@@ -1769,770 +1503,957 @@
 
   </main>
 
-  <!-- Floating Selected Candidate Indicator -->
   <div class="floating-choice-bar">
     <span>현재 선택된 의사결정 후보:</span>
-    <strong id="choiceLabel">최적 1안 · 코어 매출 수성 &amp; 바이크 소프트랜딩 (추천)</strong>
+    <strong id="choiceLabel">최적 1안 · K Car 시그니처 레드 브릿지 (★추천)</strong>
   </div>
 
-  <!-- Rationale Detail Modal -->
   <dialog class="rationale-dialog" id="rationaleModal">
     <div class="dlg-body" id="rationaleBody"></div>
   </dialog>
 
   <script>
     /* =========================================================================
-       OFFICIAL K CAR HEADER CI SVG (Exact 2x2 Red/Gray Cutout Symbol + K Car)
+       BRAND LOGOS (Light & Dark Versions) & STATUS BAR HELPER
        ========================================================================= */
-    const KCAR_CI_SVG = `
-      <svg width="76" height="20" viewBox="0 0 76 20" fill="none" aria-label="K Car">
-        <!-- Top-left & Top-right Red Mark -->
-        <rect x="0" y="2" width="7.2" height="7.2" rx="1" fill="#D9162E"/>
-        <path d="M8.8 2 H16 V9.2 H8.8 V7.5 A2.1 2.1 0 0 0 10.9 5.6 A2.1 2.1 0 0 0 8.8 3.7 Z" fill="#D9162E"/>
-        <!-- Bottom-left & Bottom-right Gray Mark -->
-        <rect x="0" y="10.8" width="7.2" height="7.2" rx="1" fill="#9EA3AC"/>
-        <path d="M8.8 10.8 H16 V18 H8.8 V16.3 A2.1 2.1 0 0 0 10.9 14.4 A2.1 2.1 0 0 0 8.8 12.5 Z" fill="#9EA3AC"/>
-        <!-- K Car Geometric Wordmark -->
-        <path d="M21.5 3.8 H24.3 V9.6 L29.2 3.8 H32.6 L27.3 9.8 L32.9 17.2 H29.5 L25.3 11.5 L24.3 12.6 V17.2 H21.5 V3.8 Z" fill="#D9162E"/>
-        <path d="M43.8 12.6 C43.4 15.4 41.3 17.4 38.2 17.4 C34.6 17.4 32.3 14.7 32.3 10.5 C32.3 6.3 34.7 3.6 38.3 3.6 C41.3 3.6 43.4 5.4 43.8 8.2 H41.1 C40.7 6.8 39.7 6.0 38.2 6.0 C36.2 6.0 35.0 7.7 35.0 10.5 C35.0 13.3 36.2 15.0 38.2 15.0 C39.7 15.0 40.7 14.2 41.1 12.6 H43.8 Z" fill="#D9162E"/>
-        <path d="M45.2 14.3 C45.2 12.3 46.8 11.3 49.6 11.1 L51.7 10.9 V10.3 C51.7 9.3 51.0 8.7 49.8 8.7 C48.7 8.7 48.0 9.2 47.8 9.9 H45.5 C45.7 8.0 47.4 6.8 49.9 6.8 C52.7 6.8 54.2 8.1 54.2 10.5 V17.2 H51.8 V15.8 C51.1 16.8 49.9 17.4 48.5 17.4 C46.5 17.4 45.2 16.1 45.2 14.3 Z M51.7 13.3 V12.5 L49.9 12.7 C48.4 12.8 47.7 13.3 47.7 14.2 C47.7 15.0 48.4 15.5 49.4 15.5 C50.8 15.5 51.7 14.6 51.7 13.3 Z" fill="#D9162E"/>
-        <path d="M56.4 7.0 H58.8 V8.7 C59.3 7.4 60.4 6.8 61.8 6.8 C62.2 6.8 62.5 6.8 62.7 6.9 V9.3 C62.4 9.2 62.0 9.2 61.5 9.2 C59.9 9.2 59.0 10.1 59.0 11.8 V17.2 H56.4 V7.0 Z" fill="#D9162E"/>
-      </svg>
-    `;
-
-    /* =========================================================================
-       PRECISION DUOTONE VECTOR ICONS (Used for Service/Utility Tier in Hybrid)
-       ========================================================================= */
-    const PRECISION_VECTORS = {
-      sellCar: `
-        <div class="vec-badge vec-sell">
-          <svg width="26" height="26" viewBox="0 0 28 28" fill="none">
-            <circle cx="14" cy="14" r="10" fill="#FFF4D9" stroke="#16171D" stroke-width="1.8"/>
-            <path d="M9.5 11.5 L11.5 17.5 L14 12.5 L16.5 17.5 L18.5 11.5" stroke="#B70F28" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            <line x1="8.5" y1="14.2" x2="19.5" y2="14.2" stroke="#16171D" stroke-width="1.5" stroke-linecap="round"/>
+    function renderKcarLogo(whiteMode = false) {
+      const mainRed = whiteMode ? '#FFFFFF' : '#D9162E';
+      const subGray = whiteMode ? 'rgba(255,255,255,0.62)' : '#9EA3AC';
+      const sloganColor = whiteMode ? 'rgba(255,255,255,0.88)' : '#16171D';
+      return `
+        <div style="display:inline-flex;align-items:center;gap:7px;">
+          <svg width="72" height="19" viewBox="0 0 76 20" fill="none">
+            <rect x="0" y="2" width="7.2" height="7.2" rx="1" fill="${mainRed}"/>
+            <path d="M8.8 2 H16 V9.2 H8.8 V7.5 A2.1 2.1 0 0 0 10.9 5.6 A2.1 2.1 0 0 0 8.8 3.7 Z" fill="${mainRed}"/>
+            <rect x="0" y="10.8" width="7.2" height="7.2" rx="1" fill="${subGray}"/>
+            <path d="M8.8 10.8 H16 V18 H8.8 V16.3 A2.1 2.1 0 0 0 10.9 14.4 A2.1 2.1 0 0 0 8.8 12.5 Z" fill="${subGray}"/>
+            <path d="M21.5 3.8 H24.3 V9.6 L29.2 3.8 H32.6 L27.3 9.8 L32.9 17.2 H29.5 L25.3 11.5 L24.3 12.6 V17.2 H21.5 V3.8 Z" fill="${mainRed}"/>
+            <path d="M43.8 12.6 C43.4 15.4 41.3 17.4 38.2 17.4 C34.6 17.4 32.3 14.7 32.3 10.5 C32.3 6.3 34.7 3.6 38.3 3.6 C41.3 3.6 43.4 5.4 43.8 8.2 H41.1 C40.7 6.8 39.7 6.0 38.2 6.0 C36.2 6.0 35.0 7.7 35.0 10.5 C35.0 13.3 36.2 15.0 38.2 15.0 C39.7 15.0 40.7 14.2 41.1 12.6 H43.8 Z" fill="${mainRed}"/>
+            <path d="M45.2 14.3 C45.2 12.3 46.8 11.3 49.6 11.1 L51.7 10.9 V10.3 C51.7 9.3 51.0 8.7 49.8 8.7 C48.7 8.7 48.0 9.2 47.8 9.9 H45.5 C45.7 8.0 47.4 6.8 49.9 6.8 C52.7 6.8 54.2 8.1 54.2 10.5 V17.2 H51.8 V15.8 C51.1 16.8 49.9 17.4 48.5 17.4 C46.5 17.4 45.2 16.1 45.2 14.3 Z M51.7 13.3 V12.5 L49.9 12.7 C48.4 12.8 47.7 13.3 47.7 14.2 C47.7 15.0 48.4 15.5 49.4 15.5 C50.8 15.5 51.7 14.6 51.7 13.3 Z" fill="${mainRed}"/>
+            <path d="M56.4 7.0 H58.8 V8.7 C59.3 7.4 60.4 6.8 61.8 6.8 C62.2 6.8 62.5 6.8 62.7 6.9 V9.3 C62.4 9.2 62.0 9.2 61.5 9.2 C59.9 9.2 59.0 10.1 59.0 11.8 V17.2 H56.4 V7.0 Z" fill="${mainRed}"/>
           </svg>
-        </div>`,
-      c2cCar: `
-        <div class="vec-badge tint-red vec-c2c">
-          <svg width="26" height="26" viewBox="0 0 28 28" fill="none">
-            <path d="M14 4.5 C9.3 4.5 6 8 6 12.4 C6 17.8 14 23.8 14 23.8 C14 23.8 22 17.8 22 12.4 C22 8 18.7 4.5 14 4.5 Z" fill="#B70F28"/>
-            <circle cx="14" cy="12.2" r="3.4" fill="#FFFFFF"/>
-          </svg>
-        </div>`,
-      rentUsed: `
-        <div class="vec-badge vec-rent-used">
-          <svg width="26" height="26" viewBox="0 0 28 28" fill="none">
-            <rect x="5" y="6.5" width="18" height="16.5" rx="3.5" fill="#F6F8FA" stroke="#16171D" stroke-width="1.8"/>
-            <path d="M5 10 C5 8 6.5 6.5 8.5 6.5 H19.5 C21.5 6.5 23 8 23 10 V11.2 H5 V10 Z" fill="#16171D"/>
-            <line x1="9.5" y1="4.5" x2="9.5" y2="8" stroke="#16171D" stroke-width="1.8" stroke-linecap="round"/>
-            <line x1="18.5" y1="4.5" x2="18.5" y2="8" stroke="#16171D" stroke-width="1.8" stroke-linecap="round"/>
-            <rect x="9" y="14.5" width="4" height="4" rx="1" fill="#B70F28"/>
-            <rect x="15" y="14.5" width="4" height="4" rx="1" fill="#CBD2E0"/>
-          </svg>
-        </div>`,
-      rentNew: `
-        <div class="vec-badge vec-rent-new">
-          <svg width="26" height="26" viewBox="0 0 28 28" fill="none">
-            <rect x="5.5" y="12" width="17" height="11" rx="2.5" fill="#F6F8FA" stroke="#16171D" stroke-width="1.8"/>
-            <rect x="4.5" y="8.8" width="19" height="4" rx="1.5" fill="#FFFFFF" stroke="#16171D" stroke-width="1.8"/>
-            <rect x="12.6" y="8.8" width="2.8" height="14.2" fill="#B70F28"/>
-            <path d="M14 8.8 C10.8 8.8 9.5 5.6 11.8 4.8 C13.4 4.2 14 6.8 14 8.8 Z" fill="#B70F28"/>
-            <path d="M14 8.8 C17.2 8.8 18.5 5.6 16.2 4.8 C14.6 4.2 14 6.8 14 8.8 Z" fill="#B70F28"/>
-          </svg>
-        </div>`,
-      rentDeal: `
-        <div class="vec-badge tint-red vec-rent-deal">
-          <svg width="26" height="26" viewBox="0 0 28 28" fill="none">
-            <rect x="5.5" y="5.5" width="17" height="17" rx="5" fill="#B70F28"/>
-            <circle cx="11" cy="11" r="1.6" fill="#FFFFFF"/>
-            <circle cx="17" cy="17" r="1.6" fill="#FFFFFF"/>
-            <line x1="17.2" y1="10.2" x2="10.8" y2="17.8" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
-          </svg>
-        </div>`,
-      myCar: `
-        <div class="vec-badge vec-mycar">
-          <svg width="26" height="26" viewBox="0 0 28 28" fill="none">
-            <path d="M4.5 17.5 L6.8 11.5 C7.4 10 8.6 9.5 10.5 9.5 H16.5 C18.4 9.5 19.6 10 20.2 11.5 L22.5 17.5 V20.5 H4.5 V17.5 Z" fill="#F1F3F7" stroke="#16171D" stroke-width="1.8" stroke-linejoin="round"/>
-            <g class="scan-lens">
-              <circle cx="18.5" cy="17.5" r="4.3" fill="#FFFFFF" stroke="#B70F28" stroke-width="2"/>
-              <line x1="21.7" y1="20.7" x2="24.5" y2="23.5" stroke="#16171D" stroke-width="2" stroke-linecap="round"/>
-            </g>
-          </svg>
-        </div>`
-    };
-
-    const QUICK_ICONS = {
-      home: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M3 8.5 H14.5 V16.5 H3 Z" fill="#FDEEEF" stroke="#16171D" stroke-width="1.7" stroke-linejoin="round"/><path d="M14.5 10.5 H18.5 L21 13.5 V16.5 H14.5 Z" fill="#B70F28" stroke="#16171D" stroke-width="1.7" stroke-linejoin="round"/><circle cx="7.5" cy="17.5" r="2" fill="#FFF" stroke="#16171D" stroke-width="1.7"/><circle cx="17.5" cy="17.5" r="2" fill="#FFF" stroke="#16171D" stroke-width="1.7"/></svg>`,
-      weekly: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" fill="#FDEEEF"/><path d="M13 5.5 L8 12.8 H12.2 L11 18.5 L16 11.2 H11.8 Z" fill="#B70F28"/></svg>`,
-      warranty: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 3.8 L18.5 6.5 V11.8 C18.5 15.8 15.7 18.8 12 20.3 C8.3 18.8 5.5 15.8 5.5 11.8 V6.5 Z" fill="#E5EEFC" stroke="#16171D" stroke-width="1.7" stroke-linejoin="round"/><path d="M9.3 12 L11.2 13.9 L15 10.1" stroke="#0086FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
-      inspect: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="6" y="4.5" width="12" height="15.5" rx="2.5" fill="#FEF6EE" stroke="#16171D" stroke-width="1.7"/><rect x="9.5" y="3" width="5" height="3" rx="1.2" fill="#B70F28"/><line x1="9.2" y1="10.5" x2="14.8" y2="10.5" stroke="#16171D" stroke-width="1.7" stroke-linecap="round"/><line x1="9.2" y1="14.2" x2="13.2" y2="14.2" stroke="#FA6400" stroke-width="1.7" stroke-linecap="round"/></svg>`
-    };
-
-    /* =========================================================================
-       STUDIO ASSET RESOLVER FOR THE 3 VISUAL MIX MODES
-       - 'photoreal': Studio Automotive/Bike Photography + 3D Metallic/Glossy Objects
-       - 'clay3d'   : Toss/Apple-style 3D Matte Clay Isometric Vehicles + 3D Tactile Icons
-       - 'hybrid'   : Photoreal Hero (Core Cars & Bike) + Precision Brand Duotone Vectors
-       ========================================================================= */
-    function renderVisualAsset(key, mixMode, surface = 'gray') {
-      // 1. Buy Car
-      if (key === 'buyCar') {
-        const streakColor = (surface === 'red' || surface === 'dark') ? 'rgba(255,255,255,0.55)' : 'rgba(183,15,40,0.38)';
-        const streaks = `<svg class="fx-motion-only fx-car-streaks" viewBox="0 0 44 24" fill="none"><line x1="4" y1="7" x2="36" y2="3" stroke="${streakColor}" stroke-width="1.8" stroke-linecap="round"/><line x1="12" y1="15" x2="40" y2="11" stroke="${streakColor}" stroke-width="1.4" stroke-linecap="round"/></svg>`;
-        if (surface === 'red') {
-          return `${streaks}<img class="asset-buycar" src="./assets/photo_car_hero_red.png" alt="내차 사기" style="width:100%;height:100%;object-fit:contain;object-position:right bottom;" />`;
-        }
-        if (surface === 'dark') {
-          return `${streaks}<img class="asset-buycar" src="./assets/photo_car_hero_dark.png" alt="내차 사기" style="width:100%;height:100%;object-fit:contain;object-position:right bottom;" />`;
-        }
-        const src = mixMode === 'clay3d' ? './assets/clay_car_iso.png' : './assets/photo_car_buy.png';
-        return `${streaks}<img class="blend-multiply asset-buycar" src="${src}" alt="내차 사기" style="width:100%;height:100%;object-fit:contain;object-position:right bottom;" />`;
-      }
-
-      // 2. Bike C2C
-      if (key === 'bike') {
-        const bikeStreaks = `<svg class="fx-motion-only fx-bike-streaks" viewBox="0 0 34 20" fill="none"><line x1="4" y1="6" x2="28" y2="3" stroke="rgba(240,29,41,0.45)" stroke-width="1.8" stroke-linecap="round"/><line x1="10" y1="13" x2="31" y2="10" stroke="rgba(240,29,41,0.3)" stroke-width="1.4" stroke-linecap="round"/></svg>`;
-        const src = mixMode === 'clay3d' ? './assets/clay_bike_iso.png' : './assets/photo_bike.png';
-        return `${bikeStreaks}<img class="blend-multiply asset-bike" src="${src}" alt="바이크 직거래" style="width:100%;height:100%;object-fit:contain;object-position:right bottom;" />`;
-      }
-
-      // 3. If Hybrid Mix, use Precision Brand Vectors for Secondary/Utility Items!
-      if (mixMode === 'hybrid' && PRECISION_VECTORS[key]) {
-        return PRECISION_VECTORS[key];
-      }
-
-      // 4. Photorealistic vs 3D Clay for Rent New SUV
-      if (key === 'rentNew') {
-        return `<img class="blend-multiply" src="./assets/photo_rent_suv.png" alt="신차 렌트" style="width:100%;height:100%;object-fit:contain;" />`;
-      }
-
-      // 5. High-Res Studio 3D Tactile Renders
-      const map3D = {
-        sellCar:  './assets/icon3d_sell_coin.png',
-        c2cCar:   './assets/icon3d_c2c_pin.png',
-        rentUsed: './assets/icon3d_rent_calendar.png',
-        rentDeal: './assets/icon3d_rent_deal.png',
-        myCar:    './assets/icon3d_mycar_value.png'
-      };
-      return `<img class="blend-multiply" src="${map3D[key]}" alt="${key}" style="width:100%;height:100%;object-fit:contain;" />`;
+          <span style="font-size:10.5px;font-weight:700;color:${sloganColor};letter-spacing:-0.4px;">No.1 모빌리티플랫폼</span>
+        </div>
+      `;
     }
 
-    /* =========================================================================
-       MOBILE SCREEN BUILDER (360px Exact Spec)
-       ========================================================================= */
-    function buildMobileViewport({
-      layout,           // 'bento' | 'superapp' | 'dualwide' | 'concierge'
-      mixMode,          // 'photoreal' | 'clay3d' | 'hybrid'
-      heroSurface = 'red', // 'red' | 'dark' | 'gray'
-      bikeAccent = 'gray', // 'gray' | 'tint' | 'darkPhoto'
-      compact = false,
-      motionEnabled = false
-    }) {
-      const topChrome = `
-        <div class="fold-guide"><span class="fold-guide-badge">1st Fold · 760px</span></div>
-        <div class="mo-statusbar">
+    function renderStatusBar(lightText = false) {
+      const col = lightText ? '#FFFFFF' : '#16171D';
+      return `
+        <div class="mo-statusbar" style="color:${col};">
           <span>9:27</span>
           <div class="mo-status-right">
-            <svg width="16" height="11" viewBox="0 0 16 11"><rect x="0" y="6.5" width="2.6" height="4.5" rx="0.8" fill="#16171D"/><rect x="4.2" y="4.5" width="2.6" height="6.5" rx="0.8" fill="#16171D"/><rect x="8.4" y="2.2" width="2.6" height="8.8" rx="0.8" fill="#16171D"/><rect x="12.6" y="0" width="2.6" height="11" rx="0.8" fill="#16171D"/></svg>
-            <svg width="15" height="11" viewBox="0 0 15 11" fill="none"><path d="M1.2 3.6 C4.8 0.6 10.2 0.6 13.8 3.6" stroke="#16171D" stroke-width="1.5" stroke-linecap="round"/><path d="M3.6 6.2 C5.9 4.3 9.1 4.3 11.4 6.2" stroke="#16171D" stroke-width="1.5" stroke-linecap="round"/><circle cx="7.5" cy="9" r="1.4" fill="#16171D"/></svg>
-            <svg width="22" height="11" viewBox="0 0 22 11"><rect x="0.6" y="0.8" width="18.4" height="9.4" rx="2.4" fill="none" stroke="#16171D" stroke-width="1.2"/><rect x="2.3" y="2.4" width="14.8" height="6.2" rx="1.2" fill="#16171D"/><path d="M20.2 3.8 V7.2" stroke="#16171D" stroke-width="1.4" stroke-linecap="round"/></svg>
-          </div>
-        </div>
-        <div class="mo-gnb">
-          <div class="kcar-ci">
-            ${KCAR_CI_SVG}
-            <span class="kcar-ci-slogan">대한민국 No.1 모빌리티플랫폼</span>
+            <svg width="16" height="11" viewBox="0 0 16 11"><rect x="0" y="6.5" width="2.6" height="4.5" rx="0.8" fill="${col}"/><rect x="4.2" y="4.5" width="2.6" height="6.5" rx="0.8" fill="${col}"/><rect x="8.4" y="2.2" width="2.6" height="8.8" rx="0.8" fill="${col}"/><rect x="12.6" y="0" width="2.6" height="11" rx="0.8" fill="${col}"/></svg>
+            <svg width="15" height="11" viewBox="0 0 15 11" fill="none"><path d="M1.2 3.6 C4.8 0.6 10.2 0.6 13.8 3.6" stroke="${col}" stroke-width="1.5" stroke-linecap="round"/><path d="M3.6 6.2 C5.9 4.3 9.1 4.3 11.4 6.2" stroke="${col}" stroke-width="1.5" stroke-linecap="round"/><circle cx="7.5" cy="9" r="1.4" fill="${col}"/></svg>
+            <svg width="22" height="11" viewBox="0 0 22 11"><rect x="0.6" y="0.8" width="18.4" height="9.4" rx="2.4" fill="none" stroke="${col}" stroke-width="1.2"/><rect x="2.3" y="2.4" width="14.8" height="6.2" rx="1.2" fill="${col}"/></svg>
           </div>
         </div>
       `;
+    }
 
-      const kvBanner = `
-        <div class="mo-kv-banner ${compact ? 'compact-kv' : ''}">
-          <div>
-            <div class="kv-eyebrow">K Car의 새로운 도전을 위한 투표이벤트</div>
-            <div class="kv-title">케이카에서<br/><span class="hl-amber">이것까지</span> <span class="hl-red">사볼까?</span></div>
-          </div>
-          <div class="kv-foot">추첨을 통해 할리스 커피쿠폰을 드립니다!</div>
-          <span class="kv-counter">1 / 5</span>
-        </div>
-      `;
+    /* Precision Vectors for Swiss / Hybrid Tier 2 */
+    const VEC = {
+      sell: `<div class="vec-badge vec-sell"><svg width="24" height="24" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="9.5" fill="#FFF4D9" stroke="#16171D" stroke-width="1.8"/><path d="M9.5 11.5 L11.5 17.5 L14 12.5 L16.5 17.5 L18.5 11.5" stroke="#B70F28" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><line x1="8.5" y1="14.2" x2="19.5" y2="14.2" stroke="#16171D" stroke-width="1.5"/></svg></div>`,
+      c2c: `<div class="vec-badge tint-red vec-c2c"><svg width="24" height="24" viewBox="0 0 28 28" fill="none"><path d="M14 4.5 C9.3 4.5 6 8 6 12.4 C6 17.8 14 23.8 14 23.8 C14 23.8 22 17.8 22 12.4 C22 8 18.7 4.5 14 4.5 Z" fill="#B70F28"/><circle cx="14" cy="12.2" r="3.4" fill="#FFF"/></svg></div>`,
+      rentUsed: `<div class="vec-badge vec-rent-used"><svg width="24" height="24" viewBox="0 0 28 28" fill="none"><rect x="5" y="6.5" width="18" height="16.5" rx="3.5" fill="#FFF" stroke="#16171D" stroke-width="1.8"/><path d="M5 10 C5 8 6.5 6.5 8.5 6.5 H19.5 C21.5 6.5 23 8 23 10 V11.2 H5 V10 Z" fill="#16171D"/><rect x="9" y="14.5" width="4" height="4" rx="1" fill="#B70F28"/><rect x="15" y="14.5" width="4" height="4" rx="1" fill="#CBD2E0"/></svg></div>`,
+      rentNew: `<div class="vec-badge vec-rent-new"><svg width="24" height="24" viewBox="0 0 28 28" fill="none"><rect x="5.5" y="12" width="17" height="11" rx="2.5" fill="#FFF" stroke="#16171D" stroke-width="1.8"/><rect x="4.5" y="8.8" width="19" height="4" rx="1.5" fill="#FFF" stroke="#16171D" stroke-width="1.8"/><rect x="12.6" y="8.8" width="2.8" height="14.2" fill="#B70F28"/><path d="M14 8.8 C10.8 8.8 9.5 5.6 11.8 4.8 C13.4 4.2 14 6.8 14 8.8 Z" fill="#B70F28"/><path d="M14 8.8 C17.2 8.8 18.5 5.6 16.2 4.8 C14.6 4.2 14 6.8 14 8.8 Z" fill="#B70F28"/></svg></div>`,
+      rentDeal: `<div class="vec-badge tint-red vec-rent-deal"><svg width="24" height="24" viewBox="0 0 28 28" fill="none"><rect x="5.5" y="5.5" width="17" height="17" rx="5" fill="#B70F28"/><circle cx="11" cy="11" r="1.6" fill="#FFF"/><circle cx="17" cy="17" r="1.6" fill="#FFF"/><line x1="17.2" y1="10.2" x2="10.8" y2="17.8" stroke="#FFF" stroke-width="2" stroke-linecap="round"/></svg></div>`,
+      myCar: `<div class="vec-badge vec-mycar"><svg width="24" height="24" viewBox="0 0 28 28" fill="none"><path d="M4.5 17.5 L6.8 11.5 C7.4 10 8.6 9.5 10.5 9.5 H16.5 C18.4 9.5 19.6 10 20.2 11.5 L22.5 17.5 V20.5 H4.5 V17.5 Z" fill="#F1F3F7" stroke="#16171D" stroke-width="1.8" stroke-linejoin="round"/><g class="scan-lens"><circle cx="18.5" cy="17.5" r="4.3" fill="#FFF" stroke="#B70F28" stroke-width="2"/><line x1="21.7" y1="20.7" x2="24.5" y2="23.5" stroke="#16171D" stroke-width="2" stroke-linecap="round"/></g></svg></div>`
+    };
 
-      const bottomBar = `
-        <div class="mo-homebar"><div class="mo-homebar-pill"></div></div>
-      `;
+    /* =========================================================================
+       FOUR RADICALLY DISTINCT ARCHETYPE BUILDERS (Used in Step 1 & Step 3)
+       ========================================================================= */
 
-      let contentHtml = '';
-
-      // ---------------- LAYOUT A: HERO BENTO + QUICK SERVICE CHIPS ----------------
-      if (layout === 'bento') {
-        const heroCls = heroSurface === 'red' ? 'surface-red' : (heroSurface === 'dark' ? 'surface-dark' : '');
-        const bikeCls = bikeAccent === 'tint' ? 'surface-tint' : '';
-        const bikeSurfKey = bikeAccent === 'tint' ? 'tint' : 'gray';
-
-        contentHtml = `
-          <div class="mo-content ${compact ? 'compact-gap' : ''}">
-            ${kvBanner}
-
-            <div>
-              <div class="sec-row-head">
-                <div class="sec-row-left">
-                  <span class="sec-row-title">중고차</span>
-                  <span class="sec-row-sub">사고팔 때도, 믿고 K Car</span>
-                </div>
-                <span class="sec-row-more">바로가기 ›</span>
-              </div>
-              <div class="bento-grid">
-                <div class="m-card bento-left-hero ${heroCls}" style="${compact ? 'height:164px;' : ''}">
-                  <div class="m-copy">
-                    <div class="m-title" style="font-size:16px;">내차 사기</div>
-                    <div class="m-sub">직영인증 중고차 찾기</div>
-                  </div>
-                  <div class="art-slot">${renderVisualAsset('buyCar', mixMode, heroSurface)}</div>
-                </div>
-                <div class="bento-right-col">
-                  <div class="m-card bento-right-card" style="${compact ? 'height:78px;' : ''}">
-                    <div class="m-copy">
-                      <div class="m-title">내차 팔기</div>
-                      <div class="m-sub">당일 방문 최고가</div>
-                    </div>
-                    <div class="art-slot">${renderVisualAsset('sellCar', mixMode)}</div>
-                  </div>
-                  <div class="m-card bento-right-card" style="${compact ? 'height:78px;' : ''}">
-                    <div class="m-copy">
-                      <div class="m-title">안심직거래</div>
-                      <div class="m-sub">진단·보증 직거래</div>
-                    </div>
-                    <div class="art-slot">${renderVisualAsset('c2cCar', mixMode)}</div>
-                  </div>
-                </div>
-              </div>
-              <div class="quick-service-strip">
-                <div class="quick-chip">${QUICK_ICONS.home}<span>홈서비스</span></div>
-                <div class="quick-chip">${QUICK_ICONS.weekly}<span>위클리 특가</span></div>
-                <div class="quick-chip">${QUICK_ICONS.warranty}<span>K Car 보증</span></div>
-                <div class="quick-chip">${QUICK_ICONS.inspect}<span>출장진단</span></div>
-              </div>
-            </div>
-
-            <div>
-              <div class="sec-row-head">
-                <div class="sec-row-left">
-                  <span class="sec-row-title">렌터카</span>
-                  <span class="sec-row-sub">내 일상에 딱 맞는 드라이브</span>
-                </div>
-              </div>
-              <div class="rent-3-grid">
-                <div class="m-card rent-tile" style="${compact ? 'height:92px;' : ''}">
-                  <div class="m-copy"><div class="m-title">중고차 렌트</div></div>
-                  <div class="art-slot">${renderVisualAsset('rentUsed', mixMode)}</div>
-                </div>
-                <div class="m-card rent-tile" style="${compact ? 'height:92px;' : ''}">
-                  <div class="m-copy"><div class="m-title">신차 렌트</div></div>
-                  <div class="art-slot">${renderVisualAsset('rentNew', mixMode)}</div>
-                </div>
-                <div class="m-card rent-tile" style="${compact ? 'height:92px;' : ''}">
-                  <div class="m-copy"><div class="m-title">렌트 특가</div></div>
-                  <div class="art-slot">${renderVisualAsset('rentDeal', mixMode)}</div>
-                </div>
-              </div>
-            </div>
-
-            <div class="bottom-2-grid">
-              <div>
-                <div class="sec-row-head">
-                  <span class="sec-row-title">바이크 <i class="n-circle" style="font-style:normal;">N</i></span>
-                </div>
-                <div class="m-card bottom-half-card ${bikeCls}">
-                  <div class="m-copy">
-                    <div class="m-title">쉽고 편한 직거래</div>
-                    ${bikeAccent === 'tint' ? '<div class="m-sub">수수료 0원 오픈</div>' : ''}
-                  </div>
-                  <div class="art-slot">${renderVisualAsset('bike', mixMode, bikeSurfKey)}</div>
-                </div>
-              </div>
-              <div>
-                <div class="sec-row-head">
-                  <span class="sec-row-title">마이카</span>
-                </div>
-                <div class="m-card bottom-half-card">
-                  <div class="m-copy"><div class="m-title">내차 시세 확인</div></div>
-                  <div class="art-slot">${renderVisualAsset('myCar', mixMode)}</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        `;
-      }
-
-      // ---------------- LAYOUT B: SUPER-APP 4x2 DOCK + LIVE FEED ----------------
-      else if (layout === 'superapp') {
-        contentHtml = `
-          <div class="mo-content compact-gap" style="gap:18px;">
-            <div class="plate-search">
-              <span><b>차량번호 · 모델명</b>으로 통합 시세/매물 검색</span>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#B70F28" stroke-width="2.3"><circle cx="11" cy="11" r="7"/><line x1="16.2" y1="16.2" x2="21" y2="21" stroke-linecap="round"/></svg>
-            </div>
-
-            <div class="dock-4x2">
-              <div class="dock-cell">
-                <div class="dock-squircle" style="padding:3px;">${renderVisualAsset('buyCar', mixMode)}</div>
-                <span class="dock-name">내차 사기</span>
-              </div>
-              <div class="dock-cell">
-                <div class="dock-squircle" style="padding:5px;">${renderVisualAsset('sellCar', mixMode)}</div>
-                <span class="dock-name">내차 팔기</span>
-              </div>
-              <div class="dock-cell">
-                <div class="dock-squircle" style="padding:5px;">${renderVisualAsset('c2cCar', mixMode)}</div>
-                <span class="dock-name">안심직거래</span>
-              </div>
-              <div class="dock-cell is-bike">
-                <span class="dock-new-pill">NEW</span>
-                <div class="dock-squircle" style="padding:3px;">${renderVisualAsset('bike', mixMode, 'tint')}</div>
-                <span class="dock-name" style="color:var(--primary-3);font-weight:700;">바이크</span>
-              </div>
-              <div class="dock-cell">
-                <div class="dock-squircle" style="padding:5px;">${renderVisualAsset('rentUsed', mixMode)}</div>
-                <span class="dock-name">중고차 렌트</span>
-              </div>
-              <div class="dock-cell">
-                <div class="dock-squircle" style="padding:4px;">${renderVisualAsset('rentNew', mixMode)}</div>
-                <span class="dock-name">신차 렌트</span>
-              </div>
-              <div class="dock-cell">
-                <div class="dock-squircle" style="padding:5px;">${renderVisualAsset('rentDeal', mixMode)}</div>
-                <span class="dock-name">렌트 특가</span>
-              </div>
-              <div class="dock-cell">
-                <div class="dock-squircle" style="padding:4px;">${renderVisualAsset('myCar', mixMode)}</div>
-                <span class="dock-name">마이카 시세</span>
-              </div>
-            </div>
-
-            ${kvBanner}
-
-            <div class="m-card wide-strip surface-tint" style="height:80px;">
-              <div class="m-copy">
-                <div class="m-title" style="color:var(--gray-2);">K Car 바이크 직거래 오픈</div>
-                <div class="m-sub">등록비·수수료 0원, 안심 직거래 시작</div>
-              </div>
-              <div class="art-slot">${renderVisualAsset('bike', mixMode, 'tint')}</div>
-            </div>
-
-            <div class="feed-panel">
-              <div class="sec-row-head" style="margin-bottom:2px;height:20px;">
-                <span class="sec-row-title" style="font-size:15px;">실시간 모빌리티 브리핑</span>
-                <span class="sec-row-more">전체보기 ›</span>
-              </div>
-              <div class="feed-row">
-                <div>
-                  <h4>위클리 특가 · 최대 250만원 즉시 할인</h4>
-                  <p>직영인증 인기 SUV·세단 금주 한정 특가</p>
-                </div>
-                <span class="mini-tag">특가 진행</span>
-              </div>
-              <div class="feed-row">
-                <div>
-                  <h4>내 차 시세, 이번 달 매각 적기일까?</h4>
-                  <p>차량번호 1초 조회로 AI 감가 예측 리포트 확인</p>
-                </div>
-                <span class="mini-tag" style="background:var(--blue-bg);color:var(--info-blue);">시세 조회</span>
-              </div>
-            </div>
-          </div>
-        `;
-      }
-
-      // ---------------- LAYOUT C: DUAL FLAGSHIP + WIDE C2C STRIPS ----------------
-      else if (layout === 'dualwide') {
-        const leftCls = heroSurface === 'dark' ? 'surface-dark' : (heroSurface === 'red' ? 'surface-red' : '');
-        const useDarkBikePhoto = bikeAccent === 'darkPhoto';
-
-        contentHtml = `
-          <div class="mo-content compact-gap">
-            ${kvBanner}
-
-            <div>
-              <div class="sec-row-head">
-                <div class="sec-row-left">
-                  <span class="sec-row-title">중고차</span>
-                  <span class="sec-row-sub">사고팔 때도, 믿고 K Car</span>
-                </div>
-                <span class="sec-row-more">바로가기 ›</span>
-              </div>
-              <div class="dual-cards">
-                <div class="m-card dual-card ${leftCls}">
-                  <div class="m-copy">
-                    <div class="m-title" style="font-size:16px;">내차 사기</div>
-                    <div class="m-sub">원하는 중고차 찾기</div>
-                  </div>
-                  <div class="art-slot">${renderVisualAsset('buyCar', mixMode, heroSurface)}</div>
-                </div>
-                <div class="m-card dual-card">
-                  <div class="m-copy">
-                    <div class="m-title" style="font-size:16px;">내차 팔기</div>
-                    <div class="m-sub">내 차 판매 시작하기</div>
-                  </div>
-                  <div class="art-slot" style="width:82px;height:78px;right:8px;">${renderVisualAsset('sellCar', mixMode)}</div>
-                </div>
-              </div>
-              <div class="m-card wide-strip">
-                <div class="m-copy">
-                  <div class="m-title">안심직거래</div>
-                  <div class="m-sub">케이카 진단으로 판매자와 직접 안전 거래</div>
-                </div>
-                <div class="art-slot" style="width:62px;height:62px;">${renderVisualAsset('c2cCar', mixMode)}</div>
-              </div>
-            </div>
-
-            <div>
-              <div class="sec-row-head">
-                <div class="sec-row-left">
-                  <span class="sec-row-title">바이크 <i class="n-circle" style="font-style:normal;">N</i></span>
-                  <span class="sec-row-sub">새로운 이륜차 직거래 기준</span>
-                </div>
-                <span class="sec-row-more">바로가기 ›</span>
-              </div>
-              <div class="m-card wide-strip ${useDarkBikePhoto ? 'surface-bike-dark' : 'surface-tint'}" style="height:92px;">
-                <div class="m-copy">
-                  <div class="m-title" style="font-size:16px;">쉽고 편한 바이크 직거래</div>
-                  <div class="m-sub">${useDarkBikePhoto ? '수수료 0원! 스쿠터·대형 실매물 직거래' : '개인 간 바이크 거래도 이제 K Car에서'}</div>
-                </div>
-                ${useDarkBikePhoto ? '<div style="width:80px;"></div>' : `<div class="art-slot">${renderVisualAsset('bike', mixMode, 'tint')}</div>`}
-              </div>
-            </div>
-
-            <div>
-              <div class="sec-row-head">
-                <div class="sec-row-left">
-                  <span class="sec-row-title">렌터카</span>
-                  <span class="sec-row-sub">내 일상에 딱 맞는 드라이브</span>
-                </div>
-              </div>
-              <div class="rent-3-grid">
-                <div class="m-card rent-tile center-mode">
-                  <div class="art-slot">${renderVisualAsset('rentUsed', mixMode)}</div>
-                  <div class="m-title">중고차 렌트</div>
-                </div>
-                <div class="m-card rent-tile center-mode">
-                  <div class="art-slot">${renderVisualAsset('rentNew', mixMode)}</div>
-                  <div class="m-title">신차 렌트</div>
-                </div>
-                <div class="m-card rent-tile center-mode">
-                  <div class="art-slot">${renderVisualAsset('rentDeal', mixMode)}</div>
-                  <div class="m-title">렌트 특가</div>
-                </div>
-              </div>
-            </div>
-
-            <div>
-              <div class="sec-row-head"><span class="sec-row-title">마이카</span></div>
-              <div class="m-card wide-strip" style="height:74px;">
-                <div class="m-copy">
-                  <div class="m-title">내차 시세 확인</div>
-                  <div class="m-sub">차량번호 입력만으로 AI 시세 추이 확인</div>
-                </div>
-                <div class="art-slot" style="width:68px;height:54px;">${renderVisualAsset('myCar', mixMode)}</div>
-              </div>
-            </div>
-          </div>
-        `;
-      }
-
-      // ---------------- LAYOUT D: SEGMENTED CONCIERGE LIST ----------------
-      else {
-        contentHtml = `
-          <div class="mo-content compact-gap" style="gap:18px;">
-            ${kvBanner}
-
-            <div class="cat-pills">
-              <span class="cat-pill active">전체</span>
-              <span class="cat-pill">중고차</span>
-              <span class="cat-pill">바이크 N</span>
-              <span class="cat-pill">렌터카</span>
-              <span class="cat-pill">마이카</span>
-            </div>
-
-            <div>
-              <div class="sec-row-head">
-                <div class="sec-row-left">
-                  <span class="sec-row-title">중고차</span>
-                  <span class="sec-row-sub">사고팔 때도, 믿고 K Car</span>
-                </div>
-              </div>
-              <div class="list-stack">
-                <div class="m-card list-card">
-                  <div class="art-slot">${renderVisualAsset('buyCar', mixMode)}</div>
-                  <div class="list-card-body">
-                    <div class="m-title">내차 사기</div>
-                    <div class="m-sub">100% 직영인증 실매물 · 3일 책임환불제</div>
-                  </div>
-                  <span class="list-chevron">›</span>
-                </div>
-                <div class="m-card list-card">
-                  <div class="art-slot">${renderVisualAsset('sellCar', mixMode)}</div>
-                  <div class="list-card-body">
-                    <div class="m-title">내차 팔기</div>
-                    <div class="m-sub">부당 감가 없는 무료 방문 견적 · 당일 입금</div>
-                  </div>
-                  <span class="list-chevron">›</span>
-                </div>
-                <div class="m-card list-card">
-                  <div class="art-slot">${renderVisualAsset('c2cCar', mixMode)}</div>
-                  <div class="list-card-body">
-                    <div class="m-title">안심직거래</div>
-                    <div class="m-sub">케이카 전문 진단 결합 개인 간 안심 직거래</div>
-                  </div>
-                  <span class="list-chevron">›</span>
-                </div>
-              </div>
-            </div>
-
-            <div>
-              <div class="sec-row-head">
-                <span class="sec-row-title">바이크 <i class="n-circle" style="font-style:normal;">N</i> &amp; 마이카</span>
-              </div>
-              <div class="list-stack">
-                <div class="m-card list-card surface-tint">
-                  <div class="art-slot">${renderVisualAsset('bike', mixMode, 'tint')}</div>
-                  <div class="list-card-body">
-                    <div class="m-title">바이크 쉽고 편한 직거래</div>
-                    <div class="m-sub">등록비·수수료 0원, 안심 바이크 직거래</div>
-                  </div>
-                  <span class="list-chevron" style="color:var(--primary-3);">›</span>
-                </div>
-                <div class="m-card list-card">
-                  <div class="art-slot">${renderVisualAsset('myCar', mixMode)}</div>
-                  <div class="list-card-body">
-                    <div class="m-title">내차 시세 확인</div>
-                    <div class="m-sub">실거래 데이터 기반 월별 시세 리포트</div>
-                  </div>
-                  <span class="list-chevron">›</span>
-                </div>
-              </div>
-            </div>
-
-            <div>
-              <div class="sec-row-head"><span class="sec-row-title">렌터카</span></div>
-              <div class="rent-3-grid">
-                <div class="m-card rent-tile center-mode" style="height:92px;">
-                  <div class="art-slot">${renderVisualAsset('rentUsed', mixMode)}</div>
-                  <div class="m-title">중고차 렌트</div>
-                </div>
-                <div class="m-card rent-tile center-mode" style="height:92px;">
-                  <div class="art-slot">${renderVisualAsset('rentNew', mixMode)}</div>
-                  <div class="m-title">신차 렌트</div>
-                </div>
-                <div class="m-card rent-tile center-mode" style="height:92px;">
-                  <div class="art-slot">${renderVisualAsset('rentDeal', mixMode)}</div>
-                  <div class="m-title">렌트 특가</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        `;
-      }
-
+    /* ARCHETYPE 1: K CAR SIGNATURE RED BRIDGE (정통 브랜드 레드 상단 + 플로팅 브릿지) */
+    function renderArchetypeRedBridge(flagshipPolish = false) {
       return `
-        <div class="phone-shell ${motionEnabled ? 'motion-hybrid-only' : ''}">
-          <div class="mo-viewport">
-            ${topChrome}
-            ${contentHtml}
-            ${bottomBar}
+        <div class="phone-shell">
+          <div class="mo-viewport skin-red-bridge">
+            <div class="fold-guide"><span class="fold-guide-badge">1st Fold · 760px</span></div>
+
+            <div class="rb-hero-top">
+              ${renderStatusBar(true)}
+              <div class="rb-gnb">
+                ${renderKcarLogo(true)}
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFF" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+              </div>
+              <div class="rb-nav-tabs">
+                <span class="active">통합홈</span>
+                <span>직영중고차</span>
+                <span>바이크 <b style="color:#FFD466;font-size:10px;">N</b></span>
+                <span>렌터카</span>
+                <span>마이카</span>
+              </div>
+              <div class="rb-search-pill">
+                <span>차량번호·모델명으로 직영/직거래 통합검색</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FFF" stroke-width="2.4"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/></svg>
+              </div>
+            </div>
+
+            <div class="rb-body">
+              <!-- Floating Bridge Card overlapping Crimson Header -->
+              <div class="rb-bridge-card">
+                <div class="sec-head-inline">
+                  <h4>중고차 <span style="font-size:11.5px;font-weight:400;color:var(--gray-4);">사고팔 때도, 믿고 K Car</span></h4>
+                  <span class="more">바로가기 ›</span>
+                </div>
+                <div class="bento-2col">
+                  <div class="card-base" style="height:158px;background:#16171D;color:#FFF;display:flex;flex-direction:column;justify-content:space-between;">
+                    <div>
+                      <div class="card-title">내차 사기</div>
+                      <div class="card-sub">직영인증 실매물 찾기</div>
+                    </div>
+                    <img src="./assets/photo_car_hero_dark.png" alt="내차 사기" style="width:128px;height:86px;object-fit:contain;align-self:flex-end;margin:-6px -6px -8px 0;" />
+                  </div>
+                  <div style="display:flex;flex-direction:column;gap:8px;">
+                    <div class="card-base" style="height:75px;background:#F6F8FA;">
+                      <div class="card-title" style="font-size:14px;">내차 팔기</div>
+                      <div class="card-sub">방문 최고가</div>
+                      <div style="position:absolute;right:8px;bottom:6px;transform:scale(0.88);transform-origin:right bottom;">${flagshipPolish ? VEC.sell : '<img class="blend-multiply" src="./assets/icon3d_sell_coin.png" alt="" style="width:48px;height:48px;object-fit:contain;"/>'}</div>
+                    </div>
+                    <div class="card-base" style="height:75px;background:#F6F8FA;">
+                      <div class="card-title" style="font-size:14px;">안심직거래</div>
+                      <div class="card-sub">진단 직거래</div>
+                      <div style="position:absolute;right:8px;bottom:6px;transform:scale(0.88);transform-origin:right bottom;">${flagshipPolish ? VEC.c2c : '<img class="blend-multiply" src="./assets/icon3d_c2c_pin.png" alt="" style="width:48px;height:48px;object-fit:contain;"/>'}</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Bike Spotlight & MyCar Dual Section -->
+              <div style="display:grid;grid-template-columns:1.12fr 0.88fr;gap:10px;">
+                <div class="rb-section-box" style="background:linear-gradient(145deg,#FFF5F6 0%,#FDE8EB 100%);border:1px solid #F6C5CC;position:relative;overflow:hidden;height:118px;">
+                  <div style="font-size:11px;font-weight:700;color:var(--primary-3);">바이크 <span class="n-badge">N</span></div>
+                  <div style="font-size:15px;font-weight:700;margin-top:2px;">쉽고 편한 직거래</div>
+                  <div style="font-size:11px;color:var(--primary-2);margin-top:2px;">수수료 0원 오픈</div>
+                  <img class="blend-multiply" src="./assets/photo_bike.png" alt="바이크" style="position:absolute;right:2px;bottom:2px;width:82px;height:62px;object-fit:contain;" />
+                </div>
+                <div class="rb-section-box" style="position:relative;overflow:hidden;height:118px;">
+                  <div style="font-size:11px;font-weight:700;color:var(--gray-4);">마이카</div>
+                  <div style="font-size:15px;font-weight:700;margin-top:2px;">내차 시세 확인</div>
+                  <div style="font-size:11px;color:var(--gray-4);margin-top:2px;">AI 시세 리포트</div>
+                  <img class="blend-multiply" src="./assets/icon3d_mycar_value.png" alt="마이카" style="position:absolute;right:4px;bottom:2px;width:66px;height:52px;object-fit:contain;" />
+                </div>
+              </div>
+
+              <!-- Rent 3-Col Module -->
+              <div class="rb-section-box">
+                <div class="sec-head-inline" style="margin-bottom:8px;">
+                  <h4 style="font-size:15px;">렌터카 <span style="font-size:11.5px;font-weight:400;color:var(--gray-4);">맞춤 드라이브</span></h4>
+                </div>
+                <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;">
+                  <div class="card-base" style="height:82px;background:#F6F8FA;padding:10px;">
+                    <div class="card-title" style="font-size:12.5px;">중고차 렌트</div>
+                    <img class="blend-multiply" src="./assets/icon3d_rent_calendar.png" alt="" style="position:absolute;right:4px;bottom:3px;width:42px;height:42px;object-fit:contain;"/>
+                  </div>
+                  <div class="card-base" style="height:82px;background:#F6F8FA;padding:10px;">
+                    <div class="card-title" style="font-size:12.5px;">신차 렌트</div>
+                    <img class="blend-multiply" src="./assets/photo_rent_suv.png" alt="" style="position:absolute;right:2px;bottom:3px;width:52px;height:40px;object-fit:contain;"/>
+                  </div>
+                  <div class="card-base" style="height:82px;background:#F6F8FA;padding:10px;">
+                    <div class="card-title" style="font-size:12.5px;">렌트 특가</div>
+                    <img class="blend-multiply" src="./assets/icon3d_rent_deal.png" alt="" style="position:absolute;right:4px;bottom:3px;width:42px;height:42px;object-fit:contain;"/>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slim Event Banner -->
+              <div style="height:74px;border-radius:14px;background:linear-gradient(90deg,#16171D 0%,#2D1822 100%);color:#FFF;padding:12px 16px;display:flex;align-items:center;justify-content:space-between;">
+                <div>
+                  <div style="font-size:10px;color:#CBD5E1;">새로운 도전 투표 이벤트</div>
+                  <div style="font-size:14px;font-weight:700;margin-top:2px;">케이카에서 <span style="color:#F5A345;">이것까지</span> <span style="color:#FF4D5A;">사볼까?</span></div>
+                </div>
+                <span style="font-size:11px;background:rgba(255,255,255,0.14);padding:4px 9px;border-radius:99px;">참여 ›</span>
+              </div>
+            </div>
+
+            <div class="mo-homebar" style="color:#16171D;"><div class="mo-homebar-pill"></div></div>
+          </div>
+        </div>
+      `;
+    }
+
+    /* ARCHETYPE 2: TOSS / FINTECH MINIMAL SUPER-APP (쿨그레이 + 번호판 위젯 + 파스텔 독) */
+    function renderArchetypeFintech() {
+      return `
+        <div class="phone-shell">
+          <div class="mo-viewport skin-fintech">
+            <div class="fold-guide"><span class="fold-guide-badge">1st Fold · 760px</span></div>
+            ${renderStatusBar(false)}
+            <div class="ft-gnb">
+              ${renderKcarLogo(false)}
+              <div style="display:flex;gap:10px;align-items:center;">
+                <span style="font-size:11px;font-weight:700;color:#0064FF;background:#E8F3FF;padding:4px 9px;border-radius:99px;">내 차고 1대</span>
+              </div>
+            </div>
+
+            <div class="ft-body">
+              <!-- Module 1: Korean License Plate Instant Lookup -->
+              <div class="ft-module" style="padding:16px;">
+                <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;">
+                  <span style="font-size:15px;font-weight:700;">내 차·바이크 번호판 원탭 조회</span>
+                  <span style="font-size:11px;color:#0064FF;font-weight:700;">AI 시세 연동</span>
+                </div>
+                <div class="kr-plate-box">
+                  <div class="kr-plate-euro"><span>KOR</span><span>●</span></div>
+                  <div class="kr-plate-num">
+                    <span>123가 4568</span>
+                    <span class="kr-plate-cta">시세·매물 조회</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Module 2: 4x2 Pastel Super-App Mobility Dock -->
+              <div class="ft-module">
+                <div class="ft-mod-head">
+                  <span class="ft-mod-title">모빌리티 전체 서비스</span>
+                  <span style="font-size:12px;color:#8B95A1;">8개 카테고리</span>
+                </div>
+                <div class="ft-dock-grid">
+                  <div class="ft-dock-item">
+                    <div class="ft-squircle pastel-sky"><img class="blend-multiply" src="./assets/clay_car_iso.png" alt="" style="width:100%;height:100%;object-fit:contain;"/></div>
+                    <span class="ft-dock-label" style="font-weight:700;">내차 사기</span>
+                  </div>
+                  <div class="ft-dock-item">
+                    <div class="ft-squircle pastel-butter"><img class="blend-multiply" src="./assets/icon3d_sell_coin.png" alt="" style="width:100%;height:100%;object-fit:contain;"/></div>
+                    <span class="ft-dock-label">내차 팔기</span>
+                  </div>
+                  <div class="ft-dock-item">
+                    <div class="ft-squircle pastel-mint"><img class="blend-multiply" src="./assets/icon3d_c2c_pin.png" alt="" style="width:100%;height:100%;object-fit:contain;"/></div>
+                    <span class="ft-dock-label">안심직거래</span>
+                  </div>
+                  <div class="ft-dock-item">
+                    <span class="ft-pill-new">NEW</span>
+                    <div class="ft-squircle pastel-peach"><img class="blend-multiply" src="./assets/clay_bike_iso.png" alt="" style="width:100%;height:100%;object-fit:contain;"/></div>
+                    <span class="ft-dock-label" style="color:var(--primary-3);font-weight:700;">바이크</span>
+                  </div>
+                  <div class="ft-dock-item">
+                    <div class="ft-squircle pastel-lavender"><img class="blend-multiply" src="./assets/icon3d_rent_calendar.png" alt="" style="width:100%;height:100%;object-fit:contain;"/></div>
+                    <span class="ft-dock-label">중고차 렌트</span>
+                  </div>
+                  <div class="ft-dock-item">
+                    <div class="ft-squircle pastel-cyan"><img class="blend-multiply" src="./assets/photo_rent_suv.png" alt="" style="width:100%;height:100%;object-fit:contain;"/></div>
+                    <span class="ft-dock-label">신차 렌트</span>
+                  </div>
+                  <div class="ft-dock-item">
+                    <div class="ft-squircle" style="background:#FFEFF2;"><img class="blend-multiply" src="./assets/icon3d_rent_deal.png" alt="" style="width:100%;height:100%;object-fit:contain;"/></div>
+                    <span class="ft-dock-label">렌트 특가</span>
+                  </div>
+                  <div class="ft-dock-item">
+                    <div class="ft-squircle" style="background:#EEF2F6;"><img class="blend-multiply" src="./assets/icon3d_mycar_value.png" alt="" style="width:100%;height:100%;object-fit:contain;"/></div>
+                    <span class="ft-dock-label">마이카</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Module 3: Bike Launch Highlight Card -->
+              <div class="ft-module" style="background:linear-gradient(135deg,#FFFFFF 0%,#FFF4F6 100%);display:flex;align-items:center;justify-content:space-between;padding:16px 18px;">
+                <div>
+                  <span style="display:inline-block;font-size:10.5px;font-weight:700;color:var(--primary-3);background:var(--primary-9);padding:2px 7px;border-radius:6px;margin-bottom:5px;">신규 오픈 · 수수료 0원</span>
+                  <div style="font-size:15.5px;font-weight:700;color:#191F28;">바이크 직거래도 이제 케이카</div>
+                  <div style="font-size:12px;color:#6B7684;margin-top:2px;">스쿠터부터 대형까지 실매물 안심 거래</div>
+                </div>
+                <img class="blend-multiply" src="./assets/clay_bike_iso.png" alt="바이크" style="width:68px;height:62px;object-fit:contain;flex-shrink:0;" />
+              </div>
+
+              <!-- Module 4: Live MyCar Feed + Event Row -->
+              <div class="ft-module" style="padding:14px 16px;display:flex;flex-direction:column;gap:10px;">
+                <div style="display:flex;align-items:center;justify-content:space-between;">
+                  <div style="display:flex;align-items:center;gap:10px;">
+                    <div style="width:36px;height:36px;border-radius:11px;background:#E8F3FF;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;color:#0064FF;">₩</div>
+                    <div>
+                      <div style="font-size:13.5px;font-weight:700;">이번 주 위클리 특가 48대</div>
+                      <div style="font-size:11.5px;color:#6B7684;">직영인증 SUV 최대 250만원 할인</div>
+                    </div>
+                  </div>
+                  <span style="color:#8B95A1;font-size:15px;">›</span>
+                </div>
+                <div style="border-top:1px solid #F2F4F7;padding-top:10px;display:flex;align-items:center;justify-content:space-between;">
+                  <div style="display:flex;align-items:center;gap:10px;">
+                    <div style="width:36px;height:36px;border-radius:11px;background:#FFF4D4;display:flex;align-items:center;justify-content:center;font-size:15px;">☕</div>
+                    <div>
+                      <div style="font-size:13.5px;font-weight:700;">케이카에서 이것까지 사볼까?</div>
+                      <div style="font-size:11.5px;color:#6B7684;">투표 참여 시 할리스 커피쿠폰 증정</div>
+                    </div>
+                  </div>
+                  <span style="color:#8B95A1;font-size:15px;">›</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="mo-homebar" style="color:#191F28;"><div class="mo-homebar-pill"></div></div>
+          </div>
+        </div>
+      `;
+    }
+
+    /* ARCHETYPE 3: DARK LUXURY MOBILITY SHOWROOM (딥 오닉스 다크 쇼룸 + 풀블리드 화보) */
+    function renderArchetypeDarkShowroom() {
+      return `
+        <div class="phone-shell">
+          <div class="mo-viewport skin-dark-lounge">
+            <div class="fold-guide"><span class="fold-guide-badge">1st Fold · 760px</span></div>
+
+            <div class="dl-top-hero">
+              <div>
+                ${renderStatusBar(true)}
+                <div style="height:40px;display:flex;align-items:center;justify-content:space-between;">
+                  ${renderKcarLogo(true)}
+                  <span style="font-size:10px;font-weight:700;letter-spacing:0.6px;color:#FCA5A5;border:1px solid rgba(248,113,113,0.4);padding:3px 8px;border-radius:99px;">SHOWROOM</span>
+                </div>
+              </div>
+              <div>
+                <div style="font-size:10.5px;color:#94A3B8;">K Car 모빌리티 확장 투표 캠페인</div>
+                <div style="font-size:20px;line-height:25px;font-weight:700;margin-top:3px;">케이카에서 <span style="color:#F5A345;">이것까지</span> <span style="color:#FF3B4E;">사볼까?</span></div>
+              </div>
+            </div>
+
+            <div class="dl-body">
+              <!-- Used Car Dark Showroom Dual -->
+              <div>
+                <div class="dl-sec-label">
+                  <span>01 · CERTIFIED &amp; C2C AUTO</span>
+                  <span style="color:#E2E8F0;font-size:11px;">중고차 전체 ›</span>
+                </div>
+                <div class="bento-2col" style="margin-bottom:8px;">
+                  <div class="dl-glass-card" style="height:152px;border-color:rgba(240,29,41,0.5);background:#16171D;">
+                    <div class="card-title" style="font-size:16px;">내차 사기</div>
+                    <div class="card-sub" style="color:#FCA5A5;">직영인증 플래그십</div>
+                    <img src="./assets/photo_car_hero_dark.png" alt="" style="position:absolute;right:0;bottom:2px;width:138px;height:88px;object-fit:contain;" />
+                  </div>
+                  <div class="dl-photo-card" style="height:152px;background-image:linear-gradient(150deg,rgba(15,18,26,0.92) 0%,rgba(15,18,26,0.35) 100%),url('./assets/photo_sell_key.jpg');">
+                    <div class="card-title" style="font-size:16px;">내차 팔기</div>
+                    <div class="card-sub" style="color:#FDE68A;">방문 최고가 매입</div>
+                  </div>
+                </div>
+                <div class="dl-glass-card" style="height:66px;display:flex;align-items:center;justify-content:space-between;padding:0 16px;">
+                  <div>
+                    <div class="card-title" style="font-size:14px;">승용 안심직거래</div>
+                    <div class="card-sub" style="color:#94A3B8;">케이카 진단·보증이 결합된 개인 간 거래</div>
+                  </div>
+                  <span style="width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;font-size:13px;">↗</span>
+                </div>
+              </div>
+
+              <!-- Bike Full-Bleed Dark Studio Card -->
+              <div>
+                <div class="dl-sec-label">
+                  <span style="color:#FF4D5E;">02 · K CAR BIKE LAUNCH [NEW]</span>
+                  <span>수수료 0원</span>
+                </div>
+                <div class="dl-photo-card" style="height:106px;border-color:rgba(255,59,78,0.5);background-image:linear-gradient(90deg,rgba(11,13,19,0.96) 0%,rgba(11,13,19,0.80) 52%,rgba(11,13,19,0.10) 100%),url('./assets/photo_bike_wide_dark.jpg');display:flex;flex-direction:column;justify-content:center;">
+                  <span style="font-size:10px;font-weight:700;color:#FF6B78;letter-spacing:0.5px;">NEW MOBILITY</span>
+                  <div class="card-title" style="font-size:17px;margin-top:2px;">바이크 안심 직거래</div>
+                  <div class="card-sub" style="color:#CBD5E1;">스쿠터부터 리터급까지 실매물 직거래</div>
+                </div>
+              </div>
+
+              <!-- Rent Highway Photo + MyCar Strip -->
+              <div>
+                <div class="dl-sec-label"><span>03 · RENT-A-CAR &amp; MYCAR</span></div>
+                <div class="dl-photo-card" style="height:90px;margin-bottom:8px;background-image:linear-gradient(90deg,rgba(11,13,19,0.92) 0%,rgba(11,13,19,0.45) 60%,rgba(11,13,19,0.15) 100%),url('./assets/photo_rent_drive.jpg');display:flex;align-items:center;justify-content:space-between;">
+                  <div>
+                    <div class="card-title" style="font-size:15.5px;">중고·신차 렌트 &amp; 월 특가</div>
+                    <div class="card-sub" style="color:#E2E8F0;">즉시 출고 가능한 맞춤 드라이브 플랜</div>
+                  </div>
+                  <span style="font-size:11px;font-weight:700;background:rgba(255,255,255,0.16);backdrop-filter:blur(4px);padding:5px 10px;border-radius:99px;">탐색 ›</span>
+                </div>
+                <div class="dl-glass-card" style="height:60px;display:flex;align-items:center;justify-content:space-between;padding:0 16px;">
+                  <div style="display:flex;align-items:center;gap:10px;">
+                    <span style="font-size:11px;font-weight:700;color:#38BDF8;background:rgba(56,189,248,0.14);padding:3px 7px;border-radius:5px;">MY CAR</span>
+                    <span style="font-size:13.5px;font-weight:700;">내차 실시간 AI 시세 리포트</span>
+                  </div>
+                  <span style="color:#94A3B8;">›</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="mo-homebar" style="color:#F8FAFC;"><div class="mo-homebar-pill"></div></div>
+          </div>
+        </div>
+      `;
+    }
+
+    /* ARCHETYPE 4: EDITORIAL SWISS MAGAZINE & CONCIERGE (웜 아이보리 + 블랙 잉크 네오에디토리얼) */
+    function renderArchetypeEditorial() {
+      return `
+        <div class="phone-shell">
+          <div class="mo-viewport skin-editorial">
+            <div class="fold-guide"><span class="fold-guide-badge">1st Fold · 760px</span></div>
+            ${renderStatusBar(false)}
+            <div class="ed-header">
+              ${renderKcarLogo(false)}
+              <span style="font-size:10.5px;font-weight:700;border:1.2px solid #121316;padding:2px 8px;border-radius:99px;">EDITION 2026</span>
+            </div>
+
+            <div class="ed-body">
+              <div class="ed-masthead">
+                <h3>오늘 어떤 모빌리티를<br/>경험하시겠어요?</h3>
+                <p>직영 중고차부터 신규 바이크 직거래·렌트까지 한곳에서</p>
+              </div>
+
+              <div class="ed-filter-pills">
+                <span class="ed-pill active">ALL 08</span>
+                <span class="ed-pill">중고차 03</span>
+                <span class="ed-pill">바이크 NEW</span>
+                <span class="ed-pill">렌트·시세</span>
+              </div>
+
+              <div class="ed-card">
+                <img class="blend-multiply" src="./assets/photo_car_buy.png" alt="" style="width:74px;height:54px;object-fit:contain;flex-shrink:0;" />
+                <div style="flex:1;min-width:0;">
+                  <div class="ed-num">01 · CERTIFIED BUY</div>
+                  <div style="font-size:15px;font-weight:700;">내차 사기 · 직영인증</div>
+                  <div style="font-size:11.5px;color:#57534E;">3일 책임환불 · 홈서비스 즉시 배송</div>
+                </div>
+                <span class="ed-circle-btn">↗</span>
+              </div>
+
+              <div class="ed-card">
+                <img class="blend-multiply" src="./assets/icon3d_sell_coin.png" alt="" style="width:54px;height:50px;object-fit:contain;flex-shrink:0;margin:0 10px;" />
+                <div style="flex:1;min-width:0;">
+                  <div class="ed-num">02 · FAST SELL &amp; C2C</div>
+                  <div style="font-size:15px;font-weight:700;">내차 팔기 · 안심직거래</div>
+                  <div style="font-size:11.5px;color:#57534E;">당일 방문견적 매입 &amp; 개인 간 직거래</div>
+                </div>
+                <span class="ed-circle-btn">↗</span>
+              </div>
+
+              <div class="ed-card ed-highlight">
+                <img class="blend-multiply" src="./assets/photo_bike.png" alt="" style="width:74px;height:54px;object-fit:contain;flex-shrink:0;" />
+                <div style="flex:1;min-width:0;">
+                  <div class="ed-num">03 · NEW LAUNCH</div>
+                  <div style="font-size:15px;font-weight:700;color:var(--primary-3);">바이크 쉽고 편한 직거래</div>
+                  <div style="font-size:11.5px;color:#7F1D1D;">중개수수료 0원 · 실매물 이륜차 직거래</div>
+                </div>
+                <span class="ed-circle-btn" style="border-color:var(--primary-3);color:var(--primary-3);">↗</span>
+              </div>
+
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+                <div class="ed-card" style="flex-direction:column;align-items:flex-start;padding:12px;gap:6px;">
+                  <div class="ed-num" style="color:#121316;">04 · RENT</div>
+                  <div style="font-size:14px;font-weight:700;">신차·중고 렌트</div>
+                  <div style="font-size:11px;color:#57534E;">월 대여료 특가 플랜</div>
+                </div>
+                <div class="ed-card" style="flex-direction:column;align-items:flex-start;padding:12px;gap:6px;">
+                  <div class="ed-num" style="color:#121316;">05 · MY CAR</div>
+                  <div style="font-size:14px;font-weight:700;">내차 시세 확인</div>
+                  <div style="font-size:11px;color:#57534E;">번호판 AI 시세 추이</div>
+                </div>
+              </div>
+
+              <div style="border:1.5px solid #121316;border-radius:12px;background:#121316;color:#F6F3EC;padding:12px 14px;display:flex;align-items:center;justify-content:space-between;">
+                <div>
+                  <div style="font-size:10px;color:#A8A29E;">EVENT · 할리스 커피쿠폰 증정</div>
+                  <div style="font-size:13.5px;font-weight:700;">케이카에서 이것까지 사볼까? 투표하기</div>
+                </div>
+                <span style="font-weight:700;">→</span>
+              </div>
+            </div>
+
+            <div class="mo-homebar" style="color:#121316;"><div class="mo-homebar-pill"></div></div>
           </div>
         </div>
       `;
     }
 
     /* =========================================================================
-       SECTION DATA DEFINITIONS
+       STEP 2 BUILDER: 3 RADICALLY DIFFERENT GRAPHIC ART DIRECTIONS
+       1) 'magazine' : Full-Bleed Commercial Photography Cards (No Motion)
+       2) 'pastel'   : Pastel Color-Block × 3D Pop Clay Cards (No Motion)
+       3) 'swiss'    : High-Contrast Swiss Grid × Motion Hybrid (MOTION ENABLED ONLY HERE!)
        ========================================================================= */
-    const DATA_LAYOUTS = [
+    function renderArtDirectionPhone(artStyle, structureMode = 'bento') {
+      const isMotion = artStyle === 'swiss';
+      const isDual = structureMode === 'dual';
+
+      // 1. FULL-BLEED MAGAZINE PHOTO ART
+      if (artStyle === 'magazine') {
+        const topUsedHtml = isDual ? `
+          <div class="bento-2col" style="margin-bottom:8px;">
+            <div class="card-base mag-card" style="height:156px;background-color:#B70F28;background-image:linear-gradient(160deg,rgba(140,8,28,0.92) 0%,rgba(183,15,40,0.18) 65%),url('./assets/photo_car_hero_red.png');background-size:125%;background-position:right bottom;">
+              <span class="mag-pill">DIRECT</span>
+              <div class="card-title" style="font-size:16px;">내차 사기</div>
+              <div class="card-sub">직영인증 실매물</div>
+            </div>
+            <div class="card-base mag-card" style="height:156px;background-image:linear-gradient(160deg,rgba(16,18,25,0.92) 0%,rgba(16,18,25,0.25) 70%),url('./assets/photo_sell_key.jpg');">
+              <span class="mag-pill">SELL</span>
+              <div class="card-title" style="font-size:16px;">내차 팔기</div>
+              <div class="card-sub">방문 최고가 견적</div>
+            </div>
+          </div>
+          <div class="card-base mag-card" style="height:74px;background-image:linear-gradient(90deg,rgba(22,25,35,0.95) 0%,rgba(45,20,30,0.82) 100%);display:flex;align-items:center;justify-content:space-between;">
+            <div>
+              <div class="card-title">안심직거래</div>
+              <div class="card-sub">케이카 진단 결합 개인 간 안전 직거래</div>
+            </div>
+            <span class="mag-pill" style="margin:0;">C2C ›</span>
+          </div>
+        ` : `
+          <div class="bento-2col">
+            <div class="card-base mag-card" style="height:172px;background-color:#B70F28;background-image:linear-gradient(160deg,rgba(135,8,26,0.92) 0%,rgba(183,15,40,0.15) 65%),url('./assets/photo_car_hero_red.png');background-size:128%;background-position:right bottom;">
+              <span class="mag-pill">CERTIFIED</span>
+              <div class="card-title" style="font-size:16px;">내차 사기</div>
+              <div class="card-sub">직영인증 중고차</div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:8px;">
+              <div class="card-base mag-card" style="height:82px;background-image:linear-gradient(95deg,rgba(16,18,25,0.92) 0%,rgba(16,18,25,0.28) 100%),url('./assets/photo_sell_key.jpg');">
+                <div class="card-title" style="font-size:14.5px;">내차 팔기</div>
+                <div class="card-sub">1일 내 최고가</div>
+              </div>
+              <div class="card-base mag-card" style="height:82px;background:linear-gradient(125deg,#25293A 0%,#491625 100%);">
+                <div class="card-title" style="font-size:14.5px;">안심직거래</div>
+                <div class="card-sub">수수료 0원 직거래</div>
+              </div>
+            </div>
+          </div>
+        `;
+
+        return `
+          <div class="phone-shell">
+            <div class="mo-viewport" style="background:#12141B;color:#FFF;">
+              <div class="fold-guide"><span class="fold-guide-badge">1st Fold · 760px</span></div>
+              ${renderStatusBar(true)}
+              <div style="height:48px;padding:0 20px;display:flex;align-items:center;justify-content:space-between;">
+                ${renderKcarLogo(true)}
+                <span style="font-size:10px;color:#94A3B8;font-weight:700;">PHOTO EDITION</span>
+              </div>
+              <div style="padding:6px 20px 20px;display:flex;flex-direction:column;gap:18px;">
+                <div class="card-base mag-card" style="height:112px;background-image:linear-gradient(90deg,rgba(12,14,20,0.95) 0%,rgba(12,14,20,0.3) 100%),url('./assets/banner_mobility_hero.jpg');display:flex;flex-direction:column;justify-content:center;">
+                  <div style="font-size:10px;color:#CBD5E1;">K Car 투표 캠페인</div>
+                  <div style="font-size:17px;font-weight:700;margin-top:2px;">케이카에서 <span style="color:#F5A345;">이것까지</span> <span style="color:#FF4D5A;">사볼까?</span></div>
+                </div>
+                <div>
+                  <div class="sec-head-inline"><h4 style="color:#FFF;">중고차</h4><span class="more" style="color:#94A3B8;">바로가기 ›</span></div>
+                  ${topUsedHtml}
+                </div>
+                <div>
+                  <div class="sec-head-inline"><h4 style="color:#FFF;">렌터카 · 드라이브</h4></div>
+                  <div class="card-base mag-card" style="height:96px;background-image:linear-gradient(90deg,rgba(12,14,20,0.92) 0%,rgba(12,14,20,0.22) 100%),url('./assets/photo_rent_drive.jpg');display:flex;flex-direction:column;justify-content:center;">
+                    <span class="mag-pill" style="width:fit-content;">RENTAL FLEET</span>
+                    <div class="card-title">중고차·신차 렌트 &amp; 월 특가</div>
+                    <div class="card-sub">내 일상에 딱 맞는 드라이브 플랜</div>
+                  </div>
+                </div>
+                <div>
+                  <div class="sec-head-inline"><h4 style="color:#FFF;">바이크 <span class="n-badge">N</span> &amp; 마이카</h4></div>
+                  <div class="card-base mag-card" style="height:102px;background-image:linear-gradient(90deg,rgba(12,14,20,0.95) 0%,rgba(12,14,20,0.2) 100%),url('./assets/photo_bike_wide_dark.jpg');display:flex;flex-direction:column;justify-content:center;">
+                    <span class="mag-pill" style="width:fit-content;background:rgba(240,29,41,0.45);">BIKE OPEN</span>
+                    <div class="card-title">바이크 직거래 · 내차 시세</div>
+                    <div class="card-sub">수수료 0원 바이크 거래 &amp; AI 시세 조회</div>
+                  </div>
+                </div>
+              </div>
+              <div class="mo-homebar" style="color:#FFF;"><div class="mo-homebar-pill"></div></div>
+            </div>
+          </div>
+        `;
+      }
+
+      // 2. PASTEL COLOR-BLOCK × 3D POP CLAY
+      if (artStyle === 'pastel') {
+        const topPastelHtml = isDual ? `
+          <div class="bento-2col" style="margin-bottom:8px;">
+            <div class="card-base pastel-sky" style="height:156px;">
+              <div class="card-title" style="font-size:16px;">내차 사기</div>
+              <div class="card-sub">설레는 첫 직영차</div>
+              <img class="blend-multiply" src="./assets/clay_car_iso.png" alt="" style="position:absolute;right:4px;bottom:4px;width:112px;height:82px;object-fit:contain;"/>
+            </div>
+            <div class="card-base pastel-butter" style="height:156px;">
+              <div class="card-title" style="font-size:16px;">내차 팔기</div>
+              <div class="card-sub">기분 좋은 최고가</div>
+              <img class="blend-multiply" src="./assets/icon3d_sell_coin.png" alt="" style="position:absolute;right:8px;bottom:6px;width:82px;height:78px;object-fit:contain;"/>
+            </div>
+          </div>
+          <div class="card-base pastel-mint" style="height:74px;display:flex;align-items:center;justify-content:space-between;">
+            <div>
+              <div class="card-title">안심직거래</div>
+              <div class="card-sub">이웃과 안전하게 직거래해요</div>
+            </div>
+            <img class="blend-multiply" src="./assets/icon3d_c2c_pin.png" alt="" style="width:52px;height:52px;object-fit:contain;"/>
+          </div>
+        ` : `
+          <div class="bento-2col">
+            <div class="card-base pastel-sky" style="height:172px;">
+              <div class="card-title" style="font-size:16px;">내차 사기</div>
+              <div class="card-sub">믿고 사는 직영차</div>
+              <img class="blend-multiply" src="./assets/clay_car_iso.png" alt="" style="position:absolute;right:4px;bottom:4px;width:118px;height:88px;object-fit:contain;"/>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:8px;">
+              <div class="card-base pastel-butter" style="height:82px;">
+                <div class="card-title" style="font-size:14.5px;">내차 팔기</div>
+                <div class="card-sub">방문 무료 견적</div>
+                <img class="blend-multiply" src="./assets/icon3d_sell_coin.png" alt="" style="position:absolute;right:6px;bottom:4px;width:54px;height:54px;object-fit:contain;"/>
+              </div>
+              <div class="card-base pastel-mint" style="height:82px;">
+                <div class="card-title" style="font-size:14.5px;">안심직거래</div>
+                <div class="card-sub">케이카 진단 보장</div>
+                <img class="blend-multiply" src="./assets/icon3d_c2c_pin.png" alt="" style="position:absolute;right:6px;bottom:4px;width:52px;height:52px;object-fit:contain;"/>
+              </div>
+            </div>
+          </div>
+        `;
+
+        return `
+          <div class="phone-shell">
+            <div class="mo-viewport" style="background:#FFFDF9;color:#191F28;">
+              <div class="fold-guide"><span class="fold-guide-badge">1st Fold · 760px</span></div>
+              ${renderStatusBar(false)}
+              <div style="height:48px;padding:0 20px;display:flex;align-items:center;justify-content:space-between;">
+                ${renderKcarLogo(false)}
+                <span style="font-size:10.5px;font-weight:700;background:#FFE9EE;color:#C81E51;padding:3px 9px;border-radius:99px;">3D POP</span>
+              </div>
+              <div style="padding:6px 20px 20px;display:flex;flex-direction:column;gap:18px;">
+                <div style="height:106px;border-radius:18px;background:linear-gradient(135deg,#FFE6EC 0%,#E8F1FF 100%);padding:16px 18px;display:flex;align-items:center;justify-content:space-between;">
+                  <div>
+                    <span style="font-size:10px;font-weight:700;color:#C81E51;background:#FFF;padding:2px 7px;border-radius:99px;">투표 이벤트</span>
+                    <div style="font-size:16.5px;font-weight:700;color:#191F28;margin-top:5px;line-height:1.25;">케이카에서<br/>이것까지 사볼까?</div>
+                  </div>
+                  <img class="blend-multiply" src="./assets/clay_bike_iso.png" alt="" style="width:78px;height:72px;object-fit:contain;"/>
+                </div>
+                <div>
+                  <div class="sec-head-inline"><h4>중고차</h4><span class="more">전체보기 ›</span></div>
+                  ${topPastelHtml}
+                </div>
+                <div>
+                  <div class="sec-head-inline"><h4>렌터카</h4></div>
+                  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;">
+                    <div class="card-base pastel-lavender" style="height:96px;padding:11px;">
+                      <div class="card-title" style="font-size:13px;">중고차 렌트</div>
+                      <img class="blend-multiply" src="./assets/icon3d_rent_calendar.png" alt="" style="position:absolute;right:4px;bottom:4px;width:48px;height:48px;object-fit:contain;"/>
+                    </div>
+                    <div class="card-base pastel-cyan" style="height:96px;padding:11px;">
+                      <div class="card-title" style="font-size:13px;">신차 렌트</div>
+                      <img class="blend-multiply" src="./assets/photo_rent_suv.png" alt="" style="position:absolute;right:2px;bottom:4px;width:58px;height:46px;object-fit:contain;"/>
+                    </div>
+                    <div class="card-base pastel-peach" style="height:96px;padding:11px;">
+                      <div class="card-title" style="font-size:13px;">렌트 특가</div>
+                      <img class="blend-multiply" src="./assets/icon3d_rent_deal.png" alt="" style="position:absolute;right:4px;bottom:4px;width:48px;height:48px;object-fit:contain;"/>
+                    </div>
+                  </div>
+                </div>
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+                  <div>
+                    <div class="sec-head-inline"><h4>바이크 <span class="n-badge">N</span></h4></div>
+                    <div class="card-base pastel-peach" style="height:96px;">
+                      <div class="card-title" style="font-size:13.5px;">쉽고 편한 직거래</div>
+                      <img class="blend-multiply" src="./assets/clay_bike_iso.png" alt="" style="position:absolute;right:4px;bottom:3px;width:66px;height:56px;object-fit:contain;"/>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="sec-head-inline"><h4>마이카</h4></div>
+                    <div class="card-base pastel-sky" style="height:96px;">
+                      <div class="card-title" style="font-size:13.5px;">내차 시세 확인</div>
+                      <img class="blend-multiply" src="./assets/icon3d_mycar_value.png" alt="" style="position:absolute;right:4px;bottom:3px;width:66px;height:52px;object-fit:contain;"/>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mo-homebar" style="color:#191F28;"><div class="mo-homebar-pill"></div></div>
+            </div>
+          </div>
+        `;
+      }
+
+      // 3. SWISS HIGH-CONTRAST GRID × MOTION HYBRID (EXCLUSIVE LIVE MOTION!)
+      const carStreaks = `<svg class="fx-motion-only fx-car-streaks" viewBox="0 0 44 24" fill="none"><line x1="4" y1="7" x2="36" y2="3" stroke="rgba(255,255,255,0.65)" stroke-width="1.8" stroke-linecap="round"/><line x1="12" y1="15" x2="40" y2="11" stroke="rgba(255,255,255,0.5)" stroke-width="1.4" stroke-linecap="round"/></svg>`;
+      const bikeStreaks = `<svg class="fx-motion-only fx-bike-streaks" viewBox="0 0 34 20" fill="none"><line x1="4" y1="6" x2="28" y2="3" stroke="rgba(240,29,41,0.55)" stroke-width="1.8" stroke-linecap="round"/><line x1="10" y1="13" x2="31" y2="10" stroke="rgba(240,29,41,0.38)" stroke-width="1.4" stroke-linecap="round"/></svg>`;
+
+      const topSwissHtml = isDual ? `
+        <div class="bento-2col" style="margin-bottom:8px;">
+          <div class="card-base swiss-card swiss-red" style="height:156px;">
+            <div class="card-title" style="font-size:16px;">내차 사기</div>
+            <div class="card-sub">직영인증 중고차</div>
+            <div style="position:absolute;right:2px;bottom:4px;width:128px;height:90px;">
+              ${carStreaks}
+              <img class="asset-buycar" src="./assets/photo_car_hero_red.png" alt="" style="width:100%;height:100%;object-fit:contain;object-position:right bottom;"/>
+            </div>
+          </div>
+          <div class="card-base swiss-card" style="height:156px;">
+            <div class="card-title" style="font-size:16px;">내차 팔기</div>
+            <div class="card-sub">방문 최고가 견적</div>
+            <div style="position:absolute;right:12px;bottom:12px;">${VEC.sell}</div>
+          </div>
+        </div>
+        <div class="card-base swiss-card" style="height:74px;display:flex;align-items:center;justify-content:space-between;">
+          <div>
+            <div class="card-title">안심직거래</div>
+            <div class="card-sub">케이카 진단·보증 개인 간 직거래</div>
+          </div>
+          ${VEC.c2c}
+        </div>
+      ` : `
+        <div class="bento-2col">
+          <div class="card-base swiss-card swiss-red" style="height:172px;">
+            <div class="card-title" style="font-size:16px;">내차 사기</div>
+            <div class="card-sub">직영인증 중고차</div>
+            <div style="position:absolute;right:2px;bottom:4px;width:130px;height:94px;">
+              ${carStreaks}
+              <img class="asset-buycar" src="./assets/photo_car_hero_red.png" alt="" style="width:100%;height:100%;object-fit:contain;object-position:right bottom;"/>
+            </div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:8px;">
+            <div class="card-base swiss-card" style="height:82px;">
+              <div class="card-title" style="font-size:14.5px;">내차 팔기</div>
+              <div class="card-sub">당일 최고가</div>
+              <div style="position:absolute;right:10px;bottom:10px;">${VEC.sell}</div>
+            </div>
+            <div class="card-base swiss-card" style="height:82px;">
+              <div class="card-title" style="font-size:14.5px;">안심직거래</div>
+              <div class="card-sub">진단 직거래</div>
+              <div style="position:absolute;right:10px;bottom:10px;">${VEC.c2c}</div>
+            </div>
+          </div>
+        </div>
+      `;
+
+      return `
+        <div class="phone-shell ${isMotion ? 'motion-hybrid-only' : ''}">
+          <div class="mo-viewport" style="background:#FFFFFF;color:#16171D;">
+            <div class="fold-guide"><span class="fold-guide-badge">1st Fold · 760px</span></div>
+            ${renderStatusBar(false)}
+            <div style="height:48px;padding:0 20px;display:flex;align-items:center;justify-content:space-between;border-bottom:1.5px solid #16171D;">
+              ${renderKcarLogo(false)}
+              <span style="font-size:10px;font-weight:700;background:#16171D;color:#FFF;padding:3px 8px;border-radius:4px;">LIVE MOTION</span>
+            </div>
+            <div style="padding:14px 20px 20px;display:flex;flex-direction:column;gap:18px;">
+              <div style="height:100px;border-radius:12px;border:1.5px solid #16171D;background:#F8FAFC;padding:14px 16px;display:flex;align-items:center;justify-content:space-between;">
+                <div>
+                  <div style="font-size:10px;font-weight:700;color:var(--primary-3);">K CAR CAMPAIGN</div>
+                  <div style="font-size:16.5px;font-weight:700;margin-top:3px;line-height:1.25;">케이카에서<br/>이것까지 사볼까?</div>
+                </div>
+                <span style="width:36px;height:36px;border-radius:50%;background:#16171D;color:#FFF;display:flex;align-items:center;justify-content:center;font-weight:700;">→</span>
+              </div>
+              <div>
+                <div class="sec-head-inline"><h4>중고차</h4><span class="more" style="color:#16171D;font-weight:700;">바로가기 ›</span></div>
+                ${topSwissHtml}
+              </div>
+              <div>
+                <div class="sec-head-inline"><h4>렌터카</h4></div>
+                <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;">
+                  <div class="card-base swiss-card" style="height:94px;padding:10px;">
+                    <div class="card-title" style="font-size:12.5px;">중고차 렌트</div>
+                    <div style="position:absolute;right:8px;bottom:8px;">${VEC.rentUsed}</div>
+                  </div>
+                  <div class="card-base swiss-card" style="height:94px;padding:10px;">
+                    <div class="card-title" style="font-size:12.5px;">신차 렌트</div>
+                    <div style="position:absolute;right:8px;bottom:8px;">${VEC.rentNew}</div>
+                  </div>
+                  <div class="card-base swiss-card" style="height:94px;padding:10px;">
+                    <div class="card-title" style="font-size:12.5px;">렌트 특가</div>
+                    <div style="position:absolute;right:8px;bottom:8px;">${VEC.rentDeal}</div>
+                  </div>
+                </div>
+              </div>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+                <div>
+                  <div class="sec-head-inline"><h4>바이크 <span class="n-badge">N</span></h4></div>
+                  <div class="card-base swiss-card swiss-tint" style="height:98px;">
+                    <div class="card-title" style="font-size:13.5px;">쉽고 편한 직거래</div>
+                    <div style="position:absolute;right:4px;bottom:3px;width:78px;height:58px;">
+                      ${bikeStreaks}
+                      <img class="blend-multiply asset-bike" src="./assets/photo_bike.png" alt="" style="width:100%;height:100%;object-fit:contain;object-position:right bottom;"/>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div class="sec-head-inline"><h4>마이카</h4></div>
+                  <div class="card-base swiss-card" style="height:98px;">
+                    <div class="card-title" style="font-size:13.5px;">내차 시세 확인</div>
+                    <div style="position:absolute;right:10px;bottom:10px;">${VEC.myCar}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mo-homebar" style="color:#16171D;"><div class="mo-homebar-pill"></div></div>
+          </div>
+        </div>
+      `;
+    }
+
+    /* =========================================================================
+       DATA & RENDER CONTROLLERS
+       ========================================================================= */
+    const STEP1_DATA = [
       {
-        badge: 'Layout A · 코어 집중형',
+        badge: 'Type A · Brand Signature',
         badgeCls: 'b-red',
-        meta: '높이 약 890px',
-        title: '코어 비대칭 벤토 + 퀵서비스 칩',
-        desc: '피그마 03안 고도화. 직영 중고차 비대칭 그리드 아래 피그마 숨김 레이어(홈서비스·특가·보증·출장진단)를 퀵칩으로 복원해 탐색 깊이를 확보했습니다.',
-        spec: { layout: 'bento', mixMode: 'photoreal', heroSurface: 'red', bikeAccent: 'gray', compact: false }
+        meta: '레드 헤더 + 플로팅 브릿지',
+        title: 'K Car 시그니처 레드 브릿지형',
+        desc: '상단을 K Car 크림슨 레드(#B70F28) 풀블리드로 구성하고 주력 중고차 카드를 입체 브릿지로 부상시켜 압도적 브랜드 정체성을 전달합니다.',
+        render: () => renderArchetypeRedBridge(false)
       },
       {
-        badge: 'Layout B · 슈퍼앱 확장형',
+        badge: 'Type B · Fintech Minimal',
         badgeCls: 'b-navy',
-        meta: '높이 약 860px',
-        title: '번호판 통합검색 + 4×2 슈퍼앱 독',
-        desc: '피그마 01·02안 확장형. 8대 모빌리티 서비스를 상단 독(Dock)에 집약해 향후 신규 사업 추가 시에도 스크롤 증가 없이 유연하게 대응합니다.',
-        spec: { layout: 'superapp', mixMode: 'clay3d', heroSurface: 'gray', bikeAccent: 'tint', compact: true }
+        meta: '토스·카카오T식 슈퍼앱',
+        title: '쿨그레이 슈퍼앱 & 번호판 원탭형',
+        desc: '광고 배너를 하단으로 내리고 대한민국 실물 번호판 조회창과 4×2 파스텔 모빌리티 독을 전면에 배치한 모던 핀테크 문법입니다.',
+        render: () => renderArchetypeFintech()
       },
       {
-        badge: 'Layout C · 신사업 부스팅형',
-        badgeCls: 'b-green',
-        meta: '높이 약 940px',
-        title: '듀얼 플래그십 + 풀폭 와이드 배너',
-        desc: '피그마 05안 고도화. 내차 사기·팔기 대칭 배치 아래 승용 안심직거래와 바이크 직거래[N]를 각각 풀폭 배너로 격상하여 주목도를 극대화합니다.',
-        spec: { layout: 'dualwide', mixMode: 'photoreal', heroSurface: 'dark', bikeAccent: 'darkPhoto', compact: false }
+        badge: 'Type C · Dark Showroom',
+        badgeCls: 'b-dark',
+        meta: '제네시스·우버식 다크모드',
+        title: '딥 오닉스 다크 모빌리티 쇼룸형',
+        desc: '기존 중고차 앱의 흰 배경을 탈피해 풀 다크 오닉스 테마와 시네마틱 실사 화보 카드로 하이엔드 모빌리티 브랜드 이미지를 구축합니다.',
+        render: () => renderArchetypeDarkShowroom()
       },
       {
-        badge: 'Layout D · 컨시어지 탐색형',
-        badgeCls: 'b-orange',
-        meta: '높이 약 930px',
-        title: '카테고리 앵커 + 컨시어지 리스트',
-        desc: '피그마 04안 고도화. 상단 카테고리 앵커 탭과 서비스별 구체적 혜택 설명을 함께 노출해 첫 방문·중장년 고객의 이해도를 높입니다.',
-        spec: { layout: 'concierge', mixMode: 'photoreal', heroSurface: 'gray', bikeAccent: 'tint', compact: false }
+        badge: 'Type D · Editorial Concierge',
+        badgeCls: 'b-warm',
+        meta: '현대카드·매거진식 큐레이션',
+        title: '웜 아이보리 에디토리얼 컨시어지형',
+        desc: '따뜻한 지류 질감 배경과 1.5px 블랙 잉크 프레임, 01~05 넘버링 컨시어지 리스트로 가독성과 감각적 큐레이션을 강조합니다.',
+        render: () => renderArchetypeEditorial()
       }
     ];
 
-    const DATA_ICONS = [
+    const STEP2_DATA = [
       {
-        badge: 'Style Mix 01 · 실사 스튜디오 중심',
-        badgeCls: 'b-red',
-        meta: '실사 차량/바이크 + 3D 메탈릭',
-        title: '스튜디오 실사 포토 × 3D 오브젝트 혼합',
-        desc: '차량·바이크·렌트 SUV는 실제 스튜디오 촬영풍 실사 컷을 배치해 신뢰감을 주고, 시세·직거래·특가 등 추상 개념은 입체 3D 오브젝트로 직관화했습니다.',
-        mixMode: 'photoreal'
+        badge: 'Style Mix 01 · 풀블리드 매거진 화보',
+        badgeCls: 'b-dark',
+        meta: '카드 전체 실사 포토그래피',
+        title: '매거진 풀블리드 실사 화보 스타일',
+        desc: '작은 아이콘 대신 카드 전체를 자동차·스마트키·해안도로·바이크 실사 화보로 채워 쇼룸 카탈로그 같은 몰입감을 주는 방식입니다.',
+        artStyle: 'magazine'
       },
       {
-        badge: 'Style Mix 02 · 매트 클레이 중심',
-        badgeCls: 'b-navy',
-        meta: '3D 아이소메트릭 클레이 통일',
-        title: '3D 매트 클레이 × 소프트 배지 혼합',
-        desc: '피그마 시안의 아이소메트릭 3D 톤앤매너를 하이엔드 매트 클레이 렌더링으로 고도화하여 친근하고 트렌디한 모빌리티 앱 인상을 전달합니다.',
-        mixMode: 'clay3d'
+        badge: 'Style Mix 02 · 파스텔 컬러블록 3D 팝',
+        badgeCls: 'b-pastel',
+        meta: '파스텔 블록 + 매트 3D 클레이',
+        title: '파스텔 컬러블록 × 3D 클레이 팝',
+        desc: '카테고리별 고유 파스텔 배경(스카이·버터·민트·피치·라벤더)과 매트 3D 클레이 오브젝트를 결합해 밝고 친근한 인상을 줍니다.',
+        artStyle: 'pastel'
       },
       {
         badge: 'Style Mix 03 · 위계 차등 하이브리드',
-        badgeCls: 'b-green',
-        meta: '실사 히어로 + 정밀 듀오톤 벡터',
-        title: '실사 히어로(1군) × 정밀 브랜드 벡터(2군)',
-        desc: '핵심 수익/신규 런칭(내차 사기·바이크)에만 실사 이미지를 써서 시선을 집중시키고, 부가 메뉴는 정밀 스쿼클 벡터 아이콘으로 시각 피로도를 낮췄습니다.',
-        mixMode: 'hybrid'
+        badgeCls: 'b-swiss',
+        meta: '스위스 그리드 + 전용 모션 ON',
+        title: '스위스 보더 그리드 × 모션 하이브리드',
+        desc: '명쾌한 블랙 라인 그리드 위에 1군(내차 사기·바이크)만 주행 모션 실사로 움직이고, 2군 메뉴는 정밀 벡터 마이크로 모션으로 위계를 나눕니다.',
+        artStyle: 'swiss'
       }
     ];
 
-    const DATA_OPTIMAL = [
+    const STEP3_OPTIMAL = [
       {
         id: 'OPT1',
-        choiceText: '최적 1안 · 코어 매출 수성 & 바이크 소프트랜딩 (추천)',
-        badge: '★ 최우선 추천 · 균형 성장형',
+        choiceText: '최적 1안 · K Car 시그니처 레드 브릿지 (★추천)',
+        badge: '★ 최우선 추천 · Brand Flagship',
         badgeCls: 'b-red',
-        meta: '높이 838px · 1st Fold 최적화',
-        title: '최적 1안: 코어 매출 수성 & 바이크 소프트랜딩',
-        desc: '컴팩트 비대칭 벤토 + [실사 히어로 × 정밀 벡터 하이브리드]. 주력인 내차 사기(#B70F28)와 신규 바이크에만 실사가 들어가 시선이 정확히 꽂힙니다.',
+        meta: '정통성 · 리뉴얼 체감 동시 달성',
+        title: '최적 1안: K Car 시그니처 레드 브릿지',
+        desc: '크림슨 레드 상단 헤더 + 입체 플로팅 브릿지 카드 + 정밀 벡터 하이브리드 조합으로 케이카다운 신뢰감과 신사업 주목도를 완벽히 양립합니다.',
         kpis: [
-          { name: '직영 중고차 전환율 방어', val: 97, color: '#B70F28' },
-          { name: '바이크 신규 인지 및 유입', val: 86, color: '#0086FF' },
-          { name: '시각적 정돈감 · 가독성', val: 95, color: '#0B845F' }
+          { name: '케이카 브랜드 아이덴티티 각인', val: 98, color: '#B70F28' },
+          { name: '직영 중고차 코어 전환율 방어', val: 96, color: '#0086FF' },
+          { name: '바이크 신규 오픈 주목도', val: 90, color: '#0B845F' }
         ],
-        spec: { layout: 'bento', mixMode: 'hybrid', heroSurface: 'red', bikeAccent: 'tint', compact: true },
+        render: () => renderArchetypeRedBridge(true),
         rationale: {
-          goal: '기존 K Car 핵심 매출원(내차 사기/팔기)의 전환율을 100% 방어하면서, 첫 화면 하단에 바이크 직거래를 가장 세련되게 안착시키는 균형안',
+          goal: '경쟁 플랫폼(엔카·KB·당근)과 즉시 구별되는 K Car만의 시그니처 레드 브릿지 아키텍처로 대표 모빌리티 포털 위상을 확립',
           points: [
-            '피그마 03안 레드 카드의 오기재 문구("내차 판매 시작하기" → "직영인증 중고차 찾기") 수정 및 세로 여백 컴팩트화로 760px 기준선 내 바이크 타이틀 진입',
-            '모든 카드에 무거운 실사/3D를 넣는 대신, [내차 사기]와 [바이크]에만 스튜디오 실사를 배치하고 나머지는 K Car 듀오톤 벡터로 정리해 시선 분산 방지',
-            '바이크 카드에 Primary 10(#FFF9F9) 소프트 틴트 배경과 "수수료 0원 오픈" 문구를 적용해 마이카 대비 확실한 신사업 강조'
+            '상단 크림슨 풀블리드 헤더 안에 통합탭(직영·바이크N·렌트·마이카)과 통합검색을 내장해 플랫폼 확장성 확보',
+            '레드 헤더 위로 겹쳐 올라오는 화이트 플로팅 브릿지 카드가 시각적 깊이감과 프리미엄 리뉴얼 인상을 즉시 전달',
+            '중단 좌측 코랄 하이라이트 영역에 [바이크 N · 수수료 0원 오픈]을 배치해 첫 화면(760px) 안에서 자연스럽게 신사업 유입 유도'
           ],
-          guide: '기존 앱 이용자의 혼선을 최소화하면서 본업 매출과 신규 바이크 안착을 동시에 달성하고자 할 때 가장 안전한 최우선 추천안입니다.'
+          guide: '기존 케이카 고객의 신뢰도를 흔들지 않으면서도 "확 달라진 통합 모빌리티 메인"을 보여주고자 할 때 가장 강력한 1순위 추천안입니다.'
         }
       },
       {
         id: 'OPT2',
-        choiceText: '최적 2안 · K Car 모빌리티 슈퍼앱 2.0 (플랫폼 확장형)',
-        badge: '플랫폼 도약형 · 확장성 1위',
+        choiceText: '최적 2안 · 토스형 핀테크 모빌리티 슈퍼앱',
+        badge: '슈퍼앱 미니멀리즘 · 사용성 1위',
         badgeCls: 'b-navy',
-        meta: '높이 848px · 상단 전 메뉴 집약',
-        title: '최적 2안: K Car 모빌리티 슈퍼앱 2.0',
-        desc: '차량번호 통합검색 + 4×2 모빌리티 독(바이크 1열 우측 골든존 배치) + 매트 3D 클레이 아이콘으로 모던 슈퍼앱 UX를 구현합니다.',
+        meta: '번호판 원탭 + 4×2 파스텔 독',
+        title: '최적 2안: 핀테크형 모빌리티 슈퍼앱',
+        desc: '쿨그레이 바탕 위 실물 번호판 원탭 조회창과 파스텔 3D 클레이 4×2 독을 결합해 토스·카카오T처럼 가장 빠르고 직관적인 UX를 구현합니다.',
         kpis: [
-          { name: '차기 모빌리티 사업 확장성', val: 98, color: '#003AA1' },
-          { name: '첫 화면(760px) 정보 완결성', val: 96, color: '#0B845F' },
-          { name: 'MZ·신규 고객 친화도', val: 92, color: '#B70F28' }
+          { name: '전 세대 직관적 사용성 · 속도감', val: 98, color: '#0064FF' },
+          { name: '향후 10+ 모빌리티 확장 유연성', val: 97, color: '#0B845F' },
+          { name: '번호판 기반 재방문 락인(Lock-in)', val: 94, color: '#B70F28' }
         ],
-        spec: { layout: 'superapp', mixMode: 'clay3d', heroSurface: 'gray', bikeAccent: 'tint', compact: true },
+        render: () => renderArchetypeFintech(),
         rationale: {
-          goal: '"중고차 앱"에서 "대한민국 No.1 종합 모빌리티 플랫폼"으로 브랜드 인식을 단번에 전환하고 향후 신사업 확장 기반을 마련하는 구조',
+          goal: '무거운 배너 위주 쇼핑몰 문법을 버리고, 고객이 앱을 켜자마자 번호판 조회나 원하는 모빌리티로 1초 만에 진입하는 유틸리티 슈퍼앱',
           points: [
-            '최상단 통합 검색바와 4×2 독을 통해 스크롤 없이 320px 높이 안에서 8개 핵심 모빌리티 서비스 전체로 즉시 이동 가능',
-            '신규 런칭한 바이크[NEW]를 1열 우측 상단 골든존에 배치하고, 이벤트 배너 바로 아래 오픈 배너를 이중 배치해 유입 극대화',
-            '통일감 있는 3D 매트 클레이 그래픽으로 자동차·바이크·렌트·시세 카테고리를 이질감 없이 하나로 연결'
+            '대한민국 실제 번호판 디자인을 차용한 원탭 조회 위젯이 강렬한 첫인상과 높은 인터랙션 클릭률을 유도',
+            '8대 서비스를 파스텔 스쿼클 4×2 독으로 정리하여 첫 화면 상단에서 모든 모빌리티 카테고리가 한눈에 인지됨',
+            '독 우측 상단 골든존과 중단 오픈 카드로 바이크 직거래를 이중 노출하여 거부감 없는 신사업 유입 달성'
           ],
-          guide: '향후 이륜차 금융·보험·정비·전기차 등 추가 버티컬 확장이 계획되어 있어 장기적인 슈퍼앱 홈 화면 구조가 필요할 때 추천합니다.'
+          guide: '트렌디하고 가벼운 슈퍼앱 경험과 내차/바이크 시세 조회 기반의 높은 일간 활성 사용자(DAU) 확보가 목표일 때 최적입니다.'
         }
       },
       {
         id: 'OPT3',
-        choiceText: '최적 3안 · C2C 직거래 성장 부스터 (신사업 드라이브형)',
-        badge: '신사업 공격형 · 초기 CTR 극대화',
-        badgeCls: 'b-green',
-        meta: '높이 924px · 화보 배너 임팩트',
-        title: '최적 3안: C2C 직거래(차+바이크) 부스터',
-        desc: '직영 다크 투톱 카드 아래, 신규 바이크 직거래를 다크 스튜디오 실사 풀폭 배너로 과감히 격상해 런칭 임팩트를 극대화합니다.',
+        choiceText: '최적 3안 · 딥 오닉스 다크 모빌리티 쇼룸',
+        badge: '파격 혁신형 · 하이엔드 쇼룸',
+        badgeCls: 'b-dark',
+        meta: '풀 다크 테마 + 시네마틱 실사 화보',
+        title: '최적 3안: 다크 럭셔리 모빌리티 쇼룸',
+        desc: '딥 오닉스 다크 테마와 풀블리드 실사 세단·스마트키·스포츠 바이크 화보 카드를 결합해 프리미엄 모빌리티 라운지 감성을 극대화합니다.',
         kpis: [
-          { name: '바이크 직거래 초기 CTR/매물 확보', val: 98, color: '#B70F28' },
-          { name: '신규 서비스 런칭 화제성', val: 95, color: '#0086FF' },
-          { name: '직영 vs 직거래 구분 명확성', val: 91, color: '#0B845F' }
+          { name: '기존 앱 대비 파격적 변화 체감도', val: 99, color: '#16171D' },
+          { name: '바이크·렌트 비주얼 임팩트', val: 97, color: '#B70F28' },
+          { name: '2030 남성·바이크 타깃 매력도', val: 95, color: '#0086FF' }
         ],
-        spec: { layout: 'dualwide', mixMode: 'photoreal', heroSurface: 'dark', bikeAccent: 'darkPhoto', compact: true },
+        render: () => renderArchetypeDarkShowroom(),
         rationale: {
-          goal: '바이크 직거래 오픈 초기 3~6개월간 압도적인 시각적 주목도로 매물 등록과 거래 트래픽(GMV)을 빠르게 끌어올리는 공격적 GTM 시안',
+          goal: '국내 모든 중고차 앱의 천편일률적인 화이트 타일 UI를 깨고, 제네시스·우버·포르쉐 앱 수준의 다크 쇼룸으로 브랜드 격을 높이는 전략안',
           points: [
-            '피그마 05안에서 최하단 절반 크기에 있던 바이크를 렌터카 위쪽 중앙 풀폭(320×92px) 다크 스튜디오 화보 배너로 격상',
-            '내차 사기(#16171D 다크 스튜디오 세단)와 바이크 직거래(다크 스튜디오 스포츠 바이크)가 프리미엄 실사 톤으로 호응하며 고급감 형성',
-            '렌터카 및 부가 메뉴도 고해상도 실사·3D 에셋을 매칭해 쇼룸 같은 시각적 완성도 구현'
+            '다크 배경 위에서 화이트 세단, 티타늄 스마트키, 레드&화이트 스포츠 바이크의 스튜디오 림라이트 실사가 극적으로 돋보임',
+            '신규 런칭하는 바이크 안심직거래가 대형 화보 배너로 노출되어 모터사이클 라이더 타깃에게 강렬한 팬덤 인상 부여',
+            '렌터카 역시 해안도로 주행 화보 카드로 연출되어 감성적 드라이브 수요를 자극'
           ],
-          guide: '바이크 런칭 마케팅 캠페인 기간 동안 신사업 유입률과 매물 확보를 최우선 KPI로 두실 때 가장 강력한 효과를 발휘합니다.'
+          guide: '경쟁사와 완전히 다른 압도적 비주얼 임팩트와 신규 바이크 직거래의 공격적 초기 브랜딩이 필요할 때 추천합니다.'
         }
       }
     ];
 
-    /* =========================================================================
-       DOM RENDERING & EVENT HANDLERS
-       ========================================================================= */
-    let activeBaseLayout = 'bento';
+    let activeArtMode = 'bento';
     let selectedOptId = 'OPT1';
 
-    function renderStep1() {
-      document.getElementById('gridLayouts').innerHTML = DATA_LAYOUTS.map(item => `
+    function renderAll() {
+      document.getElementById('gridLayouts').innerHTML = STEP1_DATA.map(d => `
         <div class="device-col">
           <div class="brief-card">
             <div class="brief-top">
-              <span class="brief-badge ${item.badgeCls}">${item.badge}</span>
-              <span class="brief-meta">${item.meta}</span>
+              <span class="brief-badge ${d.badgeCls}">${d.badge}</span>
+              <span class="brief-meta">${d.meta}</span>
             </div>
-            <h3 class="brief-title">${item.title}</h3>
-            <p class="brief-desc">${item.desc}</p>
+            <h3 class="brief-title">${d.title}</h3>
+            <p class="brief-desc">${d.desc}</p>
           </div>
-          ${buildMobileViewport(item.spec)}
+          ${d.render()}
+        </div>
+      `).join('');
+
+      renderStep2Only();
+      renderStep3Only();
+    }
+
+    function renderStep2Only() {
+      document.getElementById('gridIcons').innerHTML = STEP2_DATA.map(d => `
+        <div class="device-col">
+          <div class="brief-card">
+            <div class="brief-top">
+              <span class="brief-badge ${d.badgeCls}">${d.badge}</span>
+              <span class="brief-meta">${d.meta}</span>
+            </div>
+            <h3 class="brief-title">${d.title}</h3>
+            <p class="brief-desc">${d.desc}</p>
+          </div>
+          ${renderArtDirectionPhone(d.artStyle, activeArtMode)}
         </div>
       `).join('');
     }
 
-    function renderStep2() {
-      document.getElementById('gridIcons').innerHTML = DATA_ICONS.map(item => `
-        <div class="device-col">
-          <div class="brief-card">
-            <div class="brief-top">
-              <span class="brief-badge ${item.badgeCls}">${item.badge}</span>
-              <span class="brief-meta">${item.meta}</span>
-            </div>
-            <h3 class="brief-title">${item.title}</h3>
-            <p class="brief-desc">${item.desc}</p>
-          </div>
-          ${buildMobileViewport({
-            layout: activeBaseLayout,
-            mixMode: item.mixMode,
-            heroSurface: activeBaseLayout === 'dualwide' ? 'dark' : 'red',
-            bikeAccent: 'tint',
-            compact: false,
-            motionEnabled: item.mixMode === 'hybrid'
-          })}
-        </div>
-      `).join('');
-    }
-
-    function renderStep3() {
-      document.getElementById('gridOptimal').innerHTML = DATA_OPTIMAL.map(item => {
+    function renderStep3Only() {
+      document.getElementById('gridOptimal').innerHTML = STEP3_OPTIMAL.map(item => {
         const selected = item.id === selectedOptId;
-        const kpisHtml = item.kpis.map(k => `
+        const kpiHtml = item.kpis.map(k => `
           <div class="kpi-item">
             <span>${k.name}</span>
             <div class="kpi-track"><div class="kpi-fill" style="width:${k.val}%;background:${k.color};"></div></div>
@@ -2548,13 +2469,13 @@
               </div>
               <h3 class="brief-title">${item.title}</h3>
               <p class="brief-desc">${item.desc}</p>
-              <div class="kpi-list">${kpisHtml}</div>
+              <div class="kpi-list">${kpiHtml}</div>
               <div class="brief-btns">
-                <button class="btn-outline" onclick="openRationale('${item.id}')">설계 근거 · 변경점</button>
+                <button class="btn-outline" onclick="openRationale('${item.id}')">설계 근거 · 차별점</button>
                 <button class="btn-select" onclick="chooseOptimal('${item.id}')">${selected ? '✓ 의사결정 선택됨' : '이 시안 선택'}</button>
               </div>
             </div>
-            ${buildMobileViewport(item.spec)}
+            ${item.render()}
           </div>
         `;
       }).join('');
@@ -2562,29 +2483,29 @@
 
     window.chooseOptimal = function(id) {
       selectedOptId = id;
-      const found = DATA_OPTIMAL.find(d => d.id === id);
+      const found = STEP3_OPTIMAL.find(x => x.id === id);
       if (found) document.getElementById('choiceLabel').textContent = found.choiceText;
-      renderStep3();
+      renderStep3Only();
     };
 
     window.openRationale = function(id) {
-      const found = DATA_OPTIMAL.find(d => d.id === id);
+      const found = STEP3_OPTIMAL.find(x => x.id === id);
       if (!found) return;
       const modal = document.getElementById('rationaleModal');
       document.getElementById('rationaleBody').innerHTML = `
         <div class="dlg-head">
           <div>
             <span class="brief-badge ${found.badgeCls}" style="display:inline-block;margin-bottom:6px;">${found.badge}</span>
-            <h3 class="t-sub1">${found.title}</h3>
+            <h3 style="font-size:20px;font-weight:700;">${found.title}</h3>
           </div>
           <button class="dlg-close" onclick="document.getElementById('rationaleModal').close()">✕</button>
         </div>
         <div class="dlg-section">
-          <h4>전략적 포지셔닝</h4>
+          <h4>핵심 디자인 방향성</h4>
           <p>${found.rationale.goal}</p>
         </div>
         <div class="dlg-section">
-          <h4>피그마 원본(#3576:38696) 대비 주요 고도화 내역</h4>
+          <h4>주요 시각적 차별화 포인트</h4>
           <ul style="padding-left:18px;display:flex;flex-direction:column;gap:6px;">
             ${found.rationale.points.map(p => `<li>${p}</li>`).join('')}
           </ul>
@@ -2600,41 +2521,36 @@
       if (e.target.id === 'rationaleModal') e.target.close();
     });
 
-    // Top Navigation Tabs
     document.querySelectorAll('.exec-tab-btn').forEach(btn => {
       btn.addEventListener('click', () => {
         const tab = btn.dataset.tab;
-        const update = () => {
+        const apply = () => {
           document.querySelectorAll('.exec-tab-btn').forEach(b => b.classList.toggle('active', b === btn));
           document.querySelectorAll('.board-section').forEach(sec => {
             sec.classList.toggle('is-hidden', tab !== 'all' && sec.id !== tab);
           });
           window.scrollTo({ top: 0, behavior: 'smooth' });
         };
-        if (document.startViewTransition) document.startViewTransition(update);
-        else update();
+        if (document.startViewTransition) document.startViewTransition(apply);
+        else apply();
       });
     });
 
-    // Section 2 Live Layout Switcher
-    document.querySelectorAll('[data-base-layout]').forEach(btn => {
+    document.querySelectorAll('[data-art-mode]').forEach(btn => {
       btn.addEventListener('click', () => {
-        activeBaseLayout = btn.dataset.baseLayout;
-        document.querySelectorAll('[data-base-layout]').forEach(b => b.classList.toggle('active', b === btn));
-        renderStep2();
+        activeArtMode = btn.dataset.artMode;
+        document.querySelectorAll('[data-art-mode]').forEach(b => b.classList.toggle('active', b === btn));
+        renderStep2Only();
       });
     });
 
-    // 1st Fold (760px) Guide Line Toggle
     document.getElementById('foldToggle').addEventListener('click', (e) => {
       const btn = e.currentTarget;
       const active = document.body.classList.toggle('show-fold');
       btn.classList.toggle('active', active);
     });
 
-    renderStep1();
-    renderStep2();
-    renderStep3();
+    renderAll();
   </script>
 </body>
 </html>

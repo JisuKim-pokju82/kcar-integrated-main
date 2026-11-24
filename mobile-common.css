@@ -1,0 +1,555 @@
+/* ==========================================================================
+   K Car Integrated Main (Gate) — Real Mobile Standalone Stylesheet (A ~ F)
+   Follows KCar C2C Design System (Spoqa Han Sans Neo, #B70F28, #16171D)
+   ========================================================================== */
+@font-face {
+  font-family: 'Spoqa Han Sans Neo';
+  font-weight: 700;
+  font-display: swap;
+  src: url('https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@latest/Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Bold.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Spoqa Han Sans Neo';
+  font-weight: 500;
+  font-display: swap;
+  src: url('https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@latest/Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Medium.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Spoqa Han Sans Neo';
+  font-weight: 400;
+  font-display: swap;
+  src: url('https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@latest/Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Regular.woff2') format('woff2');
+}
+
+:root {
+  --primary-3: #B70F28;
+  --primary-9: #FDEEEF;
+  --gray-2: #16171D;
+  --gray-3: #54555A;
+  --gray-4: #82848B;
+  --gray-7: #D8DEE8;
+  --gray-8: #E8E8EE;
+  --white: #FFFFFF;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100%;
+  font-family: 'Spoqa Han Sans Neo', -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+  color: var(--gray-2);
+  background: #E9ECF2;
+  -webkit-font-smoothing: antialiased;
+  word-break: keep-all;
+}
+
+@media (max-width: 540px) {
+  html, body {
+    background: #FFFFFF;
+  }
+}
+
+.mo-app-root {
+  width: 100%;
+  max-width: 460px;
+  min-height: 100dvh;
+  margin: 0 auto;
+  position: relative;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media (min-width: 541px) {
+  .mo-app-root {
+    box-shadow: 0 12px 48px rgba(15, 23, 42, 0.12);
+  }
+}
+
+.blend-multiply {
+  mix-blend-mode: multiply;
+}
+
+/* ==========================================================================
+   6 DISTINCT BRIGHT/WHITE-TONED MOBILITY SKINS (A ~ F)
+   ========================================================================== */
+/* A: Signature Pure White Standard */
+.mskin-a {
+  background: #FFFFFF;
+}
+
+/* B: Crimson-Silver Aero Horizon Deck */
+.mskin-b {
+  background-color: #F3F5FA;
+  background-image:
+    linear-gradient(168deg, #FFFFFF 0%, #FFF1F3 12%, #FFE0E6 24%, #E8F0FF 34%, #F3F5FA 42%),
+    repeating-linear-gradient(-28deg, rgba(183, 15, 40, 0.035) 0px, rgba(183, 15, 40, 0.035) 1px, transparent 1px, transparent 14px);
+  background-size: 100% 100%, 100% 290px;
+  background-repeat: no-repeat;
+}
+
+/* C: Wind-Tunnel Silver Pearl & Aero Glass */
+.mskin-c {
+  background-color: #F2F6FC;
+  background-image:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.50) 0%, rgba(245, 249, 255, 0.20) 45%, rgba(244, 247, 252, 0.82) 100%),
+    url('./assets/bg_white_aero.jpg');
+  background-size: 100% 760px;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+/* D: Cool Platinum Super-App Modular & Onyx Action Bar */
+.mskin-d {
+  background: linear-gradient(180deg, #FFFFFF 0%, #FFFFFF 54px, #E9EEF6 54px, #E9EEF6 100%);
+}
+
+/* E: Polestar / Porsche Alabaster Titanium Studio & Racing Stripes */
+.mskin-e {
+  background-color: #F5F6F9;
+  background-image:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.50) 0%, rgba(248, 250, 253, 0.28) 50%, rgba(245, 246, 249, 0.90) 100%),
+    url('./assets/bg_white_titanium.jpg');
+  background-size: 100% 760px;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+/* F: Signature Crimson Cap & Overlapping Pure White Sheet (Optimal-1 Heritage) */
+.mskin-f {
+  background: #F7F8FB;
+}
+
+.f-crimson-cap {
+  background: linear-gradient(140deg, #C8122E 0%, #B70F28 58%, #8F091D 100%);
+  padding: calc(env(safe-area-inset-top, 0px) + 6px) 20px 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.f-crimson-cap::after {
+  content: '';
+  position: absolute;
+  right: -36px;
+  top: -36px;
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0) 70%);
+  pointer-events: none;
+}
+
+.f-white-sheet {
+  background: #FFFFFF;
+  border-radius: 24px 24px 0 0;
+  margin-top: -18px;
+  padding: 18px 20px 26px;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 -6px 20px rgba(22, 23, 29, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* ==========================================================================
+   HEADER & INTEGRATED SEARCH BAR
+   ========================================================================== */
+.mo-header {
+  height: 52px;
+  padding: env(safe-area-inset-top, 0px) 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mo-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.mo-icon-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: none;
+  background: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.mo-main-body {
+  padding: 6px 20px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.kcar-search-box {
+  height: 46px;
+  border-radius: 10px;
+  background: var(--white);
+  border: 1.8px solid var(--primary-3);
+  padding: 0 12px 0 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  box-shadow: 0 3px 10px rgba(183, 15, 40, 0.06);
+}
+
+.kcar-search-box input {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--gray-2);
+  letter-spacing: -0.4px;
+}
+
+.kcar-search-box input::placeholder {
+  color: var(--gray-4);
+}
+
+.kcar-search-box.style-aero-capsule {
+  border-radius: 999px;
+  border: 1.5px solid rgba(255, 255, 255, 0.95);
+  background: #FFFFFF;
+  padding: 0 7px 0 16px;
+  box-shadow: 0 10px 24px rgba(183, 15, 40, 0.12), 0 2px 6px rgba(15, 23, 42, 0.05);
+}
+
+.kcar-search-box.style-glass-frost {
+  border-radius: 14px;
+  border: 1.5px solid rgba(255, 255, 255, 0.96);
+  background: rgba(255, 255, 255, 0.76);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 8px 22px rgba(28, 52, 92, 0.09);
+}
+
+.kcar-search-box.style-neo-bold {
+  border-radius: 13px;
+  border: 2px solid #16171D;
+  background: #FFFFFF;
+  padding: 0 7px 0 14px;
+  box-shadow: 0 6px 16px rgba(22, 23, 29, 0.06);
+}
+
+.kcar-search-box.style-tech-sharp {
+  border-radius: 7px;
+  border: 1.5px solid #16171D;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 3px 3px 0 rgba(22, 23, 29, 0.10);
+}
+
+.kcar-search-box.style-cap-float {
+  border-radius: 12px;
+  border: none;
+  background: #FFFFFF;
+  padding: 0 10px 0 15px;
+  box-shadow: 0 8px 20px rgba(85, 4, 16, 0.24);
+}
+
+.kcar-search-submit {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  background: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+   SECTIONS & CARDS (중고차 50:50 + 1줄 / 렌터카 3열 / 바이크·마이카 2열)
+   ========================================================================== */
+.m-sec-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 22px;
+  margin-bottom: 8px;
+}
+
+.m-sec-title {
+  font-size: 17px;
+  line-height: 22px;
+  font-weight: 700;
+  color: var(--gray-2);
+  letter-spacing: -0.5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.m-sec-more {
+  font-size: 12px;
+  color: var(--gray-4);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.n-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #F01D29;
+  color: #FFFFFF;
+  font-size: 9.5px;
+  font-weight: 700;
+}
+
+.touch-card {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.14s ease;
+}
+
+.touch-card:active {
+  transform: scale(0.982);
+}
+
+/* 1) 중고차: 50:50 Equal Top + 1-Line Full-Width Bottom (Total ~208px, Largest!) */
+.m-used-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.m-used-equal {
+  height: 134px;
+  border-radius: 16px;
+  padding: 14px 14px;
+}
+
+.m-used-c2c-bar {
+  margin-top: 8px;
+  height: 66px;
+  border-radius: 14px;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* 2) 렌터카: 3-Col Grid */
+.m-rent-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.m-rent-card {
+  height: 90px;
+  border-radius: 14px;
+  padding: 11px 11px;
+}
+
+/* 3) 바이크 / 마이카: 2-Col Split */
+.m-bottom-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.m-half-card {
+  height: 92px;
+  border-radius: 15px;
+  padding: 12px 13px;
+}
+
+.m-tech-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 9.5px;
+  line-height: 13px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  margin-bottom: 3px;
+}
+
+/* 4) Event Promo Banner */
+.m-promo-banner {
+  height: 108px;
+  border-radius: 15px;
+  padding: 16px 18px;
+  position: relative;
+  overflow: hidden;
+  background-color: #16171D;
+  background-image:
+    linear-gradient(92deg, rgba(20, 22, 29, 0.96) 0%, rgba(20, 22, 29, 0.82) 52%, rgba(20, 22, 29, 0.20) 100%),
+    url('./assets/banner_mobility_hero.jpg');
+  background-size: cover;
+  background-position: center right;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+
+/* 5) Official K Car Corporate Footer */
+.kcar-mo-footer {
+  background: #F4F5F8;
+  border-top: 1px solid #E5E8EE;
+  padding: 22px 20px calc(env(safe-area-inset-bottom, 0px) + 74px);
+  color: #6B707B;
+  font-size: 11px;
+  line-height: 16.5px;
+  letter-spacing: -0.3px;
+}
+
+.kf-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 11px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #E5E8EE;
+  margin-bottom: 12px;
+  font-size: 11.5px;
+  color: #3E4149;
+}
+
+.kf-links strong {
+  color: #16171D;
+  font-weight: 700;
+}
+
+.kf-cs-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.kf-cs-tel {
+  font-size: 14.5px;
+  font-weight: 700;
+  color: #16171D;
+  letter-spacing: -0.3px;
+}
+
+.kf-biz-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5px;
+  color: #7A7F8A;
+}
+
+.kf-biz-badge {
+  display: inline-block;
+  padding: 0 5px;
+  margin-left: 3px;
+  border: 1px solid #C8CCD6;
+  border-radius: 3px;
+  background: var(--white);
+  color: #54555A;
+  font-size: 10px;
+  line-height: 14px;
+}
+
+.kf-copy {
+  margin-top: 10px;
+  font-size: 10.5px;
+  color: #9499A4;
+}
+
+/* ==========================================================================
+   DISCREET FLOATING A~F MOBILE VARIATION SWITCHER (HIDEABLE FOR PURE VIEW)
+   ========================================================================== */
+.mo-QuickDock {
+  position: fixed;
+  left: 50%;
+  bottom: calc(env(safe-area-inset-bottom, 0px) + 12px);
+  transform: translateX(-50%);
+  z-index: 999;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 5px 7px;
+  border-radius: 999px;
+  background: rgba(22, 23, 29, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.24);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.mo-QuickDock.is-collapsed {
+  left: auto;
+  right: 12px;
+  transform: none;
+  padding: 6px 11px;
+}
+
+.mo-dock-link {
+  width: 30px;
+  height: 28px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.72);
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+
+.mo-dock-link.active {
+  background: #B70F28;
+  color: #FFFFFF;
+  box-shadow: 0 2px 8px rgba(183, 15, 40, 0.45);
+}
+
+.mo-dock-hub {
+  padding: 0 9px;
+  height: 28px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  font-size: 11px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.82);
+  text-decoration: none;
+  border-left: 1px solid rgba(255, 255, 255, 0.18);
+  margin-left: 2px;
+}
+
+.mo-dock-toggle {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 11px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}

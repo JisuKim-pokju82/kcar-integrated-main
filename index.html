@@ -1661,6 +1661,143 @@
       background-repeat: no-repeat;
     }
 
+    /* 1-F: Signature Crimson Cap & Overlapping Pure White Sheet */
+    .wskin-v6 {
+      background: #F7F8FB;
+    }
+
+    .f5-crimson-cap {
+      background: linear-gradient(140deg, #C8122E 0%, #B70F28 58%, #8F091D 100%);
+      padding: 0 20px 26px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .f5-white-sheet {
+      background: #FFFFFF;
+      border-radius: 22px 22px 0 0;
+      margin-top: -16px;
+      padding: 18px 20px 22px;
+      position: relative;
+      z-index: 2;
+      box-shadow: 0 -6px 20px rgba(22, 23, 29, 0.08);
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+
+    .kcar-main-search.style-cap-float {
+      border-radius: 12px;
+      border: none;
+      background: #FFFFFF;
+      padding: 0 10px 0 15px;
+      box-shadow: 0 8px 20px rgba(85, 4, 16, 0.24);
+    }
+
+    /* Direct Mobile Full-Screen Quick Bar */
+    .mobile-live-bar {
+      background: linear-gradient(95deg, #16171D 0%, #242733 100%);
+      color: #FFFFFF;
+      border-radius: 16px;
+      padding: 16px 22px;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      box-shadow: 0 10px 26px rgba(15, 23, 42, 0.12);
+    }
+
+    .mlb-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .mlb-badge {
+      background: #B70F28;
+      color: #FFFFFF;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 999px;
+      white-space: nowrap;
+    }
+
+    .mlb-text strong {
+      font-size: 14.5px;
+      font-weight: 700;
+      display: block;
+    }
+
+    .mlb-text span {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.72);
+    }
+
+    .mlb-links {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .mlb-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 8px 13px;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.11);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      color: #FFFFFF;
+      font-size: 12.5px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.15s ease;
+    }
+
+    .mlb-btn:hover {
+      background: #B70F28;
+      border-color: #B70F28;
+      transform: translateY(-1px);
+    }
+
+    .mlb-btn.is-hub {
+      background: #FFFFFF;
+      color: #16171D;
+      border-color: #FFFFFF;
+    }
+
+    .mlb-btn.is-hub:hover {
+      background: #FDEEEF;
+      color: #B70F28;
+    }
+
+    .btn-mo-open {
+      flex: 1;
+      height: 36px;
+      border-radius: 9px;
+      background: var(--primary-9);
+      border: 1px solid #F4C4CB;
+      color: var(--primary-3);
+      font-size: 12px;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      text-decoration: none;
+      transition: all 0.15s ease;
+    }
+
+    .btn-mo-open:hover {
+      background: var(--primary-3);
+      color: #FFFFFF;
+      border-color: var(--primary-3);
+    }
+
     .f5-glass-card {
       background: rgba(255, 255, 255, 0.74);
       backdrop-filter: blur(14px);
@@ -1699,7 +1836,7 @@
         <button class="exec-tab-btn" data-tab="step-layouts">1) 플랫폼 아키텍처 (4종)</button>
         <button class="exec-tab-btn" data-tab="step-icons">2) 그래픽·모션 아트디렉션 (3종)</button>
         <button class="exec-tab-btn" data-tab="step-optimal">3) 플래그십 최적안 (3종)</button>
-        <button class="exec-tab-btn" data-tab="step-final5">4) ★최적 1안 화이트 베리에이션 (5종)</button>
+        <button class="exec-tab-btn" data-tab="step-final5">4) ★최적 1안 베리에이션 (A~F 6종)</button>
       </nav>
 
       <div>
@@ -1712,6 +1849,26 @@
   </header>
 
   <main class="workspace">
+
+    <!-- Direct Real-Mobile Fullscreen Access Bar (A ~ F) -->
+    <section class="mobile-live-bar" aria-label="모바일 실화면 바로가기">
+      <div class="mlb-left">
+        <span class="mlb-badge">📱 모바일 실화면 버전</span>
+        <div class="mlb-text">
+          <strong>스마트폰 전체화면(100% 뷰포트)에서 A~F안 바로 보기</strong>
+          <span>폰 베젤 없는 순수 모바일 웹 버전입니다. 모바일에서 접속하거나 새 탭으로 열어 실기 화면 그대로 확인하세요.</span>
+        </div>
+      </div>
+      <div class="mlb-links">
+        <a class="mlb-btn js-mo-link" data-mo="a.html" href="./a.html" target="_blank" rel="noopener">A안</a>
+        <a class="mlb-btn js-mo-link" data-mo="b.html" href="./b.html" target="_blank" rel="noopener">B안</a>
+        <a class="mlb-btn js-mo-link" data-mo="c.html" href="./c.html" target="_blank" rel="noopener">C안</a>
+        <a class="mlb-btn js-mo-link" data-mo="d.html" href="./d.html" target="_blank" rel="noopener">D안</a>
+        <a class="mlb-btn js-mo-link" data-mo="e.html" href="./e.html" target="_blank" rel="noopener">E안</a>
+        <a class="mlb-btn js-mo-link" data-mo="f.html" href="./f.html" target="_blank" rel="noopener">F안</a>
+        <a class="mlb-btn is-hub js-mo-link" data-mo="mobile.html" href="./mobile.html" target="_blank" rel="noopener">모바일 통합 런처 ↗</a>
+      </div>
+    </section>
 
     <!-- Design Differentiation Legend -->
     <section class="concept-legend-bar">
@@ -1818,25 +1975,25 @@
     </section>
 
     <!-- =======================================================================
-         STEP 4: 최종 확정 [최적 1안] 기반 — 모빌리티 플랫폼 5종 컨셉 베리에이션
+         STEP 4: 최종 확정 [최적 1안] 기반 — 모빌리티 플랫폼 6종(A~F) 컨셉 베리에이션
          ======================================================================= -->
     <section id="step-final5" class="board-section">
       <div class="sec-banner">
         <div>
-          <span class="sec-kicker">STEP 04 · OPTIMAL 01 SLEEK MOBILITY VARIATIONS (화이트·라이트 톤 5종)</span>
-          <h2 class="sec-title">최종 1안 기반 — 중고차 [50:50 + 1줄 직거래] &amp; 5가지 모빌리티 컨셉 베리에이션</h2>
+          <span class="sec-kicker">STEP 04 · OPTIMAL 01 SLEEK MOBILITY VARIATIONS (A~F 6종 + 모바일 실화면 지원)</span>
+          <h2 class="sec-title">최종 1안 기반 — 중고차 [50:50 + 1줄 직거래] &amp; A~F 6가지 모빌리티 컨셉 베리에이션</h2>
           <p class="sec-subdesc">
             전 시안 공통으로 중고차 영역을 <strong>상단 [내차 사기 50% : 내차 팔기 50%] 균등 배분 + 하단 [안심직거래 1줄 와이드 바]</strong> 대형 구조로 개편하고,
-            <strong>1-A 정통 화이트</strong>를 기준점 삼아 <strong>1-B 에어로 호라이즌 브릿지 · 1-C 윈드터널 글래스모피즘 · 1-D 플래티넘 슈퍼앱 · 1-E 티타늄 스튜디오 그리드</strong>까지 확연히 다른 세련된 모빌리티 감성을 구현했습니다.
+            <strong>A안~F안</strong>까지 6가지 뚜렷한 모빌리티 컨셉과 각 시안별 <strong>스마트폰 전용 실화면 페이지(<code>a.html</code>~<code>f.html</code>)</strong>를 함께 제공합니다.
           </p>
         </div>
       </div>
 
       <div id="gridFinal5" class="grid-5-final"></div>
 
-      <!-- 5-Variation Concept Matrix -->
+      <!-- 6-Variation Concept Matrix -->
       <div class="summary-sheet">
-        <h3>최종 1안 화이트·라이트 톤 5종 컨셉 차별화 요약</h3>
+        <h3>최종 1안 화이트·라이트 톤 A~F 6종 컨셉 차별화 요약</h3>
         <table class="cmp-table">
           <thead>
             <tr>
@@ -1876,6 +2033,12 @@
               <td>폴스타·포르쉐풍 알라바스터 건축 스튜디오 채광 배경</td>
               <td>샤프 직각 검색창 + <strong><code>01·02·03</code> 레이싱 스트라이프 액센트 정밀 카드</strong></td>
               <td>하이엔드 오토모티브 쇼룸 같은 테크니컬 정밀미</td>
+            </tr>
+            <tr>
+              <td><strong>1-F</strong><br/><span style="color:#B70F28;font-size:11px;font-weight:700;">Crimson Cap &amp; White Sheet</span></td>
+              <td>크림슨 레드 상단 캡 + 오버래핑 순백 라운지 시트</td>
+              <td>화이트 플로팅 검색창 + <strong>코랄·블루 소프트 50:50 카드 + 수수료 0 직거래 바</strong></td>
+              <td>최적 1안의 레드 브릿지 헤리티지와 화이트 본문을 결합</td>
             </tr>
           </tbody>
         </table>
@@ -2718,6 +2881,8 @@
     const STEP4_FINAL5 = [
       {
         id: 'FV1',
+        moFile: 'a.html',
+        moCode: 'A안',
         choiceText: '최종 1-A안 (기본) · 시그니처 퓨어 화이트 & 레드 포인트',
         badge: '1-A · 기본 기준안 (Base)',
         badgeCls: 'b-red',
@@ -2728,6 +2893,8 @@
       },
       {
         id: 'FV2',
+        moFile: 'b.html',
+        moCode: 'B안',
         choiceText: '최종 1-B안 · 크림슨-실버 에어로 브릿지 & 오닉스 콕핏',
         badge: '1-B · 에어로 호라이즌 브릿지',
         badgeCls: 'b-pastel',
@@ -2738,6 +2905,8 @@
       },
       {
         id: 'FV3',
+        moFile: 'c.html',
+        moCode: 'C안',
         choiceText: '최종 1-C안 · 윈드터널 실버펄 & 프로스티드 글래스',
         badge: '1-C · 퓨처리스틱 에어로 글래스',
         badgeCls: 'b-navy',
@@ -2748,6 +2917,8 @@
       },
       {
         id: 'FV4',
+        moFile: 'd.html',
+        moCode: 'D안',
         choiceText: '최종 1-D안 · 플래티넘 슈퍼앱 & 오닉스 직거래 액션바',
         badge: '1-D · 우버·토스형 네오 슈퍼앱',
         badgeCls: 'b-dark',
@@ -2758,6 +2929,8 @@
       },
       {
         id: 'FV5',
+        moFile: 'e.html',
+        moCode: 'E안',
         choiceText: '최종 1-E안 · 티타늄 쇼룸 스튜디오 & 레이싱 스트라이프',
         badge: '1-E · 폴스타·포르쉐 테크 그리드',
         badgeCls: 'b-swiss',
@@ -2765,6 +2938,18 @@
         title: '1-E. 티타늄 스튜디오 & 레이싱 스트라이프',
         desc: '대각선 자연광이 비치는 알라바스터 건축 스튜디오 배경 위에 샤프한 직선 카드와 레드·블랙·블루 레이싱 스트라이프 인덱스를 결합한 하이엔드 쇼룸 시안입니다.',
         vKey: 'v5'
+      },
+      {
+        id: 'FV6',
+        moFile: 'f.html',
+        moCode: 'F안',
+        choiceText: '최종 1-F안 · 크림슨 캡 & 화이트 라운지 시트',
+        badge: '1-F · 크림슨 캡 × 화이트 시트',
+        badgeCls: 'b-red',
+        meta: '레드 상단 캡 + 오버래핑 화이트',
+        title: '1-F. 크림슨 캡 & 화이트 라운지 시트',
+        desc: '최적 1안의 시그니처 레드 상단 캡(화이트 CI·플로팅 검색창)과 오버래핑 순백 라운지 시트를 결합해 브랜드 각인과 화이트 톤 개방감을 동시에 살렸습니다.',
+        vKey: 'v6'
       }
     ];
 
@@ -2904,6 +3089,34 @@
           ],
           bikeStyle: 'background:rgba(255,255,255,0.95);border-radius:7px;border:1px solid #EBC2C9;border-left:4px solid #B70F28;',
           mycarStyle: 'background:rgba(255,255,255,0.95);border-radius:7px;border:1px solid #D4DAE6;border-left:4px solid #585C74;'
+        },
+        v6: {
+          skinCls: 'wskin-v6',
+          crimsonCap: true,
+          searchCls: 'style-cap-float',
+          placeholder: '원하는 모델, 차량번호를 검색해 보세요',
+          searchBtnHtml: `<span class="kcar-search-btn" style="background:#FDEEEF;color:#B70F28;" aria-label="검색"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#B70F28" stroke-width="2.4"><circle cx="11" cy="11" r="7"/><line x1="16.2" y1="16.2" x2="21" y2="21" stroke-linecap="round"/></svg></span>`,
+          wrapUsedStyle: '',
+          promoTopMargin: '22px',
+          cardRadius: '17px',
+          buyStyle: 'background:linear-gradient(155deg,#FFF4F5 0%,#FFE9EC 100%);color:#16171D;box-shadow:inset 0 0 0 1.2px #F6C5CD;',
+          buyTag: '<span class="f5-tech-tag" style="color:#B70F28;">직영 본업</span>',
+          buySubColor: '#8B2637',
+          buyCarImg: '<img class="blend-multiply" src="./assets/clay_car_iso.png" alt="내차 사기" style="width:102px;height:74px;object-fit:contain;" />',
+          sellStyle: 'background:linear-gradient(155deg,#F2F6FF 0%,#E8F0FE 100%);color:#16171D;box-shadow:inset 0 0 0 1.2px #C9DBFA;',
+          sellTag: '<span class="f5-tech-tag" style="color:#0A60EA;">당일 판매</span>',
+          sellSubColor: '#2B4C82',
+          c2cStyle: 'background:#F7F9FC;color:#16171D;box-shadow:inset 0 0 0 1.2px #E1E6F0;',
+          c2cBadge: '<span style="font-size:10px;font-weight:700;color:#0B845F;background:#DDF2E5;padding:2px 7px;border-radius:99px;">수수료 0</span>',
+          c2cSubColor: '#54555A',
+          c2cIconWrap: '<img class="blend-multiply" src="./assets/icon3d_c2c_pin.png" alt="안심직거래" style="width:50px;height:50px;object-fit:contain;flex-shrink:0;" />',
+          rentStyle: [
+            'background:#F7F9FC;box-shadow:inset 0 0 0 1px #E6EBF3;',
+            'background:#F7F9FC;box-shadow:inset 0 0 0 1px #E6EBF3;',
+            'background:#F7F9FC;box-shadow:inset 0 0 0 1px #E6EBF3;'
+          ],
+          bikeStyle: 'background:linear-gradient(145deg,#FFF5F6 0%,#FFECEF 100%);box-shadow:inset 0 0 0 1px #F6C9D0;',
+          mycarStyle: 'background:#F7F9FC;box-shadow:inset 0 0 0 1px #E6EBF3;'
         }
       }[vKey];
 
@@ -2950,86 +3163,101 @@
         ? `<div style="${cfg.wrapUsedStyle}">${usedSectionInner}</div>`
         : `<div>${usedSectionInner}</div>`;
 
+      const lowerSectionsHtml = `
+        <!-- 3. 중고차 Section (Largest Height 220px · 50:50 + 1-Line C2C · 3D Clay Unified) -->
+        ${usedSectionBlock}
+
+        <!-- 4. 렌터카 Section (Subtitle Removed · 3D Clay Unified) -->
+        <div>
+          <div class="f5-sec-head">
+            <span class="f5-sec-title">렌터카</span>
+          </div>
+          <div class="f5-rent-grid">
+            <div class="f5-rent-card" style="${cfg.rentStyle[0]}">
+              <div style="font-size:13.5px;font-weight:700;">중고차 렌트</div>
+              <img class="blend-multiply" src="./assets/icon3d_rent_calendar.png" alt="중고차 렌트" style="position:absolute;right:4px;bottom:3px;width:50px;height:50px;object-fit:contain;" />
+            </div>
+            <div class="f5-rent-card" style="${cfg.rentStyle[1]}">
+              <div style="font-size:13.5px;font-weight:700;">신차 렌트</div>
+              <img class="blend-multiply" src="./assets/clay_rent_new.png" alt="신차 렌트" style="position:absolute;right:3px;bottom:2px;width:56px;height:52px;object-fit:contain;" />
+            </div>
+            <div class="f5-rent-card" style="${cfg.rentStyle[2]}">
+              <div style="font-size:13.5px;font-weight:700;">렌트 특가</div>
+              <img class="blend-multiply" src="./assets/icon3d_rent_deal.png" alt="렌트 특가" style="position:absolute;right:4px;bottom:3px;width:50px;height:50px;object-fit:contain;" />
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. 바이크 / 마이카 Section (Bottom of 1st Screen <= 760px · 3D Clay Unified) -->
+        <div class="f5-bottom-split">
+          <div>
+            <div class="f5-sec-head">
+              <span class="f5-sec-title">바이크 <span class="n-badge">N</span></span>
+            </div>
+            <div class="f5-half-card" style="${cfg.bikeStyle}">
+              <div style="font-size:14px;font-weight:700;">쉽고 편한 직거래</div>
+              <img class="blend-multiply" src="./assets/clay_bike_iso.png" alt="바이크 직거래" style="position:absolute;right:4px;bottom:3px;width:66px;height:58px;object-fit:contain;" />
+            </div>
+          </div>
+          <div>
+            <div class="f5-sec-head">
+              <span class="f5-sec-title">마이카</span>
+            </div>
+            <div class="f5-half-card" style="${cfg.mycarStyle}">
+              <div style="font-size:14px;font-weight:700;">내차 시세 확인</div>
+              <img class="blend-multiply" src="./assets/clay_mycar.png" alt="내차 시세 확인" style="position:absolute;right:4px;bottom:3px;width:64px;height:56px;object-fit:contain;" />
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. Bottom Event Banner (Starts cleanly right below 760px 1st Fold) -->
+        <div class="f5-promo-banner" style="margin-top:${cfg.promoTopMargin};">
+          <div>
+            <div style="font-size:10px;color:rgba(255,255,255,0.72);">K Car의 새로운 도전을 위한 투표이벤트</div>
+            <div style="font-size:16.5px;line-height:21px;font-weight:700;margin-top:2px;">케이카에서 <span style="color:#F5A345;">이것까지</span> <span style="color:#FF4D5A;">사볼까?</span></div>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;">
+            <span style="font-size:10px;color:rgba(255,255,255,0.70);">추첨을 통해 할리스 커피쿠폰 증정</span>
+            <span style="font-size:10px;background:rgba(0,0,0,0.45);padding:1px 7px;border-radius:99px;">1 / 5</span>
+          </div>
+        </div>
+      `;
+
+      const topAndBodyMarkup = cfg.crimsonCap ? `
+        <div class="f5-crimson-cap">
+          ${renderStatusBar(true)}
+          <div style="height:42px;display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            ${renderKcarLogo(true, true)}
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.9"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+          </div>
+          <div class="kcar-main-search ${cfg.searchCls}">
+            <span class="kcar-search-placeholder">${cfg.placeholder}</span>
+            ${cfg.searchBtnHtml}
+          </div>
+        </div>
+        <div class="f5-white-sheet">
+          ${lowerSectionsHtml}
+        </div>
+      ` : `
+        ${renderStatusBar(false)}
+        <div style="height:44px;padding:0 20px;display:flex;align-items:center;justify-content:space-between;">
+          ${renderKcarLogo(false, true)}
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#16171D" stroke-width="1.9"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+        </div>
+        <div style="padding:10px 20px 22px;display:flex;flex-direction:column;gap:24px;">
+          <div class="kcar-main-search ${cfg.searchCls}">
+            <span class="kcar-search-placeholder">${cfg.placeholder}</span>
+            ${cfg.searchBtnHtml}
+          </div>
+          ${lowerSectionsHtml}
+        </div>
+      `;
+
       return `
         <div class="phone-shell">
           <div class="mo-viewport ${cfg.skinCls}">
             <div class="fold-guide"><span class="fold-guide-badge">1st Fold · 760px</span></div>
-
-            <!-- 1. Authentic K Car Header (Original Full-Color CI, Top Menu Removed) -->
-            ${renderStatusBar(false)}
-            <div style="height:44px;padding:0 20px;display:flex;align-items:center;justify-content:space-between;">
-              ${renderKcarLogo(false, true)}
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#16171D" stroke-width="1.9"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
-            </div>
-
-            <!-- Main Content Container -->
-            <div style="padding:10px 20px 22px;display:flex;flex-direction:column;gap:24px;">
-
-              <!-- 2. Integrated Search Bar -->
-              <div class="kcar-main-search ${cfg.searchCls}">
-                <span class="kcar-search-placeholder">${cfg.placeholder}</span>
-                ${cfg.searchBtnHtml}
-              </div>
-
-              <!-- 3. 중고차 Section (Largest Height 220px · 50:50 + 1-Line C2C · 3D Clay Unified) -->
-              ${usedSectionBlock}
-
-              <!-- 4. 렌터카 Section (Subtitle Removed · 3D Clay Unified) -->
-              <div>
-                <div class="f5-sec-head">
-                  <span class="f5-sec-title">렌터카</span>
-                </div>
-                <div class="f5-rent-grid">
-                  <div class="f5-rent-card" style="${cfg.rentStyle[0]}">
-                    <div style="font-size:13.5px;font-weight:700;">중고차 렌트</div>
-                    <img class="blend-multiply" src="./assets/icon3d_rent_calendar.png" alt="중고차 렌트" style="position:absolute;right:4px;bottom:3px;width:50px;height:50px;object-fit:contain;" />
-                  </div>
-                  <div class="f5-rent-card" style="${cfg.rentStyle[1]}">
-                    <div style="font-size:13.5px;font-weight:700;">신차 렌트</div>
-                    <img class="blend-multiply" src="./assets/clay_rent_new.png" alt="신차 렌트" style="position:absolute;right:3px;bottom:2px;width:56px;height:52px;object-fit:contain;" />
-                  </div>
-                  <div class="f5-rent-card" style="${cfg.rentStyle[2]}">
-                    <div style="font-size:13.5px;font-weight:700;">렌트 특가</div>
-                    <img class="blend-multiply" src="./assets/icon3d_rent_deal.png" alt="렌트 특가" style="position:absolute;right:4px;bottom:3px;width:50px;height:50px;object-fit:contain;" />
-                  </div>
-                </div>
-              </div>
-
-              <!-- 5. 바이크 / 마이카 Section (Bottom of 1st Screen <= 760px · 3D Clay Unified) -->
-              <div class="f5-bottom-split">
-                <div>
-                  <div class="f5-sec-head">
-                    <span class="f5-sec-title">바이크 <span class="n-badge">N</span></span>
-                  </div>
-                  <div class="f5-half-card" style="${cfg.bikeStyle}">
-                    <div style="font-size:14px;font-weight:700;">쉽고 편한 직거래</div>
-                    <img class="blend-multiply" src="./assets/clay_bike_iso.png" alt="바이크 직거래" style="position:absolute;right:4px;bottom:3px;width:66px;height:58px;object-fit:contain;" />
-                  </div>
-                </div>
-                <div>
-                  <div class="f5-sec-head">
-                    <span class="f5-sec-title">마이카</span>
-                  </div>
-                  <div class="f5-half-card" style="${cfg.mycarStyle}">
-                    <div style="font-size:14px;font-weight:700;">내차 시세 확인</div>
-                    <img class="blend-multiply" src="./assets/clay_mycar.png" alt="내차 시세 확인" style="position:absolute;right:4px;bottom:3px;width:64px;height:56px;object-fit:contain;" />
-                  </div>
-                </div>
-              </div>
-
-              <!-- 6. Bottom Event Banner (Starts cleanly right below 760px 1st Fold) -->
-              <div class="f5-promo-banner" style="margin-top:${cfg.promoTopMargin};">
-                <div>
-                  <div style="font-size:10px;color:rgba(255,255,255,0.72);">K Car의 새로운 도전을 위한 투표이벤트</div>
-                  <div style="font-size:16.5px;line-height:21px;font-weight:700;margin-top:2px;">케이카에서 <span style="color:#F5A345;">이것까지</span> <span style="color:#FF4D5A;">사볼까?</span></div>
-                </div>
-                <div style="display:flex;align-items:center;justify-content:space-between;">
-                  <span style="font-size:10px;color:rgba(255,255,255,0.70);">추첨을 통해 할리스 커피쿠폰 증정</span>
-                  <span style="font-size:10px;background:rgba(0,0,0,0.45);padding:1px 7px;border-radius:99px;">1 / 5</span>
-                </div>
-              </div>
-
-            </div>
+            ${topAndBodyMarkup}
 
             <!-- 7. Official K Car Corporate Footer (with Business Info) -->
             <footer class="kcar-mo-footer">
@@ -3157,9 +3385,22 @@
       renderStep4Only();
     }
 
+    function resolveMoHref(fileName) {
+      if (window.location.hostname === 'kcar-ebiz.github.io') {
+        return 'https://jisukim-pokju82.github.io/kcar-integrated-main/' + fileName;
+      }
+      return './' + fileName;
+    }
+
     function renderStep4Only() {
+      document.querySelectorAll('.js-mo-link').forEach(el => {
+        const f = el.getAttribute('data-mo');
+        if (f) el.href = resolveMoHref(f);
+      });
+
       document.getElementById('gridFinal5').innerHTML = STEP4_FINAL5.map(item => {
         const selected = item.id === selectedOptId;
+        const moHref = resolveMoHref(item.moFile);
         return `
           <div class="device-col ${selected ? 'is-selected' : ''}">
             <div class="brief-card">
@@ -3170,7 +3411,8 @@
               <h3 class="brief-title">${item.title}</h3>
               <p class="brief-desc">${item.desc}</p>
               <div class="brief-btns">
-                <button class="btn-select" onclick="chooseFinal5('${item.id}')">${selected ? '✓ 최종 시안 선택됨' : '이 시안 최종 선택'}</button>
+                <a class="btn-mo-open" href="${moHref}" target="_blank" rel="noopener">📱 ${item.moCode} 모바일 실화면 ↗</a>
+                <button class="btn-select" onclick="chooseFinal5('${item.id}')">${selected ? '✓ 선택됨' : '이 시안 선택'}</button>
               </div>
             </div>
             ${renderFinalWhiteVariation(item.vKey)}
